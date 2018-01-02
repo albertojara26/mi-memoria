@@ -26,16 +26,64 @@ del sistema.
 \end{itemize}
 \subsection{Requisitos funcionales}
 A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior.
+\subsubsection{• Usuario no autenticado}
 \begin{itemize}
-\item R1 
-\begin{itemize}
-\item R1.1
-\item R2.2
+\item\textbf{ \textit{R1}  Registrarse en la aplicación.}
+ El usuario podrá darse de alta en el sistema
+introduciendo sus datos en el formulario que se le indican. Una vez registrado se iniciará sesión
+automáticamente con el nuevo perfil.
+
+\item \textbf{\textit{R2} Iniciar sesión en la aplicación. }
+El usuario ya registrado podrá, con
+sus credenciales, autenticarse en el  sistema. Se pedirá o nombre del usuario la aplicación y  su contraseña. Se guardará el estado en el terminal hasta que el usuario decida desconectarse.
 \end{itemize} 
-\item R2 
-\item R3 
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {usuario-no-autenticado.jpg}
+		\caption{Casos de uso del actor Usuario No Autenticado }
+	\end{figure}
+\subsubsection{• Usuario  autenticado}
+Para hacer un poco más comprensible dividiré los casos de uso del usuario autenticado por grupos funcionales.
+\begin{itemize}
+\item Gestión de puntos de interés
+\begin{itemize}
+\item R-PDI-1 Guardar Punto De Interés caza
+\item R-PDI-2 Guardar Punto De Interés pesca
+\item R-PDI-3 Eliminar PDI
+\item R-PDI-4 Buscar los PDI
+\end{itemize} 
+\item Gestión de grupos
+\begin{itemize}
+\item R-G-1 Crear grupo
+\begin{itemize}
+\item R-G-1.1 Añadir integrantes
+\item R-G-1.2 Eliminar integrantes
+\item R-G-1.3 Ver grupos
+\item R-G-1.4 Ver integrantes grupo
+\end{itemize}
+
 \end{itemize} 
 
+
+\item Gestión de rutas
+\begin{itemize}
+\item R-R-1 Crear ruta privada
+\begin{itemize}
+\item R-R-1.1 Iniciar ruta
+\item R-R-1.2 Parar ruta
+\item R-R-1.3 Guardar ruta
+\end{itemize}
+
+\item R-R-2 Crear ruta compartida
+\begin{itemize}
+\item R-R-2.1 Iniciar ruta 
+\item R-R-2.2 Parar ruta
+\item R-R-2.3 Finalizar ruta
+\end{itemize}
+\item R-R-3 Listar rutas 
+\item R-R-4 Ver ruta en mapa
+\end{itemize} 
+\end{itemize}
 \subsection{Requisitos no funcionales}
 Por otro lado, no debemos olvidarnos de los requisitos no funcionales. Estos son aquellos que especifican criterios a cumplir por el sistema (en lugar de funciones específicas como indican los requisitos funcionales). Estos dan lugar a decisiones de diseño en la arquitectura y sus componentes así como en las elecciones tecnológicas detalladas en la Sección~\ref{s:tech}. A continuación se recogen los requisitos no funcionales educidos tras el proceso de ingeniería de requisitos.
 

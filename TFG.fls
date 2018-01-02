@@ -286,6 +286,17 @@ INPUT subfiles/ingenieria.tex
 INPUT subfiles/ingenieria.tex
 INPUT subfiles/desarrollo.tex
 INPUT subfiles/desarrollo.tex
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8c.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8t.tfm
+INPUT usuario-no-autenticado.jpg
+INPUT ./usuario-no-autenticado.jpg
+INPUT ./usuario-no-autenticado.jpg
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8c.vf
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmb.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplbi8t.vf
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8r.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
@@ -300,8 +311,10 @@ INPUT TFG.bbl
 INPUT TFG.bbl
 INPUT TFG.aux
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
