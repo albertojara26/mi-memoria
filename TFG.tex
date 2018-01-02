@@ -1,0 +1,348 @@
+\documentclass[11pt,a4paper,titlepage,twoside,openright]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[dvips]{graphicx}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{alltt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{epsfig}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{graphics}
+\usepackage{lettrine}
+\usepackage{longtable}
+\usepackage{mathpazo}
+\usepackage[scaled=1.01]{inconsolata}
+\usepackage{moreverb}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{sectsty}
+\usepackage{subfigure}
+\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[hidelinks,pdftex,
+            pdfauthor={Author Name},
+            pdftitle={Project Title},
+            pdfsubject={Trabajo de Fin de Grado},
+            pdfkeywords={},
+            pdfproducer={LaTeX},
+            pdfcreator={pdflatex}]{hyperref}
+
+\pagestyle{headings}
+
+\setlength{\textwidth}{14.5cm}
+\setlength{\textheight}{19.5cm}
+\setlength{\oddsidemargin}{0.96cm}
+\setlength{\evensidemargin}{0.46cm}
+\setlength{\topmargin}{1.46cm}
+\setlength{\footskip}{0.7cm}
+
+\definecolor{udcpink}{RGB}{177,0,114}
+\definecolor{udcgray}{RGB}{100,100,100}
+\definecolor{irlabpink}{RGB}{241,92,135}
+\definecolor{irlabblue}{RGB}{239,248,255}
+
+%Doble espaciado
+\renewcommand{\baselinestretch}{1.1}
+\setlength{\parskip}{3pt}
+\renewcommand*{\arraystretch}{1}
+
+\hyphenation{Map-Reduce}
+\hyphenation{shuffle}
+
+% Title Page
+\title{This is my title}
+\author{I am the author}
+\begin{document}
+\def\tablename{Tabla}
+\def\listtablename{Índice de Tablas}
+\def\listfigurename{Índice de Figuras}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Portada
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+\begin{center}
+\hspace{36.5pt}\textcolor{udcgray}{{\fontfamily{phv}\selectfont Departamento de Computación}}\\\vspace{-2pt}
+\hspace{4pt}\textcolor{udcpink}{{\fontfamily{phv}\selectfont Facultade de Informática}}\\\vspace{-5pt}
+\includegraphics[scale=0.3]{img/udc}\\[35pt]
+{\large TRABALLO DE FIN DE GRADO \\ GRADO EN ENXEÑERÍA INFORMÁTICA\\Mención en Sistemas de Información}\\[50pt]
+\textbf{\begin{huge}Aplicación móvil para actividades a campo abierto\end{huge}
+}\\[150pt]
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+ \begin{tabular}{ll}
+{\large {\bf Alumno:}}  & {\large Alberto Ramil Fernández}\\
+{\large {\bf Directores:}} & {\large Javier Parapar López}\\
+& {\large  Óscar Pedreira Fernández} \\
+\end{tabular}\\
+\vspace{0.5cm}
+ {\large A Coruña, \today}
+\end{flushright}
+
+\end{titlepage}
+\pagestyle{empty}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos del trabajo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{Huge}{\bf Datos del trabajo}\end{Huge}\\
+\newline
+
+\begin{tabularx}{\textwidth}{XX}
+\hline
+{\large {\bf Título del Trabajo:}} & {\large Aplicación móvil para }\\
+	& {\large actividades a campo abierto}\\
+& \\
+{\large {\bf Clase a la que pertenece:}} & {\large Trabajo Clásico de Ingeniería}\\
+& \\
+{\large {\bf Alumno:}}  & {\large Alberto Ramil Fernández }\\
+& \\
+{\large {\bf Directores:}} &{\large Javier Parapar López} \\
+ &{\large Óscar Pedreira Fernández} \\\hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\begin{tabularx}{\textwidth}{ll}
+\hline
+{\large {\bf Miembros del tribunal:}}\\
+\\
+\\
+\\
+\\
+\\
+\\ \hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\begin{tabularx}{\textwidth}{XX}
+\hline
+{\large {\bf Fecha de lectura y defensa:}} & {\large A Coruña, \today}\\
+\hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\begin{tabularx}{\textwidth}{XX}
+\hline
+{\large {\bf Calificación:}} & \\
+\hline
+\end{tabularx}
+
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Certifico
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\pagestyle{empty}
+
+\begin{minipage}[t][4cm][l]{.4\textwidth}
+\begin{center}
+{\sc Javier Parapar López}
+
+Profesor de Universidad
+
+Departamento de Computación
+
+Universidade da Coruña
+\end{center}
+\end{minipage}
+\begin{minipage}[t][4cm][l]{.1\textwidth}
+\begin{center}
+\vspace{1.2\baselineskip}
+y
+\end{center}
+\end{minipage}
+\begin{minipage}[t][4cm][l]{.4\textwidth}
+\begin{center}
+{\sc Óscar Pedreira Fernández}
+
+Profesor Predoctoral FPU
+
+Departamento de Computación
+
+Universidade da Coruña
+\end{center}
+\end{minipage}
+
+\vspace{2cm}
+
+CERTIFICAN:
+Que la memoria titulada {\it Aplicación móvil para actividades a campo abierto} ha sido realizada por {\sc Alberto Ramil Fernández} bajo su dirección y constituye su Traballo de Fin de Grado en el Grado de Enxeñería Informática.\\[4pt]
+\begin{center}
+En A Coruña, a \today
+\end{center}
+
+\vspace{3cm}
+
+\begin{minipage}[t][5cm][l]{.45\textwidth}
+\begin{center}
+{\sc Javier Parapar López}
+
+Director
+\end{center}
+\end{minipage}
+\begin{minipage}[t][5cm][l]{.45\textwidth}
+\begin{center}
+{\sc Óscar Pedreira Fernández}
+
+Director
+\end{center}
+\end{minipage}
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dedicatoria
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\vspace*{\stretch{1}}
+\hfill \emph{Dedicatoria}
+\vspace*{\stretch{1}}
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Agradecimientos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\vspace{2cm}
+\begin{Huge}{\bf Agradecimientos}\end{Huge}\\
+\newline
+
+\input{subfiles/agradecimientos}
+
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resumen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\vspace{2cm}
+\begin{Huge}{\bf Resumen}\end{Huge}\\
+\newline
+\input{subfiles/resumen}
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Palabras clave
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\vspace{2cm}
+\begin{Huge}{\bf Palabras clave}\end{Huge}\\
+\newline
+
+\begin{tabular}{c}
+\hspace{10cm} \ \\
+\end{tabular}\\
+{\small \textsc{ First keyword, second keyword, etc.}}\\
+\end{titlepage}
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{
+	 \MakeUppercase{\chaptername}\ \thechapter.\ \\ {\scriptsize #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{
+	 {\scriptsize \thesection\  #1}}{}}
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Índice
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Capítulos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introducción}
+        \label{intro}
+        \input{subfiles/introduccion}
+        \cleardoublepage
+
+\chapter{Conceptos}
+        \label{concept}
+        \input{subfiles/conceptos}
+        \cleardoublepage
+
+\chapter{Tecnología}
+        \label{tec}
+        \input{subfiles/tecnologia}
+        \cleardoublepage
+
+\chapter{Proceso de ingeniería}
+		\label{ing}
+		\input{subfiles/ingenieria}
+		\cleardoublepage
+
+\chapter{Desarrollo}
+		\label{dev}
+		\input{subfiles/desarrollo}
+		\cleardoublepage
+
+\chapter{Conclusiones y trabajo futuro}
+        \label{conc}
+        \input{subfiles/conclusiones}
+        \cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Apéndices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\addcontentsline{toc}{chapter}{Apéndices}
+
+\chapter{Glosario}
+		\label{glosario}
+		\input{subfiles/glosario}
+		\cleardoublepage
+
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliografía
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}
+
+

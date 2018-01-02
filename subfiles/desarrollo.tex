@@ -1,0 +1,106 @@
+En este capítulo se detalla el proceso de desarrollo del proyecto. En primer lugar, se analizarán los requisitos del proyecto para definir la arquitectura general del sistema. Luego se describirán el análisis, el diseño y la complementación de los componentes. Por último, se mostrarán datos ofrecidos por las herramientas de soporte al desarrollo.
+ 
+ 
+ desarrollo.
+  
+\section{Análisis de Requisitos}
+
+
+En esta aplicación móvil para actividades a campo abierto objetivo de este proyecto, se establecieron una seria de requisitos generales que debería cumplir la aplicación.\\
+
+El registro del usuario para poder comenzar a usarla.\\
+
+La creación de puntos de interés marcados en un mapa con nombre, descripción y un punto en el mapa con o sin señal GPS clasificados en tipo, caza o pesca. \\
+
+Se podrán guardar las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.\\
+
+El usuario también podrá crear grupos con los usuarios que quiera y los integrantes del mismo poder añadir a otros, el resultado de esta funcionalidad es la que permitirá posteriormente  crear rutas conjuntas. Para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento y se enviarán  las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas llevaran al usuario a un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes del grupo anteriormente indicado. Finalmente se podrán ver las rutas conjuntas igual que las individuales.
+\subsection{Actores}
+
+Los únicos actores que se presentan en la  aplicación son los siguientes:
+\begin{itemize}
+\item Usuario no  autenticado.Usuario que no está autenticado en la aplicación y que
+se le permite registrarse en el  sistema o iniciar sesión si la ya se registro en otro momento.
+\item Usuario  autenticado.Usuario autenticado que puede acceder a todas as funcionalidades
+del sistema.
+\end{itemize}
+\subsection{Requisitos funcionales}
+A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior.
+\begin{itemize}
+\item R1 
+\begin{itemize}
+\item R1.1
+\item R2.2
+\end{itemize} 
+\item R2 
+\item R3 
+\end{itemize} 
+
+\subsection{Requisitos no funcionales}
+Por otro lado, no debemos olvidarnos de los requisitos no funcionales. Estos son aquellos que especifican criterios a cumplir por el sistema (en lugar de funciones específicas como indican los requisitos funcionales). Estos dan lugar a decisiones de diseño en la arquitectura y sus componentes así como en las elecciones tecnológicas detalladas en la Sección~\ref{s:tech}. A continuación se recogen los requisitos no funcionales educidos tras el proceso de ingeniería de requisitos.
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+
+\section{Arquitectura propuesta}
+\label{s:dev:arch}
+En base a los requisitos enunciados en la sección anterior se propone una arquitectura basada en 
+
+\subsubsection*{Componente A}
+
+
+\subsubsection*{Componente B}
+
+
+\subsubsection*{Componente C}
+
+
+
+\subsection{Esquema general de la arquitectura}
+El resultado del proceso de ingeniería seguido ha dado lugar al esquema general de la arquitectura del sistema que se ilustra a continuación en la Figura~\ref{f:dev:arch}. En este se pueden apreciar las características arquitectónicas de cada uno de los componentes de la plataforma.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=\textwidth]{img/arch}
+\caption{Esquema general de la arquitectura del sistema}
+\label{f:dev:arch}
+\end{figure}
+
+
+\subsection{Diagrama de despliegue}
+Una vez creada la arquitectura, hay que determinar las elecciones tecnológicas que dan soporte a la misma. Dicho estudio se encuentra recogido en el Capítulo~\ref{s:tech}. La configuración del despliegue de la aplicación se recoge en la Figura~\ref{f:dev:arch-deploy}.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=1.1\textwidth]{img/deploy}
+\caption{Diagrama de despliegue del sistema}
+\label{f:dev:arch-deploy}
+\end{figure}
+
+
+\section{Componente A}
+En esta sección se estudiará el componente A...
+
+\subsection{Análisis}
+Este componente del sistema da respuesta al requisito <<R? xxx>> 
+
+\subsubsection{Casos de uso}
+En base a los requisitos educidos, se exponen los casos de uso de este subsistema.
+
+En la Figura~\ref{f:dev:use-cases-recsys} se ilustra el diagrama de casos de uso correspondiente al componente A.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=\textwidth]{img/use-cases-compA}
+\caption{Diagrama de casos de uso relativos al componente A}
+\label{f:dev:use-cases-recsys}
+\end{figure}
+
+\subsubsection{Modelo de datos}
+
+
+\subsection{Diseño e implementación}
+En esta sección se presenta el diseño seguido para implementar el motor de recomendación. Se empleará el lenguaje de modelado UML para ilustrar la estructura de este subsistema.
