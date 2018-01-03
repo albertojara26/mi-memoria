@@ -19,9 +19,9 @@ El usuario también podrá crear grupos con los usuarios que quiera y los integr
 
 Los únicos actores que se presentan en la  aplicación son los siguientes:
 \begin{itemize}
-\item Usuario no  autenticado.Usuario que no está autenticado en la aplicación y que
+\item \textbf{Usuario no  autenticado}.Usuario que no está autenticado en la aplicación y que
 se le permite registrarse en el  sistema o iniciar sesión si la ya se registro en otro momento.
-\item Usuario  autenticado.Usuario autenticado que puede acceder a todas as funcionalidades
+\item \textbf{Usuario  autenticado}.Usuario autenticado que puede acceder a todas as funcionalidades
 del sistema.
 \end{itemize}
 \subsection{Requisitos funcionales}
@@ -45,45 +45,60 @@ sus credenciales, autenticarse en el  sistema. Se pedirá o nombre del usuario l
 \subsubsection{• Usuario  autenticado}
 Para hacer un poco más comprensible dividiré los casos de uso del usuario autenticado por grupos funcionales.
 \begin{itemize}
-\item Gestión de puntos de interés
+\item \textbf{Gestión de puntos de interés}\\
+Aquí se describirán  los casos de uso relacionados con la gestión  de la  información del  los puntos de interés
 \begin{itemize}
-\item R-PDI-1 Guardar Punto De Interés caza
-\item R-PDI-2 Guardar Punto De Interés pesca
-\item R-PDI-3 Eliminar PDI
-\item R-PDI-4 Buscar los PDI
-\end{itemize} 
-\item Gestión de grupos
-\begin{itemize}
-\item R-G-1 Crear grupo
-\begin{itemize}
-\item R-G-1.1 Añadir integrantes
-\item R-G-1.2 Eliminar integrantes
-\item R-G-1.3 Ver grupos
-\item R-G-1.4 Ver integrantes grupo
-\end{itemize}
-
+\item\textbf{\textit{ R-PDI-1 Guardar Punto De Interés caza}}, el usuario podrá guardar un punto concreto, de caza, asociado a un par de coordenadas pudiendo añadirle un nombre y una descripción.
+\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}, el caso de uno es similar al de anterior pero este es para el tipo de pesca.
+\item \textbf{\textit{R-PDI-3 Eliminar PDI}}, el usuario podrá seleccionar un punto o una lista de puntos para ser borrados.
+\item \textbf{\textit{R-PDI-4 Buscar los PDI}}, permite ver todos los puntos de interés de cada tipo por separado pintados en un mapa y pudiendo ciclar en ellos para conocer su nombre y descripción.
 \end{itemize} 
 
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {PDI.jpg}
+		\caption{Casos de uso de gestión de puntos de interés }
+	\end{figure}
+\item \textbf{Gestión de grupos}
+\begin{itemize}
+\item\textbf{ \textit{R-G-1 Crear grupo}}, el usuario crea un grupo con nombre único.
+\item\textbf{\textit{ R-G-2 Añadir integrantes}}, el usuario busca en la base de datos los usuarios que quiere integrar en el grupo previamente creado.
+\item \textbf{\textit{R-G-3 Eliminar integrantes}}, el usuario puede eliminar los integrantes que vea pertinentes.
+\item \textbf{\textit{R-G-4 Ver grupos}}, el sistema listarla los grupos en los que el usuario está registrado.
+\item \textbf{\textit{R-G-5 Ver integrantes grupo}}, el sistema permitirá ver los integrantes del grupo que el usuario indique , previo listado del caso de uso R-G-4. 
 
-\item Gestión de rutas
+\end{itemize} 
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {grupo.jpg}
+		\caption{Casos de uso de gestión de grupos de usuarios }
+	\end{figure}
+\item \textbf{Gestión de rutas,}el usuario iniciará una navegación privada siendo guardada la ruta seguida.
 \begin{itemize}
-\item R-R-1 Crear ruta privada
+\item \textbf\textit{{R-R-1 Crear ruta privada}}, el usuario registra la ruta con un nombre.
 \begin{itemize}
-\item R-R-1.1 Iniciar ruta
-\item R-R-1.2 Parar ruta
-\item R-R-1.3 Guardar ruta
+\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario esta navegando y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente.
+\item\textbf{ \textit{R-R-1.2}} Parar ruta, permite parar la navegación, tanto de guardar las coordenadas como de pintar la ruta seguida.
+\item \textbf{\textit{R-R-1.3}} Guardar ruta, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
 \end{itemize}
 
-\item R-R-2 Crear ruta compartida
+\item \textbf{\textit{R-R-2 Crear ruta compartida}}, este caso de uso permite guardar la ruta seguida por el usuario y al mismo tiempo ver la posición del resto de integrantes de un grupo, anteriormente seleccionado, en tiempo real. Este caso de uso también enviaría a los integrantes del grupo una invitación a dicha ruta.
 \begin{itemize}
-\item R-R-2.1 Iniciar ruta 
-\item R-R-2.2 Parar ruta
-\item R-R-2.3 Finalizar ruta
+\item \textbf{\textit{R-R-2.1 Iniciar ruta}}, se comienza a guardar y dibujar la ruta en el mapa. Por otra parte se comienza el seguimiento del resto de usuario que estén también navegando. Como también una actualización parcial de la ruta seguida en el servidor.
+\item \textbf{\textit{R-R-2.2 Parar ruta}}, se para la navegación y se deja de actualizar la posición al resto de usuario de la ruta compartida.
+\item \textbf{\textit{R-R-2.3 Finalizar ruta}}, se guardan los puntos que faltan de enviar al servidor y se deja de enviar datos al resto de integrantes.
 \end{itemize}
-\item R-R-3 Listar rutas 
-\item R-R-4 Ver ruta en mapa
+\item \textbf{\textit{R-R-3 Listar rutas} }, permite al usuario ver todas las rutas realizadas tanto de manera privada como de manera compartida.
+\item \textbf{\textit{R-R-4 Ver ruta en mapa}}, el sistema dibuja en un mapa la ruta seguida y previamente seleccionada.
+\item \textbf{\textit{R-R-5 Eliminar ruta}}, permite al usuario borrar de la aplicación la ruta indicada.
 \end{itemize} 
 \end{itemize}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {rutas.jpg}
+		\caption{Casos de uso de gestión de rutas }
+	\end{figure}
 \subsection{Requisitos no funcionales}
 Por otro lado, no debemos olvidarnos de los requisitos no funcionales. Estos son aquellos que especifican criterios a cumplir por el sistema (en lugar de funciones específicas como indican los requisitos funcionales). Estos dan lugar a decisiones de diseño en la arquitectura y sus componentes así como en las elecciones tecnológicas detalladas en la Sección~\ref{s:tech}. A continuación se recogen los requisitos no funcionales educidos tras el proceso de ingeniería de requisitos.
 

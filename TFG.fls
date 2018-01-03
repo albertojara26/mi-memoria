@@ -295,8 +295,17 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8c.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmb.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplbi8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8r.tfm
+INPUT PDI.jpg
+INPUT ./PDI.jpg
+INPUT ./PDI.jpg
+INPUT grupo.jpg
+INPUT ./grupo.jpg
+INPUT ./grupo.jpg
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT rutas.jpg
+INPUT ./rutas.jpg
+INPUT ./rutas.jpg
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
