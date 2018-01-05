@@ -306,6 +306,8 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT rutas.jpg
 INPUT ./rutas.jpg
 INPUT ./rutas.jpg
+INPUT rutas.jpg
+INPUT rutas.jpg
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot

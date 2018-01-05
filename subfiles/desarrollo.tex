@@ -24,7 +24,7 @@ se le permite registrarse en el  sistema o iniciar sesión si la ya se registro 
 \item \textbf{Usuario  autenticado}.Usuario autenticado que puede acceder a todas as funcionalidades
 del sistema.
 \end{itemize}
-\subsection{Requisitos funcionales}
+\subsection{Casos de uso}
 A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior.
 \subsubsection{• Usuario no autenticado}
 \begin{itemize}
@@ -92,6 +92,7 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 \item \textbf{\textit{R-R-3 Listar rutas} }, permite al usuario ver todas las rutas realizadas tanto de manera privada como de manera compartida.
 \item \textbf{\textit{R-R-4 Ver ruta en mapa}}, el sistema dibuja en un mapa la ruta seguida y previamente seleccionada.
 \item \textbf{\textit{R-R-5 Eliminar ruta}}, permite al usuario borrar de la aplicación la ruta indicada.
+
 \end{itemize} 
 \end{itemize}
 \begin{figure}[H]
@@ -99,15 +100,39 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 		\includegraphics[width=0.75\textwidth] {rutas.jpg}
 		\caption{Casos de uso de gestión de rutas }
 	\end{figure}
-\subsection{Requisitos no funcionales}
-Por otro lado, no debemos olvidarnos de los requisitos no funcionales. Estos son aquellos que especifican criterios a cumplir por el sistema (en lugar de funciones específicas como indican los requisitos funcionales). Estos dan lugar a decisiones de diseño en la arquitectura y sus componentes así como en las elecciones tecnológicas detalladas en la Sección~\ref{s:tech}. A continuación se recogen los requisitos no funcionales educidos tras el proceso de ingeniería de requisitos.
 
-\begin{itemize}
-\item 
-\item 
-\item 
-\end{itemize}
 
+\section{Maquetas}
+Comezamos creando bosquexos e maquetas de como tera que ser a interface de usuario.
+Buscase que sexa unha interface simple e intuitiva para que o uso non sexa complicado.
+Para isto, intentase seguir as pautas e usar o maximo posible os elementos de Material
+Design [6].
+Material Design e unha linguaxe de deseno para distintas plataformas e dispositivos,
+creada polo desenador graco de Google Matas Duarte. Ofrece unha gua integral para o
+deseno visual, de movementos e de interaccion que sirve coma linguaxe xeral para ofrecer
+os usuarios unha experiencia comun e habitual entre distintas aplicacions.
+30
+
+	
+	
+	
+	\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{rutas.jpg}
+ \label{figura1}
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{rutas.jpg}
+ \label{figura2}
+\end{minipage}
+\caption{Casas de colores en La Boca (Argentina)}
+\end{figure}
+
+	
+	
 \section{Arquitectura propuesta}
 \label{s:dev:arch}
 En base a los requisitos enunciados en la sección anterior se propone una arquitectura basada en 
