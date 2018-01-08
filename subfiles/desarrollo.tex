@@ -264,7 +264,7 @@ móvil.
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
 capas, una capa de interface de usuario , una capa de persistencia
-y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente Este patrón esta compuesto por:
+y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente. Este esquema esta compuesto por:
 
 
 
@@ -278,37 +278,20 @@ y una capa intermedia llamada de servicios que permite la llamada de forma remot
 
 \begin{itemize}
 \item \textbf{Capa de presentación/cliente}:\\
-
-A capa de presentacion mostra a informacion relacionada cos servizos prestados polo
-sistema. Comuncase coas outras capas para obter e gardar os datos necesarios para
-o usuario. Noutras palabras, e a capa que e empregada polo usuario.
+La capa de  nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario.En si en la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
 \item \textbf{Capa intermedia:}\\
-
-
-Esta capa e a encargada de enlazar a capa de persistencia coa capa cliente, e dicir,
-de recoller os datos da nosa base de datos e envialos cara o cliente.
+Esta capa es la encargada de enlazar la capa de persistencia con la capa de presentación/cliente. Lo que hace es recoger los datos que provienen de la base de datos, necesarios para satisfacer el servicio invocado y enviárselos al cliente.
 \item \textbf{Capa de persistencia:}\\
-
-
-A capa de persistencia e a encargada de almacenar a informacion do sistema e
-inclue unha capa de acceso a datos que encapsula os mecanismos de persistencia que
-permiten o acceso os datos. Esta capa debe prover unha interface que posibilite a
-comunicacion coa informacion almacenada pero sen expoñer ou crear dependencias
-da tecnoloxa empregada no sistema de almacenamento. Desta forma permite crear
-unha abstraccion do sistema a tecnoloxa empregada na base de datos para, logo,
-ter unha maior 
-exibilidade ante cambios ou actualizacions na tecnoloxa sen que as
-demais capas se vexan afectadas.
+Esta capa es la encargada de almacenar los datos del sistemas en la base de datos, además contiene todos los mecanismos de acceso a datos necesarios para poder hacer persistentes los datos.
+ Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no crea una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
+ 
 
 
 \end{itemize}
-En moitas ocasions, como e no caso que estamos a tratar, a capa intermedia pode estar
-a sua vez tamen composta ou divida en varias capas propias. Podemos estar falando enton,
-da as veces chamada arquitectura en N-capas.
-Polo tanto o servidor segue o modelo Modelo-Vista-Controlador que consegue separar os
-datos da aplicacion, a loxica de negocio da aplicacion e a transmision de informacion a rede.
-Basease nas ideas de separacion de intereses e reutilizacion de codigo para as facilitar a
-tarefa de desenvolvemento de aplicacions e o seu posterior mantemento.\\
+Un vez comentada la arquitectura general del sistema, pasaremos a comentar la capa intermedia un poco más a fondo ya que en ciertas ocasiones, la capa intermedia puede estar compuesta de N-capas(Arquitectura en N-capas). Ésta es una de esas ocasiones.
+
+Los servidores que siguen el modelo Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio de la aplicación y el envío  de información por la red.
+Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crearla como a la hora de hacer su mantenimiento ya que obliga a desarrollador a colocar el código en una capa concreta. \\
 
 
 Os componentes que forman parte do padron MVC son:
@@ -325,7 +308,6 @@ aplicacion cliente. O tratarse dun servizo web, unha serie de peticions HTTP com
 an a traves da internet informacion en formato JSON.
 
 \item \textbf{controlador:}\\
-
 E
 o encargado de implementar a loxica da interface, invocando as operacions do
 modelo e seleccionando a vista encargada de cada peticion.
