@@ -101,17 +101,16 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 		\caption{Casos de uso de gestión de rutas }
 	\end{figure}
 
-
+\newpage
 \section{Maquetas}
-Comezamos creando bosquexos e maquetas de como tera que ser a interface de usuario.
-Buscase que sexa unha interface simple e intuitiva para que o uso non sexa complicado.
-Para isto, intentase seguir as pautas e usar o maximo posible os elementos de Material
+Comenzamos creando las maquetas de como debería que ser a interface del usuario.
+Se busca que sea una interface simple y intuitiva.
+Para esto, se intentarán seguir las pautas y usar lo  máximo posible los elementos de Material
 Design [6].
-Material Design e unha linguaxe de deseno para distintas plataformas e dispositivos,
-creada polo desenador graco de Google Matas Duarte. Ofrece unha gua integral para o
-deseno visual, de movementos e de interaccion que sirve coma linguaxe xeral para ofrecer
-os usuarios unha experiencia comun e habitual entre distintas aplicacions.
-30
+Material Design es un lenguaje de diseñoo para distintas plataformas y dispositivos,
+creada por el diseñador graco de Google Matas Duarte. Ofrece una guía  para ofrecer
+a los usuarios una experiencia común y habitual entre distintas aplicaciones.
+
 
 	
 	
@@ -253,27 +252,89 @@ os usuarios unha experiencia comun e habitual entre distintas aplicacions.
 \newpage
 \section{Arquitectura propuesta}
 \label{s:dev:arch}
-En base a los requisitos enunciados en la sección anterior se propone una arquitectura basada en 
+ 
 
-\subsubsection*{Componente A}
-
-
-\subsubsection*{Componente B}
-
-
-\subsubsection*{Componente C}
+En este capítulo se comentará el diseño de la aplicación de manera superficial, la arquitectura general, el
+modelo de datos y también aspectos más concretos del diseño del servidor y da aplicación
+móvil.
 
 
 
-\subsection{Esquema general de la arquitectura}
-El resultado del proceso de ingeniería seguido ha dado lugar al esquema general de la arquitectura del sistema que se ilustra a continuación en la Figura~\ref{f:dev:arch}. En este se pueden apreciar las características arquitectónicas de cada uno de los componentes de la plataforma.
+\subsection{Arquitectura do sistema}
+La aplicación que estamos desarrollando seguirá la arquitectura
+en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
+capas, una capa de interface de usuario , una capa de persistencia
+y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente Este patrón esta compuesto por:
 
-\begin{figure}[h!]
-\centering
-%\includegraphics[width=\textwidth]{img/arch}
-\caption{Esquema general de la arquitectura del sistema}
-\label{f:dev:arch}
-\end{figure}
+
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {arquitectura.png}
+		\caption{Esquema general de la arquitectura del sistema }
+	\end{figure}
+
+
+\begin{itemize}
+\item \textbf{Capa de presentación/cliente}:\\
+
+A capa de presentacion mostra a informacion relacionada cos servizos prestados polo
+sistema. Comuncase coas outras capas para obter e gardar os datos necesarios para
+o usuario. Noutras palabras, e a capa que e empregada polo usuario.
+\item \textbf{Capa intermedia:}\\
+
+
+Esta capa e a encargada de enlazar a capa de persistencia coa capa cliente, e dicir,
+de recoller os datos da nosa base de datos e envialos cara o cliente.
+\item \textbf{Capa de persistencia:}\\
+
+
+A capa de persistencia e a encargada de almacenar a informacion do sistema e
+inclue unha capa de acceso a datos que encapsula os mecanismos de persistencia que
+permiten o acceso os datos. Esta capa debe prover unha interface que posibilite a
+comunicacion coa informacion almacenada pero sen expoñer ou crear dependencias
+da tecnoloxa empregada no sistema de almacenamento. Desta forma permite crear
+unha abstraccion do sistema a tecnoloxa empregada na base de datos para, logo,
+ter unha maior 
+exibilidade ante cambios ou actualizacions na tecnoloxa sen que as
+demais capas se vexan afectadas.
+
+
+\end{itemize}
+En moitas ocasions, como e no caso que estamos a tratar, a capa intermedia pode estar
+a sua vez tamen composta ou divida en varias capas propias. Podemos estar falando enton,
+da as veces chamada arquitectura en N-capas.
+Polo tanto o servidor segue o modelo Modelo-Vista-Controlador que consegue separar os
+datos da aplicacion, a loxica de negocio da aplicacion e a transmision de informacion a rede.
+Basease nas ideas de separacion de intereses e reutilizacion de codigo para as facilitar a
+tarefa de desenvolvemento de aplicacions e o seu posterior mantemento.\\
+
+
+Os componentes que forman parte do padron MVC son:
+
+\begin{itemize}
+\item \textbf{Modelo:}\\
+Componse das clases que facilitan o acceso a datos ofrecendo unha serie de operacion
+de mais alto nivel as capas superiores. Componse das entidades ou clases persistentes
+mais un conxunto de clases que se encarga da sua xestion e unha fachada que ofrece
+operacions as outras capas.
+\item \textbf{vista:}\\
+Esta formado pola interface na que ocorren as chamadas entre o servizo web e a
+aplicacion cliente. O tratarse dun servizo web, unha serie de peticions HTTP comunicar
+an a traves da internet informacion en formato JSON.
+
+\item \textbf{controlador:}\\
+
+E
+o encargado de implementar a loxica da interface, invocando as operacions do
+modelo e seleccionando a vista encargada de cada peticion.
+
+
+
+\end{itemize}
+
+
 
 
 \subsection{Diagrama de despliegue}
