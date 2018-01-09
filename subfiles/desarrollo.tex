@@ -260,7 +260,7 @@ móvil.
 
 
 
-\subsection{Arquitectura do sistema}
+\subsection{Esquema general de la arquitectura}
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
 capas, una capa de interface de usuario , una capa de persistencia
@@ -278,9 +278,10 @@ y una capa intermedia llamada de servicios que permite la llamada de forma remot
 
 \begin{itemize}
 \item \textbf{Capa de presentación/cliente}:\\
-La capa de  nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario.En si en la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
+Capa que  nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario.En si es la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
 \item \textbf{Capa intermedia:}\\
 Esta capa es la encargada de enlazar la capa de persistencia con la capa de presentación/cliente. Lo que hace es recoger los datos que provienen de la base de datos, necesarios para satisfacer el servicio invocado y enviárselos al cliente.
+\newpage
 \item \textbf{Capa de persistencia:}\\
 Esta capa es la encargada de almacenar los datos del sistemas en la base de datos, además contiene todos los mecanismos de acceso a datos necesarios para poder hacer persistentes los datos.
  Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no crea una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
@@ -290,27 +291,24 @@ Esta capa es la encargada de almacenar los datos del sistemas en la base de dato
 \end{itemize}
 Un vez comentada la arquitectura general del sistema, pasaremos a comentar la capa intermedia un poco más a fondo ya que en ciertas ocasiones, la capa intermedia puede estar compuesta de N-capas(Arquitectura en N-capas). Ésta es una de esas ocasiones.
 
-Los servidores que siguen el modelo Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio de la aplicación y el envío  de información por la red.
-Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crearla como a la hora de hacer su mantenimiento ya que obliga a desarrollador a colocar el código en una capa concreta. \\
+Los servidores que siguen el modelo Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio  y el envío  de información por la red.
+Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crear la como a la hora de hacer su mantenimiento ya que marca al desarrollador a colocar el código en una capa concreta. \\
 
 
-Os componentes que forman parte do padron MVC son:
+Los componentes capas que componen al patrón MVC son:
 
 \begin{itemize}
 \item \textbf{Modelo:}\\
-Componse das clases que facilitan o acceso a datos ofrecendo unha serie de operacion
-de mais alto nivel as capas superiores. Componse das entidades ou clases persistentes
-mais un conxunto de clases que se encarga da sua xestion e unha fachada que ofrece
-operacions as outras capas.
-\item \textbf{vista:}\\
-Esta formado pola interface na que ocorren as chamadas entre o servizo web e a
-aplicacion cliente. O tratarse dun servizo web, unha serie de peticions HTTP comunicar
-an a traves da internet informacion en formato JSON.
+Está compuesta por clases que tienen acceso a los datos ofreciendo unos métodos que pueden ser usados de manera sencilla por las capas superiores. Éstos métodos son los encargados de acceder a la base de datos y proporcionar los datos persistentes.
 
-\item \textbf{controlador:}\\
-E
-o encargado de implementar a loxica da interface, invocando as operacions do
-modelo e seleccionando a vista encargada de cada peticion.
+
+
+\item \textbf{Vista:}\\
+
+Esta formada por el interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
+
+\item \textbf{Controlador:}\\
+Esta capa será la encargada de implementar la lógica del interface llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
 
 
 
