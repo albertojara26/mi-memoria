@@ -339,6 +339,9 @@ INPUT ./maqueta/Trayecto-actual-compartido.png
 INPUT arquitectura.png
 INPUT ./arquitectura.png
 INPUT ./arquitectura.png
+INPUT arquitectura-servidor.jpg
+INPUT ./arquitectura-servidor.jpg
+INPUT ./arquitectura-servidor.jpg
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot

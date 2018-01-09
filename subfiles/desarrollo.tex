@@ -250,6 +250,7 @@ a los usuarios una experiencia común y habitual entre distintas aplicaciones.
 
 
 \newpage
+\chapter{Diseño}
 \section{Arquitectura propuesta}
 \label{s:dev:arch}
  
@@ -258,7 +259,7 @@ En este capítulo se comentará el diseño de la aplicación de manera superfici
 modelo de datos y también aspectos más concretos del diseño del servidor y da aplicación
 móvil.
 
-
+\
 
 \subsection{Esquema general de la arquitectura}
 La aplicación que estamos desarrollando seguirá la arquitectura
@@ -281,7 +282,7 @@ y una capa intermedia llamada de servicios que permite la llamada de forma remot
 Capa que  nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario.En si es la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
 \item \textbf{Capa intermedia:}\\
 Esta capa es la encargada de enlazar la capa de persistencia con la capa de presentación/cliente. Lo que hace es recoger los datos que provienen de la base de datos, necesarios para satisfacer el servicio invocado y enviárselos al cliente.
-\newpage
+
 \item \textbf{Capa de persistencia:}\\
 Esta capa es la encargada de almacenar los datos del sistemas en la base de datos, además contiene todos los mecanismos de acceso a datos necesarios para poder hacer persistentes los datos.
  Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no crea una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
@@ -315,39 +316,48 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 \end{itemize}
 
 
+\section{Modelo de datos}
+
+\section{Servidor}
+
+Para que pudiera haber una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado una solución que se desplegará a través de un interface, al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
+
+La solución mencionada anteriormente será una aplicación, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
+
+Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
+  DigitalOcean,ya que ofrece distintos lugares donde poder ubicar lo hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera mas cercano y rápido.
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {arquitectura-servidor.jpg}
+		\caption{Arquitectura del servidor }
+	\end{figure}
 
 
-\subsection{Diagrama de despliegue}
-Una vez creada la arquitectura, hay que determinar las elecciones tecnológicas que dan soporte a la misma. Dicho estudio se encuentra recogido en el Capítulo~\ref{s:tech}. La configuración del despliegue de la aplicación se recoge en la Figura~\ref{f:dev:arch-deploy}.
-
-\begin{figure}[h!]
-\centering
-%\includegraphics[width=1.1\textwidth]{img/deploy}
-\caption{Diagrama de despliegue del sistema}
-\label{f:dev:arch-deploy}
-\end{figure}
+\subsection{Servizo web}
+A comunicacion farase a traves do paradigma Rest que e un estilo arquitectonico para
+construr aplicacions distribudas inspirado nas caractersticas da web e que emprega
+directamente HTTP para obtencion de datos. A traves das seguintes peticions HTTP
+poderemos acceder os distintos recursos.
 
 
-\section{Componente A}
-En esta sección se estudiará el componente A...
-
-\subsection{Análisis}
-Este componente del sistema da respuesta al requisito <<R? xxx>> 
-
-\subsubsection{Casos de uso}
-En base a los requisitos educidos, se exponen los casos de uso de este subsistema.
-
-En la Figura~\ref{f:dev:use-cases-recsys} se ilustra el diagrama de casos de uso correspondiente al componente A.
-
-\begin{figure}[h!]
-\centering
-%\includegraphics[width=\textwidth]{img/use-cases-compA}
-\caption{Diagrama de casos de uso relativos al componente A}
-\label{f:dev:use-cases-recsys}
-\end{figure}
-
-\subsubsection{Modelo de datos}
+\begin{itemize}
+\item Os metodos de acceso especican a accion que se quere realizar sobre un recurso. Desta
+forma o usar GET solicitarase unha representacion do recurso pedido. PUT crea
+unha nova representacion dun recurso e POST modifcaa. Tamen existe o metodo
+DELETE que elimina o recurso especicado.
+\item Dependendo do metodo que se empregue a ruta sobre a que se fai a peticion HTTP
+e distinta. Tanto POST como DELETE realzanse sobre recursos especco, polo tanto
+a ruta parecerase a : . PUT empregase sobre recursos
+coleccion /recursos. O metodo GET pode ser usando tanto en recursos coleccion
+como individuais.
 
 
-\subsection{Diseño e implementación}
-En esta sección se presenta el diseño seguido para implementar el motor de recomendación. Se empleará el lenguaje de modelado UML para ilustrar la estructura de este subsistema.
+\end{itemize}
+
+\subsection{Organizacion dos paquetes}
+
+\subsection{Transmision de Informacion}
+
+\subsection{Xestion das clases persistentes}
+
+\section{Aplicación Móvil}

@@ -6,23 +6,27 @@
 \BOOKMARK [0][-]{chapter.2}{Conceptos}{}% 6
 \BOOKMARK [0][-]{chapter.3}{Tecnolog\355a}{}% 7
 \BOOKMARK [0][-]{chapter.4}{Proceso de ingenier\355a}{}% 8
-\BOOKMARK [0][-]{chapter.5}{Desarrollo}{}% 9
+\BOOKMARK [0][-]{chapter.5}{Analisis}{}% 9
 \BOOKMARK [1][-]{section.5.1}{An\341lisis de Requisitos}{chapter.5}% 10
 \BOOKMARK [2][-]{subsection.5.1.1}{Actores}{section.5.1}% 11
 \BOOKMARK [2][-]{subsection.5.1.2}{Casos de uso}{section.5.1}% 12
 \BOOKMARK [1][-]{section.5.2}{Maquetas}{chapter.5}% 13
-\BOOKMARK [1][-]{section.5.3}{Arquitectura propuesta}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.3.1}{Esquema general de la arquitectura}{section.5.3}% 15
-\BOOKMARK [2][-]{subsection.5.3.2}{Diagrama de despliegue}{section.5.3}% 16
-\BOOKMARK [1][-]{section.5.4}{Componente A}{chapter.5}% 17
-\BOOKMARK [2][-]{subsection.5.4.1}{An\341lisis}{section.5.4}% 18
-\BOOKMARK [2][-]{subsection.5.4.2}{Dise\361o e implementaci\363n}{section.5.4}% 19
-\BOOKMARK [0][-]{chapter.6}{Conclusiones y trabajo futuro}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Investigaci\363n realizada}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Caracter\355sticas del proyecto}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Trabajo futuro}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 24
-\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 25
-\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 26
-\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 27
-\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 28
+\BOOKMARK [0][-]{chapter.6}{Dise\361o}{}% 14
+\BOOKMARK [1][-]{section.6.1}{Arquitectura propuesta}{chapter.6}% 15
+\BOOKMARK [2][-]{subsection.6.1.1}{Esquema general de la arquitectura}{section.6.1}% 16
+\BOOKMARK [1][-]{section.6.2}{Modelo de datos}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.3}{Servidor}{chapter.6}% 18
+\BOOKMARK [2][-]{subsection.6.3.1}{Servizo web}{section.6.3}% 19
+\BOOKMARK [2][-]{subsection.6.3.2}{Organizacion dos paquetes}{section.6.3}% 20
+\BOOKMARK [2][-]{subsection.6.3.3}{Transmision de Informacion}{section.6.3}% 21
+\BOOKMARK [2][-]{subsection.6.3.4}{Xestion das clases persistentes}{section.6.3}% 22
+\BOOKMARK [1][-]{section.6.4}{Aplicaci\363n M\363vil}{chapter.6}% 23
+\BOOKMARK [0][-]{chapter.7}{Conclusiones y trabajo futuro}{}% 24
+\BOOKMARK [1][-]{section.7.1}{Investigaci\363n realizada}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas del proyecto}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.3}{Trabajo futuro}{chapter.7}% 27
+\BOOKMARK [0][-]{chapter*.4}{\315ndice de Tablas}{}% 28
+\BOOKMARK [0][-]{chapter*.5}{\315ndice de Figuras}{}% 29
+\BOOKMARK [0][-]{chapter*.5}{Ap\351ndices}{}% 30
+\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 31
+\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 32
