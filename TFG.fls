@@ -284,8 +284,8 @@ INPUT subfiles/tecnologia.tex
 INPUT subfiles/tecnologia.tex
 INPUT subfiles/ingenieria.tex
 INPUT subfiles/ingenieria.tex
-INPUT subfiles/desarrollo.tex
-INPUT subfiles/desarrollo.tex
+INPUT subfiles/análisis.tex
+INPUT subfiles/análisis.tex
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8c.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8t.tfm
 INPUT usuario-no-autenticado.jpg
@@ -336,6 +336,8 @@ INPUT ./maqueta/Trayecto-actual.png
 INPUT maqueta/Trayecto-actual-compartido.png
 INPUT ./maqueta/Trayecto-actual-compartido.png
 INPUT ./maqueta/Trayecto-actual-compartido.png
+INPUT subfiles/diseño.tex
+INPUT subfiles/diseño.tex
 INPUT arquitectura.png
 INPUT ./arquitectura.png
 INPUT ./arquitectura.png

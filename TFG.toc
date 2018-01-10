@@ -27,7 +27,6 @@
 \contentsline {section}{\numberline {6.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{31}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Servicios}{31}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Organizaci\IeC {\'o}n de los paquetes}{32}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Arquitectura de la aplicaci\IeC {\'o}n m\IeC {\'o}vil}{32}{subsection.6.4.3}
 \contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{33}{chapter.7}
 \contentsline {section}{\numberline {7.1}Investigaci\IeC {\'o}n realizada}{33}{section.7.1}
 \contentsline {section}{\numberline {7.2}Caracter\IeC {\'\i }sticas del proyecto}{33}{section.7.2}

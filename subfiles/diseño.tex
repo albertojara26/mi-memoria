@@ -1,10 +1,13 @@
 
+ 
 
-En este capítulo se comentará el diseño de la aplicación de manera superficial, la arquitectura general, el modelo de datos y también aspectos más concretos del diseño del servidor.
+
+En este capítulo se comentará el diseño de la aplicación de manera superficial, la arquitectura general, el
+modelo de datos y también aspectos más concretos del diseño del servidor y da aplicación
+móvil.
 
 
 \section{Esquema general de la arquitectura}
-
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
 capas, una capa de interface de usuario , una capa de persistencia
@@ -42,27 +45,16 @@ Los servidores que siguen el modelo Modelo-Vista-Controlador consiguen separar l
 Los componentes capas que componen al patrón MVC son:
 
 \begin{itemize}
-\item \textbf{Modelo:}\\
+\item \textbf{Modelo:}
 Está compuesta por clases que tienen acceso a los datos ofreciendo unos métodos que pueden ser usados de manera sencilla por las capas superiores. Éstos métodos son los encargados de acceder a la base de datos y proporcionar los datos persistentes.
-
-
-
-\item \textbf{Vista:}\\
-
+\item \textbf{Vista:}
 Esta formada por el interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
-
-\item \textbf{Controlador:}\\
+\item \textbf{Controlador:}
 Esta capa será la encargada de implementar la lógica del interface llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
-
-
-
 \end{itemize}
 
-
 \section{Modelo de datos}
-
 \section{Servidor}
-
 Para que pudiera haber una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado una solución que se desplegará a través de un interface, al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
 
 La solución mencionada anteriormente será una aplicación, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
@@ -76,31 +68,85 @@ Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un pro
 	\end{figure}
 
 
-\subsection{Servizo web}
-A comunicacion farase a traves do paradigma Rest que e un estilo arquitectonico para
-construr aplicacions distribudas inspirado nas caractersticas da web e que emprega
-directamente HTTP para obtencion de datos. A traves das seguintes peticions HTTP
-poderemos acceder os distintos recursos.
-
+\subsection{Servicio web}
+ La comunicación en esta capa se hará mediante una API. Una manera de describir la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST que es un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
+ 
 
 \begin{itemize}
-\item Os metodos de acceso especican a accion que se quere realizar sobre un recurso. Desta
-forma o usar GET solicitarase unha representacion do recurso pedido. PUT crea
-unha nova representacion dun recurso e POST modifcaa. Tamen existe o metodo
-DELETE que elimina o recurso especicado.
-\item Dependendo do metodo que se empregue a ruta sobre a que se fai a peticion HTTP
-e distinta. Tanto POST como DELETE realzanse sobre recursos especco, polo tanto
-a ruta parecerase a : . PUT empregase sobre recursos
-coleccion /recursos. O metodo GET pode ser usando tanto en recursos coleccion
-como individuais.
+\item Los metodos de acceso indican la accion se queremos realizar sobre los recursos del sistema. Siguiendo esta linea tenemos el GET para solicitar un recurso pedido.  POST para crear el recurso en el sistema. Por otro lado para eliminar recursos usaremos DELETE. 
+
+
+
+\item Dependiendo del método usado usado iremos cambiando la ruta en la petición HTTP. Tanto POST como DELETE tendrán unas rutas con una forma muy similar ya que estos métodos acceden a recursos concretos, ejemplo\textit{ /usuario/{idusuario}}. Mientras que GET tanto se puede usar para recursos concretos como para colecciones.
+
+
+
+ 
 
 
 \end{itemize}
 
 \subsection{Organizacion dos paquetes}
+A aplicación del servidor sigue un arquetipo en 5 paquetes distintos de clases Java y uno para los test:
+\subsubsection{java}
+\begin{itemize}
+\item\textbf{ es.udc.fi.dc.config} Contiene las clases Java de configuración de Spring.
+\item \textbf{es.udc.fi.dc.model} Contiene todos los modelos de datos que estarán almacenados en la base de datos.
+\item \textbf{es.udc.fi.dc.daos} Contiene los interfaces (JpaRepository) que aceden a los datos del sistema.
+\item \textbf{es.udc.fi.dc.controller} Contiene as clases relacionadas  con las peticiones remotas.
+\item  \textbf{es.udc.fi.dc.services} Contiene tanto los interfaces de los servicios como la implementación de los mismos.
 
-\subsection{Transmision de Informacion}
 
-\subsection{Xestion das clases persistentes}
+\end{itemize}
+\subsubsection{test}
 
+\textbf{es.udc.fi.dc.test} Contiene las clases que realizan los test.
+\subsection{Transmisión de la información}
+Como se mencionó anteriormente para el servicio web usaremos la API REST, esta necesita un lenguaje de intercambio para la transmisión de información. El formato que seguiremos para la transmisión será el JSON y como parseador Jackson.
+JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión de la información muy cómodo de usar que emplea pares de clave-valor.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth] {json.PNG}
+		\caption{JSON }
+	\end{figure}
+\subsection{Gestión de las clases persistentes}
+Para gestionar las clases persistentes de nuestro aplicación usaremos el patrón de diseño basado en DAO(Data Access Object).
+
+ Un DAO define un interfaz que contiene conjunto de operaciones de persistencia y a su vez una implementacion permitiendo la gestión de las entidades en la base de datos. Es decir oculta la gestión de la base de datos y a su vez la tecnología que usamos en ella, dotando a cada clase persistente de un DAO asociado a ella. En éste proyecto hemos usado Spring Data JPA que nos proporciona una interfaz para la gestión de los objetos del dominio sin tener que escribir nosotros la implementacion de los métodos. Esto nos permite ganar agilidad a la hora de crear los DAOs ya que permite extender esta interfaz a nuestra clase DAO proporcionando todos los métodos CRUD, métodos para modificar o eliminar objetos de ese tipo. Éste interfaz se llama JpaRepository.\\
+
+
+Otro motivo por el cual usamos JpaRepository es que permite extender la creación de una buena seria de métodos de búsqueda por el nombre de los atributos de nuestras clases persistentes simplemente definiendo los como un método de nuestro interfaz del DAO.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {jparepository.PNG}
+		\caption{Ejemplo de interfaz con JpaRepository }
+	\end{figure}
 \section{Aplicación Móvil}
+La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos mas relevantes serán expuestos a continuación.
+
+\subsection{Servicios}
+\begin{itemize}
+\item \textbf{Google Maps API}. Es un servicio web proporcionado por google que nos permite usar los mapas en nuestras aplicaciones y también conocer la ubicación del usuario  en todo momento. Esta ubicación la marca con un punto azul pero no suministra coordenadas(latitud y longitud).
+\item \textbf{Google Location}. Es un servicio de google que nos suministra las coordinadas del usuario, según varia la posición ciertos metros o cada cierto tiempo.
+\item \textbf{Rest SystemService} Este punto seria el que ejecuta nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
+\item \textbf{Firebase Cloud Messaging} Firebase Cloud Messaging (FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones push cuando se inicia una ruta compartida.
+\end{itemize}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {arquitectura-movil.jpg}
+		\caption{Servicios de la aplicación móvil }
+	\end{figure}
+	
+	
+\subsection{Organización de los paquetes}
+La organización seguida en la aplicación móvil es la de agrupar las clases por funcionalidades comunes.
+\begin{itemize}
+\item  \textbf{com.example.alberto.hunter-android.activities}, contiene todas las actividades.
+\item \textbf{com.example.alberto.hunter-android.adapter}, contiene los adaptadores.
+\item \textbf{com.example.alberto.hunter-android.model},contiene todos los modelos de datos.
+\item \textbf{com.example.alberto.hunter-android.utils}, contiene las clases auxiliares.
+Con esta organización por funcionalidades comunes creamos un proyecto claro y  organizado lógicamente.
+
+\end{itemize}
+
+
