@@ -17,15 +17,18 @@
 \BOOKMARK [1][-]{section.6.3}{Servidor}{chapter.6}% 17
 \BOOKMARK [2][-]{subsection.6.3.1}{Servicio web}{section.6.3}% 18
 \BOOKMARK [2][-]{subsection.6.3.2}{Organizacion dos paquetes}{section.6.3}% 19
-\BOOKMARK [2][-]{subsection.6.3.3}{Transmision de Informacion}{section.6.3}% 20
-\BOOKMARK [2][-]{subsection.6.3.4}{Xestion das clases persistentes}{section.6.3}% 21
+\BOOKMARK [2][-]{subsection.6.3.3}{Transmisi\363n de la informaci\363n}{section.6.3}% 20
+\BOOKMARK [2][-]{subsection.6.3.4}{Gesti\363n de las clases persistentes}{section.6.3}% 21
 \BOOKMARK [1][-]{section.6.4}{Aplicaci\363n M\363vil}{chapter.6}% 22
-\BOOKMARK [0][-]{chapter.7}{Conclusiones y trabajo futuro}{}% 23
-\BOOKMARK [1][-]{section.7.1}{Investigaci\363n realizada}{chapter.7}% 24
-\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas del proyecto}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.3}{Trabajo futuro}{chapter.7}% 26
-\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 27
-\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 28
-\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 29
-\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 30
-\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 31
+\BOOKMARK [2][-]{subsection.6.4.1}{Servicios}{section.6.4}% 23
+\BOOKMARK [2][-]{subsection.6.4.2}{Organizaci\363n de los paquetes}{section.6.4}% 24
+\BOOKMARK [2][-]{subsection.6.4.3}{Arquitectura de la aplicaci\363n m\363vil}{section.6.4}% 25
+\BOOKMARK [0][-]{chapter.7}{Conclusiones y trabajo futuro}{}% 26
+\BOOKMARK [1][-]{section.7.1}{Investigaci\363n realizada}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas del proyecto}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.3}{Trabajo futuro}{chapter.7}% 29
+\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 30
+\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 31
+\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 32
+\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 33
+\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 34

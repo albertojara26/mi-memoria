@@ -332,7 +332,7 @@ Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un pro
 
 
 \subsection{Servicio web}
- La comunicación en esta capa se hará mediante una API. Una manera de describir la forma en que los programas o los sitios webs intercambian datos, cuyo formato  DE intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST que es un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
+ La comunicación en esta capa se hará mediante una API. Una manera de describir la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST que es un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
  
 
 \begin{itemize}
@@ -364,28 +364,51 @@ A aplicación del servidor sigue un arquetipo en 5 paquetes distintos de clases 
 \subsubsection{test}
 
 \textbf{es.udc.fi.dc.test} Contiene las clases que realizan los test.
-\subsection{Transmision de Informacion}
-Rest necesita unha linguaxe de intercambio para a transmision de informacion que habitualmente
-e ou ben JSON ou ben XML. Neste proxecto usaremos o estandar JSON e o
-parseador para esta linguaxe Jackson.
-JSON, acronimo de JavaScript Object Notation, e un formato estandar para a transmisi
-on de informacion empregando pares de chave-valor. E o formato de transmision de
-informacion mais comun empregado para a comunicacions asncronas cliente/servidor,
-remprazando amplamente o popular XML. Anda que anteriormente vinculado a JavaScript
-xa e tratado coma unha linguaxe totalmente independente e a maiora das linguaxes
-de programacion proporcionan parseadores para JSON.
-\subsection{Xestion das clases persistentes}
-Para a xestion das clases persistentes empregase o padron de deseno DAO. Un DAO
-dene unha interface para as operacions de persistencia e unha ou varias implementacions
-permitindo a xestion das entidades na base de datos. Deste xeito abstraese a xestion da
-bases de datos do tipo e tecnoloxa empregada nela.
-As pois, cada clase de persistencia tera un DAO asociado. Spring Data JPA proporciona
-unha interface para a administracion dos obxectos do dominio chamada JpaRepository.
-Estendendo esta interface na nosa clase DAO proporcionanos unha serie de metodos CRUD
-xenericos que permite gardar, modificar ou eliminar obxectos do tipo. Pero tamen, permitira
-a infraestrutura de Spring poder crear Beans por el.\\
+\subsection{Transmisión de la información}
+Como se mencionó anteriormente para el servicio web usaremos la API REST, esta necesita un lenguaje de intercambio para la transmisión de información. El formato que seguiremos para la transmisión será el JSON y como parseador Jackson.
+JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión de la información muy cómodo de usar que emplea pares de clave-valor.
 
-Outra caracterstica interesante que nos permite o estender a JpaRepository e a creaci
-on de metodos de procura polo nome dos atributos da clase simplemente denndoos
-como un metodo da interface do noso DAO.
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth] {json.PNG}
+		\caption{JSON }
+	\end{figure}
+\subsection{Gestión de las clases persistentes}
+Para gestionar las clases persistentes de nuestro aplicación usaremos el patrón de diseño basado en DAO(Data Access Object).
+
+ Un DAO define un interfaz que contiene conjunto de operaciones de persistencia y a su vez una implementacion permitiendo la gestión de las entidades en la base de datos. Es decir oculta la gestión de la base de datos y a su vez la tecnología que usamos en ella, dotando a cada clase persistente de un DAO asociado a ella. En éste proyecto hemos usado Spring Data JPA que nos proporciona una interfaz para la gestión de los objetos del dominio sin tener que escribir nosotros la implementacion de los métodos. Esto nos permite ganar agilidad a la hora de crear los DAOs ya que permite extender esta interfaz a nuestra clase DAO proporcionando todos los métodos CRUD, métodos para modificar o eliminar objetos de ese tipo. Éste interfaz se llama JpaRepository.\\
+
+
+Otro motivo por el cual usamos JpaRepository es que permite extender la creación de una buena seria de métodos de búsqueda por el nombre de los atributos de nuestras clases persistentes simplemente definiendo los como un método de nuestro interfaz del DAO.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {jparepository.PNG}
+		\caption{Ejemplo de interfaz con JpaRepository }
+	\end{figure}
 \section{Aplicación Móvil}
+La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos mas relevantes serán expuestos a continuación.
+
+\subsection{Servicios}
+\begin{itemize}
+\item \textbf{Google Maps API}. Es un servicio web proporcionado por google que nos permite usar los mapas en nuestras aplicaciones y también conocer la ubicación del usuario  en todo momento. Esta ubicación la marca con un punto azul pero no suministra coordenadas(latitud y longitud).
+\item \textbf{Google Location}. Es un servicio de google que nos suministra las coordinadas del usuario, según varia la posición ciertos metros o cada cierto tiempo.
+\item \textbf{Rest SystemService} Este punto seria el que ejecuta nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
+\item \textbf{Firebase}
+\end{itemize}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {arquitectura-movil.jpg}
+		\caption{Servicios de la aplicación móvil }
+	\end{figure}
+\subsection{Organización de los paquetes}
+\begin{itemize}
+\item Organizar paquetes por categoría
+\item Organizar paquetes por funcionalidades
+\end{itemize}
+
+\subsection{Arquitectura de la aplicación móvil}
+\begin{itemize}
+\item Arquitectura Orientada a Fragments
+\end{itemize}

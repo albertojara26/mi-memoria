@@ -342,6 +342,15 @@ INPUT ./arquitectura.png
 INPUT arquitectura-servidor.jpg
 INPUT ./arquitectura-servidor.jpg
 INPUT ./arquitectura-servidor.jpg
+INPUT json.PNG
+INPUT ./json.PNG
+INPUT ./json.PNG
+INPUT jparepository.PNG
+INPUT ./jparepository.PNG
+INPUT ./jparepository.PNG
+INPUT arquitectura-movil.jpg
+INPUT ./arquitectura-movil.jpg
+INPUT ./arquitectura-movil.jpg
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
