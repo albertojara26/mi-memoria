@@ -15,21 +15,22 @@
 \contentsline {subsubsection}{\IeC {\textbullet } Usuario autenticado}{15}{section*.3}
 \contentsline {section}{\numberline {5.2}Maquetas}{19}{section.5.2}
 \contentsline {chapter}{\numberline {6}Dise\IeC {\~n}o}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arquitectura propuesta}{25}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Esquema general de la arquitectura}{25}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.1}Esquema general de la arquitectura}{25}{section.6.1}
 \contentsline {section}{\numberline {6.2}Modelo de datos}{27}{section.6.2}
 \contentsline {section}{\numberline {6.3}Servidor}{27}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Servizo web}{28}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Servicio web}{28}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Organizacion dos paquetes}{29}{subsection.6.3.2}
+\contentsline {subsubsection}{java}{29}{section*.4}
+\contentsline {subsubsection}{test}{29}{section*.5}
 \contentsline {subsection}{\numberline {6.3.3}Transmision de Informacion}{29}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Xestion das clases persistentes}{29}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{29}{section.6.4}
+\contentsline {subsection}{\numberline {6.3.4}Xestion das clases persistentes}{30}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{30}{section.6.4}
 \contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{31}{chapter.7}
 \contentsline {section}{\numberline {7.1}Investigaci\IeC {\'o}n realizada}{31}{section.7.1}
 \contentsline {section}{\numberline {7.2}Caracter\IeC {\'\i }sticas del proyecto}{31}{section.7.2}
 \contentsline {section}{\numberline {7.3}Trabajo futuro}{32}{section.7.3}
-\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{33}{chapter*.4}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{35}{chapter*.5}
-\contentsline {chapter}{Ap\IeC {\'e}ndices}{37}{chapter*.5}
+\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{33}{chapter*.6}
+\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{35}{chapter*.7}
+\contentsline {chapter}{Ap\IeC {\'e}ndices}{37}{chapter*.7}
 \contentsline {chapter}{\numberline {A}Glosario}{37}{appendix.Alph1}
 \contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{41}{appendix.Alph2}

@@ -251,6 +251,7 @@ a los usuarios una experiencia común y habitual entre distintas aplicaciones.
 
 \newpage
 \chapter{Diseño}
+\section{Arquitectura propuesta}
 \label{s:dev:arch}
  
 
@@ -260,7 +261,7 @@ móvil.
 
 \
 
-\section{Esquema general de la arquitectura}
+\subsection{Esquema general de la arquitectura}
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
 capas, una capa de interface de usuario , una capa de persistencia
@@ -304,6 +305,7 @@ Está compuesta por clases que tienen acceso a los datos ofreciendo unos método
 
 
 \item \textbf{Vista:}\\
+
 Esta formada por el interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
 
 \item \textbf{Controlador:}\\
@@ -331,61 +333,31 @@ Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un pro
 	\end{figure}
 
 
-\subsection{Servicio web}
- La comunicación en esta capa se hará mediante una API. Una manera de describir la forma en que los programas o los sitios webs intercambian datos, cuyo formato  DE intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST que es un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
- 
+\subsection{Servizo web}
+A comunicacion farase a traves do paradigma Rest que e un estilo arquitectonico para
+construr aplicacions distribudas inspirado nas caractersticas da web e que emprega
+directamente HTTP para obtencion de datos. A traves das seguintes peticions HTTP
+poderemos acceder os distintos recursos.
+
 
 \begin{itemize}
-\item Los metodos de acceso indican la accion se queremos realizar sobre los recursos del sistema. Siguiendo esta linea tenemos el GET para solicitar un recurso pedido.  POST para crear el recurso en el sistema. Por otro lado para eliminar recursos usaremos DELETE. 
-
-
-
-\item Dependiendo del método usado usado iremos cambiando la ruta en la petición HTTP. Tanto POST como DELETE tendrán unas rutas con una forma muy similar ya que estos métodos acceden a recursos concretos, ejemplo\textit{ /usuario/{idusuario}}. Mientras que GET tanto se puede usar para recursos concretos como para colecciones.
-
-
-
- 
+\item Os metodos de acceso especican a accion que se quere realizar sobre un recurso. Desta
+forma o usar GET solicitarase unha representacion do recurso pedido. PUT crea
+unha nova representacion dun recurso e POST modifcaa. Tamen existe o metodo
+DELETE que elimina o recurso especicado.
+\item Dependendo do metodo que se empregue a ruta sobre a que se fai a peticion HTTP
+e distinta. Tanto POST como DELETE realzanse sobre recursos especco, polo tanto
+a ruta parecerase a : . PUT empregase sobre recursos
+coleccion /recursos. O metodo GET pode ser usando tanto en recursos coleccion
+como individuais.
 
 
 \end{itemize}
 
 \subsection{Organizacion dos paquetes}
-A aplicación del servidor sigue un arquetipo en 5 paquetes distintos de clases Java y uno para los test:
-\subsubsection{java}
-\begin{itemize}
-\item\textbf{ es.udc.fi.dc.config} Contiene las clases Java de configuración de Spring.
-\item \textbf{es.udc.fi.dc.model} Contiene todos los modelos de datos que estarán almacenados en la base de datos.
-\item \textbf{es.udc.fi.dc.daos} Contiene los interfaces (JpaRepository) que aceden a los datos del sistema.
-\item \textbf{es.udc.fi.dc.controller} Contiene as clases relacionadas  con las peticiones remotas.
-\item  \textbf{es.udc.fi.dc.services} Contiene tanto los interfaces de los servicios como la implementación de los mismos.
 
-
-\end{itemize}
-\subsubsection{test}
-
-\textbf{es.udc.fi.dc.test} Contiene las clases que realizan los test.
 \subsection{Transmision de Informacion}
-Rest necesita unha linguaxe de intercambio para a transmision de informacion que habitualmente
-e ou ben JSON ou ben XML. Neste proxecto usaremos o estandar JSON e o
-parseador para esta linguaxe Jackson.
-JSON, acronimo de JavaScript Object Notation, e un formato estandar para a transmisi
-on de informacion empregando pares de chave-valor. E o formato de transmision de
-informacion mais comun empregado para a comunicacions asncronas cliente/servidor,
-remprazando amplamente o popular XML. Anda que anteriormente vinculado a JavaScript
-xa e tratado coma unha linguaxe totalmente independente e a maiora das linguaxes
-de programacion proporcionan parseadores para JSON.
-\subsection{Xestion das clases persistentes}
-Para a xestion das clases persistentes empregase o padron de deseno DAO. Un DAO
-dene unha interface para as operacions de persistencia e unha ou varias implementacions
-permitindo a xestion das entidades na base de datos. Deste xeito abstraese a xestion da
-bases de datos do tipo e tecnoloxa empregada nela.
-As pois, cada clase de persistencia tera un DAO asociado. Spring Data JPA proporciona
-unha interface para a administracion dos obxectos do dominio chamada JpaRepository.
-Estendendo esta interface na nosa clase DAO proporcionanos unha serie de metodos CRUD
-xenericos que permite gardar, modificar ou eliminar obxectos do tipo. Pero tamen, permitira
-a infraestrutura de Spring poder crear Beans por el.\\
 
-Outra caracterstica interesante que nos permite o estender a JpaRepository e a creaci
-on de metodos de procura polo nome dos atributos da clase simplemente denndoos
-como un metodo da interface do noso DAO.
+\subsection{Xestion das clases persistentes}
+
 \section{Aplicación Móvil}
