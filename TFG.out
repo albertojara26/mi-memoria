@@ -11,23 +11,24 @@
 \BOOKMARK [2][-]{subsection.5.1.1}{Actores}{section.5.1}% 11
 \BOOKMARK [2][-]{subsection.5.1.2}{Casos de uso}{section.5.1}% 12
 \BOOKMARK [1][-]{section.5.2}{Maquetas}{chapter.5}% 13
-\BOOKMARK [0][-]{chapter.6}{Dise\361o}{}% 14
-\BOOKMARK [1][-]{section.6.1}{Esquema general de la arquitectura}{chapter.6}% 15
-\BOOKMARK [1][-]{section.6.2}{Modelo de datos}{chapter.6}% 16
-\BOOKMARK [1][-]{section.6.3}{Servidor}{chapter.6}% 17
-\BOOKMARK [2][-]{subsection.6.3.1}{Servicio web}{section.6.3}% 18
-\BOOKMARK [2][-]{subsection.6.3.2}{Organizacion dos paquetes}{section.6.3}% 19
-\BOOKMARK [2][-]{subsection.6.3.3}{Transmisi\363n de la informaci\363n}{section.6.3}% 20
-\BOOKMARK [2][-]{subsection.6.3.4}{Gesti\363n de las clases persistentes}{section.6.3}% 21
-\BOOKMARK [1][-]{section.6.4}{Aplicaci\363n M\363vil}{chapter.6}% 22
-\BOOKMARK [2][-]{subsection.6.4.1}{Servicios}{section.6.4}% 23
-\BOOKMARK [2][-]{subsection.6.4.2}{Organizaci\363n de los paquetes}{section.6.4}% 24
-\BOOKMARK [0][-]{chapter.7}{Conclusiones y trabajo futuro}{}% 25
-\BOOKMARK [1][-]{section.7.1}{Investigaci\363n realizada}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas del proyecto}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.3}{Trabajo futuro}{chapter.7}% 28
-\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 29
-\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 30
-\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 31
-\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 32
-\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 33
+\BOOKMARK [0][-]{chapter.6}{Planificaci\363n y seguimento}{}% 14
+\BOOKMARK [0][-]{chapter.7}{Dise\361o}{}% 15
+\BOOKMARK [1][-]{section.7.1}{Esquema general de la arquitectura}{chapter.7}% 16
+\BOOKMARK [1][-]{section.7.2}{Modelo de datos}{chapter.7}% 17
+\BOOKMARK [1][-]{section.7.3}{Servidor}{chapter.7}% 18
+\BOOKMARK [2][-]{subsection.7.3.1}{Servicio web}{section.7.3}% 19
+\BOOKMARK [2][-]{subsection.7.3.2}{Organizacion dos paquetes}{section.7.3}% 20
+\BOOKMARK [2][-]{subsection.7.3.3}{Transmisi\363n de la informaci\363n}{section.7.3}% 21
+\BOOKMARK [2][-]{subsection.7.3.4}{Gesti\363n de las clases persistentes}{section.7.3}% 22
+\BOOKMARK [1][-]{section.7.4}{Aplicaci\363n M\363vil}{chapter.7}% 23
+\BOOKMARK [2][-]{subsection.7.4.1}{Servicios}{section.7.4}% 24
+\BOOKMARK [2][-]{subsection.7.4.2}{Organizaci\363n de los paquetes}{section.7.4}% 25
+\BOOKMARK [0][-]{chapter.8}{Conclusiones y trabajo futuro}{}% 26
+\BOOKMARK [1][-]{section.8.1}{Investigaci\363n realizada}{chapter.8}% 27
+\BOOKMARK [1][-]{section.8.2}{Caracter\355sticas del proyecto}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.3}{Trabajo futuro}{chapter.8}% 29
+\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 30
+\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 31
+\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 32
+\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 33
+\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 34
