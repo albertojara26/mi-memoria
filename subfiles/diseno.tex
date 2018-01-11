@@ -51,8 +51,18 @@ Esta formada por el interfaz donde se realizan las llamadas entre el servicio we
 \item \textbf{Controlador:}
 Esta capa será la encargada de implementar la lógica del interface llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
 \end{itemize}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {componentes.jpg}
+		\caption{Diagrama de componentes del sistema }
+	\end{figure}
 
 \section{Modelo de datos}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.95\textwidth] {BD.jpg}
+		\caption{Entidad relación  }
+	\end{figure}
 \section{Servidor}
 Para que pudiera haber una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado una solución que se desplegará a través de un interface, al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
 
