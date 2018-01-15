@@ -1,6 +1,6 @@
 
 
-En este capítulo se comentará el diseño de la aplicación de manera superficial, la arquitectura general, el
+En este capítulo se comentará el diseño de la arquitectura general, el
 modelo de datos y también aspectos más concretos del diseño del servidor y da aplicación
 móvil.
 
@@ -17,20 +17,21 @@ y una capa intermedia llamada de servicios que permite la llamada de forma remot
 
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {arquitectura.png}
+		\includegraphics[width=0.75\textwidth] {arquitecturaBonita.jpg}
 		\caption{Esquema general de la arquitectura del sistema }
 	\end{figure}
 
 
 \begin{itemize}
 \item \textbf{Capa de presentación/cliente}:\\
-Capa que  nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario.En si es la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
+Capa que nos proporciona la información relacionada con los servicios que puede invocar el cliente. Es la encargada de comunicarse con las otras capas para guardar la información de cada usuario. En si es la capa con la que va a interactuar el usuario cada vez trabaje con esta aplicación.
+
 \item \textbf{Capa intermedia:}\\
 Esta capa es la encargada de enlazar la capa de persistencia con la capa de presentación/cliente. Lo que hace es recoger los datos que provienen de la base de datos, necesarios para satisfacer el servicio invocado y enviárselos al cliente.
 
 \item \textbf{Capa de persistencia:}\\
 Esta capa es la encargada de almacenar los datos del sistemas en la base de datos, además contiene todos los mecanismos de acceso a datos necesarios para poder hacer persistentes los datos.
- Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no crea una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
+ Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no cree una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
  
 
 
@@ -45,7 +46,7 @@ Los componentes capas que componen al patrón MVC son:
 
 \begin{itemize}
 \item \textbf{Modelo:}
-Está compuesta por clases que tienen acceso a los datos ofreciendo unos métodos que pueden ser usados de manera sencilla por las capas superiores. Éstos métodos son los encargados de acceder a la base de datos y proporcionar los datos persistentes.
+Está compuesta por clases que tienen acceso a los datos ofreciendo unos métodos para ser usados de manera sencilla por las capas superiores. Éstos métodos son los encargados de acceder a la base de datos y proporcionar los datos persistentes.
 \item \textbf{Vista:}
 Esta formada por el interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
 \item \textbf{Controlador:}
@@ -64,12 +65,12 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 		\caption{Entidad relación  }
 	\end{figure}
 \section{Servidor}
-Para que pudiera haber una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado una solución que se desplegará a través de un interface, al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
+Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de servidores , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
 
-La solución mencionada anteriormente será una aplicación, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
+La solución mencionada anteriormente será un servidor, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
 
-Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
-  DigitalOcean,ya que ofrece distintos lugares donde poder ubicar lo hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera mas cercano y rápido.
+Durante el desarrollo de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
+  DigitalOcean, ya que ofrece distintos lugares donde poder ubicar lo hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera más cercano y rápido.
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\textwidth] {arquitectura-servidor.jpg}
@@ -78,15 +79,17 @@ Durante el desarrollo  de este proyecto el servidor ha sido desplegado en un pro
 
 
 \subsection{Servicio web}
- La comunicación en esta capa se hará mediante una API. Una manera de describir la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST que es un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
+ La comunicación en esta capa se hará mediante una API. Una API describE la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST, un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
  
 
 \begin{itemize}
-\item Los metodos de acceso indican la accion se queremos realizar sobre los recursos del sistema. Siguiendo esta linea tenemos el GET para solicitar un recurso pedido.  POST para crear el recurso en el sistema. Por otro lado para eliminar recursos usaremos DELETE. 
+\item Los métodos de acceso indican la acción se queremos realizar sobre los recursos de nuestro sistema. Siguiendo esta linea tenemos el GET para solicitar un recurso pedido. POST para crear el recurso en el sistema y  para eliminar recursos usaremos DELETE. 
 
 
 
-\item Dependiendo del método usado usado iremos cambiando la ruta en la petición HTTP. Tanto POST como DELETE tendrán unas rutas con una forma muy similar ya que estos métodos acceden a recursos concretos, ejemplo\textit{ /usuario/{idusuario}}. Mientras que GET tanto se puede usar para recursos concretos como para colecciones.
+\item Dependiendo del método usado se irán cambiando la ruta en la petición HTTP y el contenido de ellas(cuerpo). Un POST tendrá una URL sencilla ya que los datos del objetos para ser creado irán en el cuerpo mientras que el GET y DELETE la tendrán de la forma \textit{ /usuario/{idusuario}} para obtener un objeto concreto o eliminarlo.
+
+
 
 
 
@@ -131,13 +134,13 @@ Otro motivo por el cual usamos JpaRepository es que permite extender la creació
 		\caption{Ejemplo de interfaz con JpaRepository }
 	\end{figure}
 \section{Aplicación Móvil}
-La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos mas relevantes serán expuestos a continuación.
+La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos más relevantes serán expuestos a continuación.
 
 \subsection{Servicios}
 \begin{itemize}
 \item \textbf{Google Maps API}. Es un servicio web proporcionado por google que nos permite usar los mapas en nuestras aplicaciones y también conocer la ubicación del usuario  en todo momento. Esta ubicación la marca con un punto azul pero no suministra coordenadas(latitud y longitud).
 \item \textbf{Google Location}. Es un servicio de google que nos suministra las coordinadas del usuario, según varia la posición ciertos metros o cada cierto tiempo.
-\item \textbf{Rest SystemService} Este punto seria el que ejecuta nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
+\item \textbf{Rest SystemService}. Este punto seria el que ejecuta nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
 \item \textbf{Firebase Cloud Messaging} Firebase Cloud Messaging (FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones push cuando se inicia una ruta compartida.
 \end{itemize}
 \begin{figure}[H]
@@ -153,7 +156,8 @@ La organización seguida en la aplicación móvil es la de agrupar las clases po
 \item  \textbf{com.example.alberto.hunter-android.activities}, contiene todas las actividades.
 \item \textbf{com.example.alberto.hunter-android.adapter}, contiene los adaptadores.
 \item \textbf{com.example.alberto.hunter-android.model},contiene todos los modelos de datos.
-\item \textbf{com.example.alberto.hunter-android.utils}, contiene las clases auxiliares.
+\item \textbf{com.example.alberto.hunter-android.utils}, contiene las clases auxiliares.\\ 
+
 Con esta organización por funcionalidades comunes creamos un proyecto claro y  organizado lógicamente.
 
 \end{itemize}

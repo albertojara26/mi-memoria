@@ -1,25 +1,23 @@
 
-  
-  
 \section{Análisis de Requisitos}
 
 
-En esta aplicación móvil para actividades a campo abierto objetivo de este proyecto, se establecieron una seria de requisitos generales que debería cumplir la aplicación.\\
+En esta aplicación móvil objetivo de este proyecto, se establecieron una serie de requisitos que debería cumplir la aplicación. Estos requisitos fueron obtenidos al  hacer una entrevista con los directores del proyecto.\\
 
-El registro del usuario para poder comenzar a usarla.\\
+El registro del usuario sería el primero para poder darle acceso y comenzar a usarla, ya que sin el no tiene acceso a ninguna funcionalidad de la aplicación.
 
 La creación de puntos de interés marcados en un mapa con nombre, descripción y un punto en el mapa con o sin señal GPS clasificados en tipo, caza o pesca. \\
 
-Se podrán guardar las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.\\
+Creación y almacenamiento de las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.\\
 
-El usuario también podrá crear grupos con los usuarios que quiera y los integrantes del mismo poder añadir a otros, el resultado de esta funcionalidad es la que permitirá posteriormente  crear rutas conjuntas. Para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento y se enviarán  las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas llevaran al usuario a un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes del grupo anteriormente indicado. Finalmente se podrán ver las rutas conjuntas igual que las individuales.
+El usuario también podrá crear grupos con los usuarios que le parezca oportuno y los integrantes del mismo poder añadir a otros. E resultado de esta funcionalidad es la que permitirá posteriormente crear rutas conjuntas ya para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento. Una vez elegido se enviarán las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas permitirán al usuario navegar por un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes. Finalmente se podrán ver las rutas conjuntas igual que las individuales.
 \subsection{Actores}
 
 Los únicos actores que se presentan en la  aplicación son los siguientes:
 \begin{itemize}
-\item \textbf{Usuario no  autenticado}.Usuario que no está autenticado en la aplicación y que
+\item \textbf{Usuario no  autenticado}. Usuario que no está autenticado en la aplicación y que solo
 se le permite registrarse en el  sistema o iniciar sesión si la ya se registro en otro momento.
-\item \textbf{Usuario  autenticado}.Usuario autenticado que puede acceder a todas as funcionalidades
+\item \textbf{Usuario  autenticado}. Usuario autenticado que puede acceder a todas as funcionalidades
 del sistema.
 \end{itemize}
 \subsection{Casos de uso}
@@ -33,23 +31,27 @@ automáticamente con el nuevo perfil.
 
 \item \textbf{\textit{R2} Iniciar sesión en la aplicación. }
 El usuario ya registrado podrá, con
-sus credenciales, autenticarse en el  sistema. Se pedirá o nombre del usuario la aplicación y  su contraseña. Se guardará el estado en el terminal hasta que el usuario decida desconectarse.
+sus credenciales, autenticarse en el  sistema. Se pedirá el nombre del usuario y su contraseña. Se guardará el estado en el terminal hasta que el usuario decida desconectarse.
 \end{itemize} 
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\textwidth] {usuario-no-autenticado.jpg}
 		\caption{Casos de uso del actor Usuario No Autenticado }
 	\end{figure}
+	
+	
+	
 \subsubsection{• Usuario  autenticado}
-Para hacer un poco más comprensible dividiré los casos de uso del usuario autenticado por grupos funcionales.
+
+Para el caso de que el usuario ya esté autenticado dividiremos en 3 grupos los casos de usos:
 \begin{itemize}
 \item \textbf{Gestión de puntos de interés}\\
-Aquí se describirán  los casos de uso relacionados con la gestión  de la  información del  los puntos de interés
+Aquí se describirán los casos de uso relacionados con la gestión  de la información del los puntos de interés.
 \begin{itemize}
 \item\textbf{\textit{ R-PDI-1 Guardar Punto De Interés caza}}, el usuario podrá guardar un punto concreto, de caza, asociado a un par de coordenadas pudiendo añadirle un nombre y una descripción.
-\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}, el caso de uno es similar al de anterior pero este es para el tipo de pesca.
+\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}, el caso de uso es similar al de anterior pero este es para el tipo de pesca.
 \item \textbf{\textit{R-PDI-3 Eliminar PDI}}, el usuario podrá seleccionar un punto o una lista de puntos para ser borrados.
-\item \textbf{\textit{R-PDI-4 Buscar los PDI}}, permite ver todos los puntos de interés de cada tipo por separado pintados en un mapa y pudiendo ciclar en ellos para conocer su nombre y descripción.
+\item \textbf{\textit{R-PDI-4 Buscar los PDI}}, permite ver todos los puntos de interés de cada tipo en un mapa y pudiendo clicar en ellos para conocer su nombre y descripción.
 \end{itemize} 
 
 \begin{figure}[H]
@@ -57,13 +59,16 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 		\includegraphics[width=0.75\textwidth] {PDI.jpg}
 		\caption{Casos de uso de gestión de puntos de interés }
 	\end{figure}
+	
+	
+	
 \item \textbf{Gestión de grupos}
 \begin{itemize}
 \item\textbf{ \textit{R-G-1 Crear grupo}}, el usuario crea un grupo con nombre único.
-\item\textbf{\textit{ R-G-2 Añadir integrantes}}, el usuario busca en la base de datos los usuarios que quiere integrar en el grupo previamente creado.
+\item\textbf{\textit{ R-G-2 Añadir integrantes}}, el usuario busca en la base de datos los usuarios que quiere integrar en el grupo previamente seleccionado.
 \item \textbf{\textit{R-G-3 Eliminar integrantes}}, el usuario puede eliminar los integrantes que vea pertinentes.
-\item \textbf{\textit{R-G-4 Ver grupos}}, el sistema listarla los grupos en los que el usuario está registrado.
-\item \textbf{\textit{R-G-5 Ver integrantes grupo}}, el sistema permitirá ver los integrantes del grupo que el usuario indique , previo listado del caso de uso R-G-4. 
+\item \textbf{\textit{R-G-4 Ver grupos}}, el sistema listar los grupos en los que el usuario está registrado.
+\item \textbf{\textit{R-G-5 Ver integrantes grupo}}, el sistema permitirá ver los integrantes del grupo que el usuario indique, previo listado del caso de uso R-G-4. 
 
 \end{itemize} 
 
@@ -72,11 +77,14 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 		\includegraphics[width=0.75\textwidth] {grupo.jpg}
 		\caption{Casos de uso de gestión de grupos de usuarios }
 	\end{figure}
-\item \textbf{Gestión de rutas,}el usuario iniciará una navegación privada siendo guardada la ruta seguida.
+	
+	
+	
+\item \textbf{Gestión de rutas}, el usuario iniciará una navegación privada siendo guardada la ruta seguida.
 \begin{itemize}
-\item \textbf\textit{{R-R-1 Crear ruta privada}}, el usuario registra la ruta con un nombre.
+\item \textbf{\textit{R-R-1 Crear ruta privada}}, el usuario registra la ruta con un nombre.
 \begin{itemize}
-\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario esta navegando y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente.
+\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario esta navegando y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente, no solo al finalizar la ruta y visualizarla.
 \item\textbf{ \textit{R-R-1.2}} Parar ruta, permite parar la navegación, tanto de guardar las coordenadas como de pintar la ruta seguida.
 \item \textbf{\textit{R-R-1.3}} Guardar ruta, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
 \end{itemize}
@@ -101,13 +109,12 @@ Aquí se describirán  los casos de uso relacionados con la gestión  de la  inf
 
 \newpage
 \section{Maquetas}
-Comenzamos creando las maquetas de como debería que ser a interface del usuario.
+Una vez obtenidos los casos de uso, comenzamos creando las maquetas de como debería que ser a interface del usuario.
 Se busca que sea una interface simple y intuitiva.
-Para esto, se intentarán seguir las pautas y usar lo  máximo posible los elementos de Material
-Design [6].
-Material Design es un lenguaje de diseñoo para distintas plataformas y dispositivos,
-creada por el diseñador graco de Google Matas Duarte. Ofrece una guía  para ofrecer
-a los usuarios una experiencia común y habitual entre distintas aplicaciones.
+Para hacer esto posible seguiremos las pautas y usaremos los elementos de Material Design. 
+
+
+Material Design es un lenguaje de diseño para distintas plataformas y dispositivos. Ofrece una guía que se debe seguir para que los usuarios  tengan una experiencia común y habitual entre distintas aplicaciones.
 
 
 	
