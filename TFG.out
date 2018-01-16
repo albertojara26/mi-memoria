@@ -15,23 +15,31 @@
 \BOOKMARK [1][-]{section.6.1}{Planificaci\363n}{chapter.6}% 15
 \BOOKMARK [1][-]{section.6.2}{Estimaci\363n de tiempos y costes}{chapter.6}% 16
 \BOOKMARK [1][-]{section.6.3}{Seguimiento}{chapter.6}% 17
-\BOOKMARK [0][-]{chapter.7}{Dise\361o}{}% 18
-\BOOKMARK [1][-]{section.7.1}{Esquema general de la arquitectura}{chapter.7}% 19
-\BOOKMARK [1][-]{section.7.2}{Modelo de datos}{chapter.7}% 20
-\BOOKMARK [1][-]{section.7.3}{Servidor}{chapter.7}% 21
-\BOOKMARK [2][-]{subsection.7.3.1}{Servicio web}{section.7.3}% 22
-\BOOKMARK [2][-]{subsection.7.3.2}{Organizacion dos paquetes}{section.7.3}% 23
-\BOOKMARK [2][-]{subsection.7.3.3}{Transmisi\363n de la informaci\363n}{section.7.3}% 24
-\BOOKMARK [2][-]{subsection.7.3.4}{Gesti\363n de las clases persistentes}{section.7.3}% 25
-\BOOKMARK [1][-]{section.7.4}{Aplicaci\363n M\363vil}{chapter.7}% 26
-\BOOKMARK [2][-]{subsection.7.4.1}{Servicios}{section.7.4}% 27
-\BOOKMARK [2][-]{subsection.7.4.2}{Organizaci\363n de los paquetes}{section.7.4}% 28
-\BOOKMARK [0][-]{chapter.8}{Conclusiones y trabajo futuro}{}% 29
-\BOOKMARK [1][-]{section.8.1}{Investigaci\363n realizada}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.2}{Caracter\355sticas del proyecto}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.3}{Trabajo futuro}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 33
-\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 34
-\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 35
-\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 36
-\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 37
+\BOOKMARK [2][-]{subsection.6.3.1}{Sprint 1}{section.6.3}% 18
+\BOOKMARK [2][-]{subsection.6.3.2}{Sprint 2}{section.6.3}% 19
+\BOOKMARK [2][-]{subsection.6.3.3}{Sprint 3}{section.6.3}% 20
+\BOOKMARK [2][-]{subsection.6.3.4}{Sprint 4}{section.6.3}% 21
+\BOOKMARK [2][-]{subsection.6.3.5}{Sprint 5}{section.6.3}% 22
+\BOOKMARK [2][-]{subsection.6.3.6}{Sprint 6}{section.6.3}% 23
+\BOOKMARK [2][-]{subsection.6.3.7}{Sprint 7}{section.6.3}% 24
+\BOOKMARK [2][-]{subsection.6.3.8}{Sprint 8}{section.6.3}% 25
+\BOOKMARK [0][-]{chapter.7}{Dise\361o}{}% 26
+\BOOKMARK [1][-]{section.7.1}{Esquema general de la arquitectura}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.2}{Modelo de datos}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.3}{Servidor}{chapter.7}% 29
+\BOOKMARK [2][-]{subsection.7.3.1}{Servicio web}{section.7.3}% 30
+\BOOKMARK [2][-]{subsection.7.3.2}{Organizacion dos paquetes}{section.7.3}% 31
+\BOOKMARK [2][-]{subsection.7.3.3}{Transmisi\363n de la informaci\363n}{section.7.3}% 32
+\BOOKMARK [2][-]{subsection.7.3.4}{Gesti\363n de las clases persistentes}{section.7.3}% 33
+\BOOKMARK [1][-]{section.7.4}{Aplicaci\363n M\363vil}{chapter.7}% 34
+\BOOKMARK [2][-]{subsection.7.4.1}{Servicios}{section.7.4}% 35
+\BOOKMARK [2][-]{subsection.7.4.2}{Organizaci\363n de los paquetes}{section.7.4}% 36
+\BOOKMARK [0][-]{chapter.8}{Conclusiones y trabajo futuro}{}% 37
+\BOOKMARK [1][-]{section.8.1}{Investigaci\363n realizada}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.2}{Caracter\355sticas del proyecto}{chapter.8}% 39
+\BOOKMARK [1][-]{section.8.3}{Trabajo futuro}{chapter.8}% 40
+\BOOKMARK [0][-]{chapter*.6}{\315ndice de Tablas}{}% 41
+\BOOKMARK [0][-]{chapter*.7}{\315ndice de Figuras}{}% 42
+\BOOKMARK [0][-]{chapter*.7}{Ap\351ndices}{}% 43
+\BOOKMARK [0][-]{appendix.Alph1}{Glosario}{}% 44
+\BOOKMARK [0][-]{appendix.Alph2}{Bibliograf\355a}{}% 45

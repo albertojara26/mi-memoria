@@ -18,25 +18,33 @@
 \contentsline {section}{\numberline {6.1}Planificaci\IeC {\'o}n}{25}{section.6.1}
 \contentsline {section}{\numberline {6.2}Estimaci\IeC {\'o}n de tiempos y costes}{26}{section.6.2}
 \contentsline {section}{\numberline {6.3}Seguimiento}{27}{section.6.3}
-\contentsline {chapter}{\numberline {7}Dise\IeC {\~n}o}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Esquema general de la arquitectura}{29}{section.7.1}
-\contentsline {section}{\numberline {7.2}Modelo de datos}{32}{section.7.2}
-\contentsline {section}{\numberline {7.3}Servidor}{32}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Servicio web}{33}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Organizacion dos paquetes}{34}{subsection.7.3.2}
-\contentsline {subsubsection}{java}{34}{section*.4}
-\contentsline {subsubsection}{test}{34}{section*.5}
-\contentsline {subsection}{\numberline {7.3.3}Transmisi\IeC {\'o}n de la informaci\IeC {\'o}n}{34}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Gesti\IeC {\'o}n de las clases persistentes}{35}{subsection.7.3.4}
-\contentsline {section}{\numberline {7.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{36}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Servicios}{36}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Organizaci\IeC {\'o}n de los paquetes}{37}{subsection.7.4.2}
-\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{39}{chapter.8}
-\contentsline {section}{\numberline {8.1}Investigaci\IeC {\'o}n realizada}{39}{section.8.1}
-\contentsline {section}{\numberline {8.2}Caracter\IeC {\'\i }sticas del proyecto}{39}{section.8.2}
-\contentsline {section}{\numberline {8.3}Trabajo futuro}{40}{section.8.3}
-\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{41}{chapter*.6}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{43}{chapter*.7}
-\contentsline {chapter}{Ap\IeC {\'e}ndices}{45}{chapter*.7}
-\contentsline {chapter}{\numberline {A}Glosario}{45}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{49}{appendix.Alph2}
+\contentsline {subsection}{\numberline {6.3.1}Sprint 1}{27}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Sprint 2}{27}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Sprint 3}{28}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Sprint 4}{28}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Sprint 5}{28}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Sprint 6}{30}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}Sprint 7}{30}{subsection.6.3.7}
+\contentsline {subsection}{\numberline {6.3.8}Sprint 8}{30}{subsection.6.3.8}
+\contentsline {chapter}{\numberline {7}Dise\IeC {\~n}o}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}Esquema general de la arquitectura}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}Modelo de datos}{34}{section.7.2}
+\contentsline {section}{\numberline {7.3}Servidor}{34}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Servicio web}{35}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Organizacion dos paquetes}{36}{subsection.7.3.2}
+\contentsline {subsubsection}{java}{36}{section*.4}
+\contentsline {subsubsection}{test}{36}{section*.5}
+\contentsline {subsection}{\numberline {7.3.3}Transmisi\IeC {\'o}n de la informaci\IeC {\'o}n}{36}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Gesti\IeC {\'o}n de las clases persistentes}{37}{subsection.7.3.4}
+\contentsline {section}{\numberline {7.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{38}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Servicios}{38}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Organizaci\IeC {\'o}n de los paquetes}{39}{subsection.7.4.2}
+\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{41}{chapter.8}
+\contentsline {section}{\numberline {8.1}Investigaci\IeC {\'o}n realizada}{41}{section.8.1}
+\contentsline {section}{\numberline {8.2}Caracter\IeC {\'\i }sticas del proyecto}{41}{section.8.2}
+\contentsline {section}{\numberline {8.3}Trabajo futuro}{42}{section.8.3}
+\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{43}{chapter*.6}
+\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{45}{chapter*.7}
+\contentsline {chapter}{Ap\IeC {\'e}ndices}{47}{chapter*.7}
+\contentsline {chapter}{\numberline {A}Glosario}{47}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{51}{appendix.Alph2}

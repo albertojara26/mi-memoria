@@ -43,7 +43,7 @@ En todas estas etapas incluimos los siguientes pasos:
  Cuando se realiza una estimación de costes tenemos que tener en cuenta los gastos en material, licencias y los gastos propios. En este caso los gastos de materias y de licencias en cero ya que el material usado era aportado por el alumno y las licencias eran todas gratuitas.
  En la siguiente tabla se detalla el esfuerzo horas-hombre de cada uno de los roles dentro del proyecto. Para calcular los costes de los recursos humanos, se han usados los salarios medios de cada uno de los roles en la provincia de A Coruña y no están incluidos beneficios, exclusivamente los costes. 
  
- La jornada laboral sería de 5 horas y la duración de cada Sprint 20 días.
+ La jornada laboral sería de 5 horas y la duración de cada Sprint 20 días, lo que nos hace obtener el siguiente coste:
 
 
 \begin{figure}[H]
@@ -69,7 +69,72 @@ supervisan y evalúan el proyecto. En este caso Javier y Óscar realizarán este
 
 \end{itemize}
 \section{Seguimiento}
-Como se comentou na seccion de metodoloxa o proxecto realzase en Sprints. Denimos
-un total de oito Sprints, cunha duracion xa de 15 das, no que se atopan denidos
-as tarefas a realizar. A continuacion detallanse os Sprints que se realizaron o longo do
-proxecto.
+
+Como se comentó a lo largo de este capítulo la metodología usada será  Scrum y el proyecto será dividido en Sprints de 4 semanas cada uno. El numero de Sprint que estimamos sería de 10.
+
+
+
+
+ Antes de empezar con los Sprint comenzamos creando el Product Backlog. Ésto es más una lista con todas las funcionalidades del la aplicación priorizadas de más a menos importancia para nuestro proyecto. 
+
+\subsection{Sprint 1}
+
+En este primer Sprint nos centraremos en las tareas relacionadas con la capa intermedia. Para ello comenzamos diseñando la base de datos y modelo de datos, algo fundamental en cualquier aplicación para no heredar carencias en capas superiores. Posteriormente los servicios necesarios para el servicio REST.
+
+
+\subsection{Sprint 2}
+ Una vez implementado el servicio Rest, el objetivo en este Sprint será hacer las pruebas para él.
+ Una vez acabas las pruebas el siguiente paso dentro de esté Sprint será la creación de las maquetas que servirán para la capa de presentación/cliente, es decir, el interface del usuario. Estas maquetas se irán revisando y refinando a lo largo del proyecto.
+ 
+\subsection{Sprint 3}
+
+En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. Los casos de uso realizados son los siguientes:
+
+\begin{itemize}
+
+\item\textbf{\textit{ R-PDI-1 Guardar Punto De Interés caza}}
+\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}
+\item \textbf{\textit{R-PDI-3 Eliminar PDI}}
+\item \textbf{\textit{R-PDI-4 Buscar los PDI}}
+\end{itemize} 
+
+
+
+\subsection{Sprint 4}
+
+En este Sprint nos centraremos en el registro de usuarios y gestión parcial de grupos.
+
+
+
+\begin{itemize}
+\item\textbf{ \textit{R1}  Registrarse en la aplicación.}
+\item \textbf{\textit{R2} Iniciar sesión en la aplicación. }
+\item\textbf{ \textit{R-G-1 Crear grupo}}
+\item\textbf{\textit{ R-G-2 Añadir integrantes}}
+\end{itemize} 
+
+\subsection{Sprint 5}
+Este Sprint se centrará en acabar con la gestión de grupos.
+
+
+
+\begin{itemize}
+\item \textbf{\textit{R-G-3 Eliminar integrantes}},
+\item \textbf{\textit{R-G-4 Ver grupos}}.
+\item \textbf{\textit{R-G-5 Ver integrantes grupo}}
+
+\end{itemize}
+
+Además en este Sprint hemos desarrollado un toolbar para gestionar todas las opciones y mejorar la navegación del usuario en la aplicación.
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth] {menu.png}
+		\caption{Captura del menú de navegación}
+	\end{figure}
+
+\subsection{Sprint 6}
+\subsection{Sprint 7}
+\subsection{Sprint 8}
+

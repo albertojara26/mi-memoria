@@ -344,6 +344,9 @@ INPUT ./backlog.png
 INPUT coste.png
 INPUT ./coste.png
 INPUT ./coste.png
+INPUT menu.png
+INPUT ./menu.png
+INPUT ./menu.png
 INPUT subfiles/diseno.tex
 INPUT subfiles/diseno.tex
 INPUT arquitecturaBonita.jpg
