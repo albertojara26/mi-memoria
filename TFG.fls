@@ -259,10 +259,10 @@ INPUT TFG.toc
 INPUT TFG.toc
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8r.tfm
-OUTPUT TFG.toc
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplro8t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplro8r.tfm
+OUTPUT TFG.toc
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT subfiles/introduccion.tex
 INPUT subfiles/introduccion.tex
@@ -370,6 +370,8 @@ INPUT ./jparepository.PNG
 INPUT arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
+INPUT subfiles/implementacion.tex
+INPUT subfiles/implementacion.tex
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot

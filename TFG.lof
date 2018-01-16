@@ -4,32 +4,33 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Casos de uso del actor Usuario No Autenticado }}{15}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de puntos de inter\IeC {\'e}s }}{16}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de grupos de usuarios }}{17}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de rutas }}{18}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Inisiar sesi\IeC {\'o}n}}{19}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Registrar usuario}}{19}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Crear grupo}}{20}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces A\IeC {\~n}adir usuarios a grupo}}{20}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Listar grupos}}{21}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Opciones generales}}{21}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Crear PDI}}{22}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Visualizar PDIs}}{22}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Ruta individual}}{23}{figure.5.13}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ruta compartida}}{23}{figure.5.14}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Casos de uso del actor Usuario No Autenticado }}{17}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de puntos de inter\IeC {\'e}s }}{18}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de grupos de usuarios }}{19}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de rutas }}{20}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Inisiar sesi\IeC {\'o}n}}{21}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Registrar usuario}}{21}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Crear grupo}}{22}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces A\IeC {\~n}adir usuarios a grupo}}{22}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Listar grupos}}{23}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Opciones generales}}{23}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Crear PDI}}{24}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Visualizar PDIs}}{24}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Ruta individual}}{25}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ruta compartida}}{25}{figure.5.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Pasos metodolog\IeC {\'\i }a Scrum}}{26}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Costes asociados a este proyecto }}{27}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Captura del men\IeC {\'u} de navegaci\IeC {\'o}n}}{29}{figure.6.3}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pasos metodolog\IeC {\'\i }a Scrum}}{28}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Costes asociados a este proyecto }}{29}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Captura del men\IeC {\'u} de navegaci\IeC {\'o}n}}{31}{figure.6.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Esquema general de la arquitectura del sistema }}{31}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de componentes del sistema }}{33}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Entidad relaci\IeC {\'o}n }}{34}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Arquitectura del servidor }}{35}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces JSON }}{37}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Ejemplo de interfaz con JpaRepository }}{38}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Servicios de la aplicaci\IeC {\'o}n m\IeC {\'o}vil }}{39}{figure.7.7}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Esquema general de la arquitectura del sistema }}{33}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de componentes del sistema }}{35}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Entidad relaci\IeC {\'o}n }}{36}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Arquitectura del servidor }}{37}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces JSON }}{39}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Ejemplo de interfaz con JpaRepository }}{40}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Servicios de la aplicaci\IeC {\'o}n m\IeC {\'o}vil }}{41}{figure.7.7}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
