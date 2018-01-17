@@ -19,7 +19,7 @@
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Ruta individual}}{25}{figure.5.13}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Ruta compartida}}{25}{figure.5.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Pasos metodolog\IeC {\'\i }a Scrum}}{28}{figure.6.1}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces GR\IeC {\'A}FICO COPIADO}}{28}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Costes asociados a este proyecto }}{29}{figure.6.2}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Captura del men\IeC {\'u} de navegaci\IeC {\'o}n}}{31}{figure.6.3}
 \addvspace {10\p@ }
@@ -31,6 +31,9 @@
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Ejemplo de interfaz con JpaRepository }}{40}{figure.7.6}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Servicios de la aplicaci\IeC {\'o}n m\IeC {\'o}vil }}{41}{figure.7.7}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Entorno de trabajo Eclipse }}{44}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Dependencia de Spring en el pom.xml }}{44}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ejemplo de inyecci\IeC {\'o}n de dependencia }}{45}{figure.8.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

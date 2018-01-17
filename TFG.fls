@@ -372,6 +372,15 @@ INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT subfiles/implementacion.tex
 INPUT subfiles/implementacion.tex
+INPUT eclipse.png
+INPUT ./eclipse.png
+INPUT ./eclipse.png
+INPUT spring.png
+INPUT ./spring.png
+INPUT ./spring.png
+INPUT dao.png
+INPUT ./dao.png
+INPUT ./dao.png
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
