@@ -278,12 +278,41 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplro8r.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8c.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT subfiles/conceptos.tex
-INPUT subfiles/conceptos.tex
 INPUT subfiles/tecnologia.tex
 INPUT subfiles/tecnologia.tex
+INPUT eclipse.png
+INPUT ./eclipse.png
+INPUT ./eclipse.png
+INPUT spring.png
+INPUT ./spring.png
+INPUT ./spring.png
+INPUT dao.png
+INPUT ./dao.png
+INPUT ./dao.png
+INPUT debug.png
+INPUT ./debug.png
+INPUT ./debug.png
+INPUT emulador.png
+INPUT ./emulador.png
+INPUT ./emulador.png
+INPUT debug.png
 INPUT subfiles/ingenieria.tex
 INPUT subfiles/ingenieria.tex
+INPUT scrum.jpg
+INPUT ./scrum.jpg
+INPUT ./scrum.jpg
+INPUT product.png
+INPUT ./product.png
+INPUT ./product.png
+INPUT planing.png
+INPUT ./planing.png
+INPUT ./planing.png
+INPUT sprint.png
+INPUT ./sprint.png
+INPUT ./sprint.png
+INPUT daily.png
+INPUT ./daily.png
+INPUT ./daily.png
 INPUT subfiles/analisis.tex
 INPUT subfiles/analisis.tex
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8c.tfm
@@ -338,9 +367,6 @@ INPUT ./maqueta/Trayecto-actual-compartido.png
 INPUT ./maqueta/Trayecto-actual-compartido.png
 INPUT subfiles/Planificacion-seguimento.tex
 INPUT subfiles/Planificacion-seguimento.tex
-INPUT backlog.png
-INPUT ./backlog.png
-INPUT ./backlog.png
 INPUT coste.png
 INPUT ./coste.png
 INPUT ./coste.png
@@ -349,9 +375,9 @@ INPUT ./menu.png
 INPUT ./menu.png
 INPUT subfiles/diseno.tex
 INPUT subfiles/diseno.tex
-INPUT arquitecturaBonita.jpg
-INPUT ./arquitecturaBonita.jpg
-INPUT ./arquitecturaBonita.jpg
+INPUT arquitectura2.png
+INPUT ./arquitectura2.png
+INPUT ./arquitectura2.png
 INPUT componentes.jpg
 INPUT ./componentes.jpg
 INPUT ./componentes.jpg
@@ -372,15 +398,6 @@ INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT subfiles/implementacion.tex
 INPUT subfiles/implementacion.tex
-INPUT eclipse.png
-INPUT ./eclipse.png
-INPUT ./eclipse.png
-INPUT spring.png
-INPUT ./spring.png
-INPUT ./spring.png
-INPUT dao.png
-INPUT ./dao.png
-INPUT ./dao.png
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
