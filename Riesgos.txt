@@ -1,0 +1,54 @@
+\section{Análisis de riesgos }
+\subsection{Riesgos identificados}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {riesgos.png}
+		\caption{Identificación y clasificación de riesgos del proyecto }
+	\end{figure}
+	
+	
+Una vez identificados y clasificados los riesgos debemos realizar dos acciones diferentes dependiendo del riesgo que conlleven:
+\subsection{Planes de contingencia} 
+
+Los riesgos que tengan una alta exposición pueden hacer peligrar el futuro del proyecto por ello,  debemos analizarlos en fases tempranas, antes
+de comenzar el diseño o la implementación, y que así   vigilarlos.
+
+ A continuación se detallan los planes de contingencia para los riesgos de elevada
+exposición.
+
+
+\begin{itemize}
+\item \textbf{Riesgo2} - Complejidad en la implementación. Se propone simplificar  las funcionalidades dividiéndolas y esto ya hacerlo en etapas tempranas del proyecto.
+
+\item 
+\textbf{Riesgo3} - Pérdida de la información. La perdida de información se puede dar por motivos diversos( fallos en el gps, fallo en la red, hardware, errores humanos) para ello se harán actualizaciones periódicas.
+
+
+
+
+	
+\end{itemize}
+
+\subsection{Seguimiento} 	
+	Para el resto de riesgos se hará una seguimiento.
+	\begin{itemize}
+	\item\textbf{ Riesgo1 Requisitos poco precisos}
+	La especificación de requisitos debe ser adecuada ya que de ello dependerán decisiones futuras.
+Para ello se harán revisiones periódicas.
+\item \textbf{Riesgo4 Mala implementacion}
+Dada la escasa experiencia de planificación, es probable
+que las tareas se desvíen de lo planificado. Por ello, se realizará un intenso
+seguimiento de la planificación para evitar retrasos.
+
+\item \textbf{Riesgo5 Arquitectura errónea},Las decisiones arquitectónicas condicionan
+gravemente el diseño e implementación de un proyecto. La metodología empleada
+propone una serie de buenas prácticas que intentan definir lo antes posible la
+arquitectura para evitar este riesgo.
+\item \textbf{Riesgo6 Mal diseño} ,La naturaleza incremental del ciclo de vida minimiza este riesgo
+ya que la propagación de los errores es limitada entre iteraciones.
+\item\textbf{ Riesgo7 Mala implementacion},Una implementación inadecuada puede hacer fracasar
+un proyecto bien diseñado. Por ello, se realizará un seguimiento del correcto
+desarrollo del diseño proyectado.
+
+
+	\end{itemize}

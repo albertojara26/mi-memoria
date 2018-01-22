@@ -2,7 +2,7 @@
 
  En este capítulo se comentará el proceso seguido para la realización de este proyecto detallando la planificación, diseño y el desarrollo del mismo estructurado en etapas.
  
-\section{Planificación}
+\section{Seguimiento}
 
 Una vez hecho el análisis, conocidos los objetivos que se quieren alcanzar en este proyecto y las herramientas que se utilizarán  empezaremos con la planificación del mismo.
 
@@ -30,10 +30,10 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 
 
 
-\section{Estimación de tiempos y costes}
+\section{Duración  y costes}
  A continuación en la tabla siguiente se ha realizado una estimación de tiempos y de costes de este proyecto.
  Cuando se realiza una estimación de costes tenemos que tener en cuenta los gastos en material, licencias y los gastos propios. En mi caso los gastos de materias y de licencias es nulo ya que el material es el del alumno y licencias y gastos propios son nulos.
- En la siguiente tabla se detalla el esfuerzo horas-hombre de cada uno de los roles dentro del proyecto. Para calcular los costes de los recursos humanos, se han usados los salarios medios de cada uno de los roles en la provincia de A Coruña y no están incluidos beneficios, exclusivamente los costes. 
+ En la siguiente tabla se detalla el esfuerzo horas-hombre de cada uno de los roles dentro del proyecto. 
  
  La jornada laboral sería de 5 horas y la duración de cada Sprint 20 días, lo que nos hace obtener el siguiente coste:
 
@@ -53,14 +53,14 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 \item En el rol de director de proyecto estarían los que 
 supervisan y evalúan el proyecto. En este caso los directores realizarán este rol.
 
-\item Analista/programador, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por mi yo me encargaría de este rol.
+\item Analista/programador Junior, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por mi yo me encargaría de este rol.
 
 
 
 
 
 \end{itemize}
-\section{Seguimiento}
+\section{Sprints}
 
 Como se comentó a lo largo de este capítulo la metodología usada será  Scrum y el proyecto será dividido en Sprints de 4 semanas cada uno. El número de Sprint que estimamos sería de 8.
 
@@ -80,7 +80,7 @@ En este primer Sprint nos centraremos en las tareas relacionadas con la capa int
  
 \subsection{Sprint 3}
 
-En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. Los casos de uso realizados son los siguientes:
+En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. La historia que se implementará será \textit{Gestión de puntos de interés (PDI)\textbf{•}}, los casos de uso realizados son los siguientes:
 
 \begin{itemize}
 
@@ -91,36 +91,128 @@ En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenz
 \end{itemize} 
 
 
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/pdipesca.png}
+ \label{figura1}
+\caption{PDI pesca}
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/pdicaza.png}
+ \label{figura2}
+\caption{PDI caza}
+
+\end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/pdiguardar.png}
+ \label{figura1}
+\caption{Guardar PDI}
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/pdiborrar.png}
+ \label{figura2}
+\caption{Borrar PDI }
+
+\end{minipage}
+\end{figure}
+
+
 
 \subsection{Sprint 4}
 
-En este Sprint nos centraremos en el registro de usuarios y gestión parcial de grupos.
+En este Sprint nos centraremos en la historia \textbf{\textit{Iniciar sesión }}, que contiene los siguientes casos de uso:
 
 
 
 \begin{itemize}
 \item\textbf{ \textit{R1  Registrarse en la aplicación.}}
 \item \textbf{\textit{R2 Iniciar sesión en la aplicación. }}
+
+\end{itemize} 
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/login.png}
+ \label{figura1}
+\caption{Iniciar sesión }
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/registro.png}
+ \label{figura2}
+\caption{Registro del usuario }
+
+\end{minipage}
+\end{figure}
+Además en este Sprint hemos desarrollado un toolbar para gestionar todas las opciones y mejorar la navegación del usuario en la aplicación.
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth] {capturamovil/opciones}
+		\caption{Captura del menú de navegación}
+	\end{figure}
+\subsection{Sprint 5}
+Este Sprint se centrará en la historia \textbf{\textit{Gestión de grupos}} que contiene los siguientes casos de uso:
+\begin{itemize}
 \item\textbf{ \textit{R-G-1 Crear grupo}}
 \item\textbf{\textit{ R-G-2 Añadir integrantes}}
-\end{itemize} 
-
-\subsection{Sprint 5}
-Este Sprint se centrará en acabar con la gestión de grupos.
-\begin{itemize}
 \item \textbf{\textit{R-G-3 Eliminar integrantes}},
 \item \textbf{\textit{R-G-4 Ver grupos}}.
 \item \textbf{\textit{R-G-5 Ver integrantes grupo}}
 \end{itemize}
-Además en este Sprint hemos desarrollado un toolbar para gestionar todas las opciones y mejorar la navegación del usuario en la aplicación.
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth] {menu.png}
-		\caption{Captura del menú de navegación}
-	\end{figure}
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/creargrupo.png}
+ \label{figura1}
+\caption{Crear grupo}
 
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/addintegrante.png}
+ \label{figura2}
+\caption{Añadir usuarios a grupo }
+
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/vergrupos.png}
+ \label{figura1}
+\caption{Ver grupos del usuario}
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/verintegrantes.png}
+ \label{figura2}
+\caption{Ver integrantes del grupo }
+
+\end{minipage}
+\end{figure}
+\newpage
 \subsection{Sprint 6}
-Este Sprint se centrará en ruta individuales.
+Este Sprint se centrará en \textbf{\textit{Iniciar una ruta individual}}.
 
 \begin{itemize}
 \item \textbf{\textit{R-R-1 Crear ruta}}
@@ -132,8 +224,52 @@ Este Sprint se centrará en ruta individuales.
 \item \textbf{\textit{R-R-5 Eliminar ruta}}
 \end{itemize}
 
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/crearruta.png}
+ \label{figura1}
+\caption{Crear ruta}
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/individual-navegacion.png}
+ \label{figura2}
+\caption{Navegación ruta individual }
+
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
+\centering
+\includegraphics[width=6cm]{capturamovil/verruta1.png}
+ \label{figura1}
+\caption{Ruta seguida vista gráfica}
+
+\end{minipage}
+\hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=6cm]{capturamovil/verruta2.png}
+ \label{figura2}
+\caption{Ruta seguida vista satélite  }
+
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth] {capturamovil/listarutas}
+		\caption{Lista de rutas creadas}
+	\end{figure}
+
 \subsection{Sprint 7}
-Este Sprint contiene la funcionalidad más compleja de todas, gestionar una ruta compartida.
+Este Sprint contiene la historia más compleja de todas,\textbf{ \textit{gestionar una ruta compartida}}.
 
 \begin{itemize}
 \item \textbf{\textit{R-R-2 Crear ruta compartida}}
