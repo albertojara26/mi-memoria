@@ -58,12 +58,16 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 		\caption{Diagrama de componentes del sistema }
 	\end{figure}
 
-\section{Modelo de datos}
+\section{Entidad relación}
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.95\textwidth] {BD.jpg}
 		\caption{Entidad relación  }
 	\end{figure}
+	En la figura anterior queda reflejado el modelo  entidad-relación de nuestro sistema. A continuación comentaremos el dominio.\\
+La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI(Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
+ Un caso especial serían las rutas compartidas asociadas a una principal, en las cuales el usuario crea una ruta y después la compartes con otros usuarios. Para  quedar esto reflejado en el entidad-relación tenemos la relación \textit{Asociada-a principal}.
+	
 \section{Servidor}
 Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de servidores , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
 

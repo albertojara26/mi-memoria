@@ -43,8 +43,6 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/dvips.def
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/dvips.def
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/alltt.sty
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/alltt.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
@@ -335,6 +333,9 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT rutas.jpg
 INPUT ./rutas.jpg
 INPUT ./rutas.jpg
+INPUT riesgos.png
+INPUT ./riesgos.png
+INPUT ./riesgos.png
 INPUT maqueta/Iniciar.png
 INPUT ./maqueta/Iniciar.png
 INPUT ./maqueta/Iniciar.png
@@ -446,6 +447,49 @@ INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT subfiles/implementacion.tex
 INPUT subfiles/implementacion.tex
+INPUT jpa.png
+INPUT ./jpa.png
+INPUT ./jpa.png
+INPUT jpa2.png
+INPUT ./jpa2.png
+INPUT ./jpa2.png
+INPUT maps.png
+INPUT ./maps.png
+INPUT ./maps.png
+INPUT click.png
+INPUT ./click.png
+INPUT ./click.png
+INPUT marker.png
+INPUT ./marker.png
+INPUT ./marker.png
+INPUT capturamovil/pdiguardar.png
+INPUT capturamovil/pdiguardar2.png
+INPUT ./capturamovil/pdiguardar2.png
+INPUT ./capturamovil/pdiguardar2.png
+INPUT location.png
+INPUT ./location.png
+INPUT ./location.png
+INPUT location2.png
+INPUT ./location2.png
+INPUT ./location2.png
+INPUT metros.png
+INPUT ./metros.png
+INPUT ./metros.png
+INPUT distancia.png
+INPUT ./distancia.png
+INPUT ./distancia.png
+INPUT firebase.png
+INPUT ./firebase.png
+INPUT ./firebase.png
+INPUT push2.png
+INPUT ./push2.png
+INPUT ./push2.png
+INPUT push.png
+INPUT ./push.png
+INPUT ./push.png
+INPUT sql.png
+INPUT ./sql.png
+INPUT ./sql.png
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot
