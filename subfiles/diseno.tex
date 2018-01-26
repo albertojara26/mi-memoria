@@ -17,8 +17,8 @@ y una capa intermedia llamada de servicios que permite la llamada de forma remot
 
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {arquitectura2.png}
-		\caption{Esquema general de la arquitectura del sistema }
+		\includegraphics[width=\textwidth] {arquitectura2.png}
+		\caption{Esquema general de la arquitectura del sistema }\label{fig:arquitectura2}
 	\end{figure}
 
 
@@ -54,15 +54,15 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 \end{itemize}
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {componentes.jpg}
-		\caption{Diagrama de componentes del sistema }
+		\includegraphics[width=\textwidth] {componentes.jpg}
+		\caption{Diagrama de componentes del sistema }\label{fig:componentes}
 	\end{figure}
 
 \section{Entidad relación}
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.95\textwidth] {BD.jpg}
-		\caption{Entidad relación  }
+		\includegraphics[width=\textwidth] {BD.jpg}
+		\caption{Entidad relación  }\label{fig:BD}
 	\end{figure}
 	En la figura anterior queda reflejado el modelo  entidad-relación de nuestro sistema. A continuación comentaremos el dominio.\\
 La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI(Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
@@ -77,8 +77,9 @@ Durante el desarrollo de este proyecto el servidor ha sido desplegado en un prov
   DigitalOcean, ya que ofrece distintos lugares donde poder ubicar lo hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera más cercano y rápido.
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {arquitectura-servidor.jpg}
+		\includegraphics[width=\textwidth] {arquitectura-servidor.jpg}
 		\caption{Arquitectura del servidor }
+		\label{fig:arquitectura-servidor}
 	\end{figure}
 
 
@@ -122,8 +123,9 @@ Como se mencionó anteriormente para el servicio web usaremos la API REST, esta 
 JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión de la información muy cómodo de usar que emplea pares de clave-valor.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth] {json.PNG}
+		\includegraphics[width=\textwidth] {json.PNG}
 		\caption{JSON }
+		\label{fig:json}
 	\end{figure}
 \subsection{Gestión de las clases persistentes}
 Para gestionar las clases persistentes de nuestro aplicación usaremos el patrón de diseño basado en DAO(Data Access Object).
@@ -134,8 +136,9 @@ Para gestionar las clases persistentes de nuestro aplicación usaremos el patró
 Otro motivo por el cual usamos JpaRepository es que permite extender la creación de una buena seria de métodos de búsqueda por el nombre de los atributos de nuestras clases persistentes simplemente definiendo los como un método de nuestro interfaz del DAO.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {jparepository.PNG}
+		\includegraphics[width=\textwidth] {jparepository.PNG}
 		\caption{Ejemplo de interfaz con JpaRepository }
+		\label{fig:jparepository}
 	\end{figure}
 \section{Aplicación Móvil}
 La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos más relevantes serán expuestos a continuación.
@@ -149,8 +152,9 @@ La capa de presentación será accesible por el usuario a través de una aplicac
 \end{itemize}
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\textwidth] {arquitectura-movil.jpg}
+		\includegraphics[width=\textwidth] {arquitectura-movil.jpg}
 		\caption{Servicios de la aplicación móvil }
+		\label{fig:arquitectura-movil}
 	\end{figure}
 	
 	

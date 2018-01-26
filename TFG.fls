@@ -7,6 +7,14 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/report.cls
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/size11.clo
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/size11.clo
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/listings.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/listings.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/listings.cfg
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/listings.cfg
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/inputenc.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/inputenc.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/base/utf8.def
@@ -31,8 +39,6 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/babel-spanish/spanish.ldf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/generic/babel/babel.def
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/keyval.sty
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/keyval.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/graphics.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/graphics.sty
 INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/graphics/trig.sty
@@ -268,14 +274,9 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/psnfss/ts1ppl.fd
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/psnfss/ts1ppl.fd
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8c.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplro8t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplro8r.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8c.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT subfiles/tecnologia.tex
 INPUT subfiles/tecnologia.tex
 INPUT eclipse.png
@@ -313,6 +314,8 @@ INPUT ./daily.png
 INPUT ./daily.png
 INPUT subfiles/analisis.tex
 INPUT subfiles/analisis.tex
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/psnfss/ts1ppl.fd
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/psnfss/ts1ppl.fd
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8c.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8t.tfm
 INPUT usuario-no-autenticado.jpg
@@ -322,9 +325,12 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8c.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmb.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplbi8t.vf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8r.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8c.tfm
 INPUT PDI.jpg
 INPUT ./PDI.jpg
 INPUT ./PDI.jpg
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8c.vf
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT grupo.jpg
 INPUT ./grupo.jpg
 INPUT ./grupo.jpg
@@ -450,46 +456,22 @@ INPUT subfiles/implementacion.tex
 INPUT jpa.png
 INPUT ./jpa.png
 INPUT ./jpa.png
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT jpa2.png
 INPUT ./jpa2.png
 INPUT ./jpa2.png
-INPUT maps.png
-INPUT ./maps.png
-INPUT ./maps.png
-INPUT click.png
-INPUT ./click.png
-INPUT ./click.png
-INPUT marker.png
-INPUT ./marker.png
-INPUT ./marker.png
 INPUT capturamovil/pdiguardar.png
 INPUT capturamovil/pdiguardar2.png
 INPUT ./capturamovil/pdiguardar2.png
 INPUT ./capturamovil/pdiguardar2.png
-INPUT location.png
-INPUT ./location.png
-INPUT ./location.png
-INPUT location2.png
-INPUT ./location2.png
-INPUT ./location2.png
-INPUT metros.png
-INPUT ./metros.png
-INPUT ./metros.png
-INPUT distancia.png
-INPUT ./distancia.png
-INPUT ./distancia.png
-INPUT firebase.png
-INPUT ./firebase.png
-INPUT ./firebase.png
-INPUT push2.png
-INPUT ./push2.png
-INPUT ./push2.png
-INPUT push.png
-INPUT ./push.png
-INPUT ./push.png
-INPUT sql.png
-INPUT ./sql.png
-INPUT ./sql.png
+INPUT capturamovil/individual-navegacion.png
+INPUT capturamovil/push1.png
+INPUT ./capturamovil/push1.png
+INPUT ./capturamovil/push1.png
+INPUT capturamovil/push2.png
+INPUT ./capturamovil/push2.png
+INPUT ./capturamovil/push2.png
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
 INPUT TFG.lot

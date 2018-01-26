@@ -1,9 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1516789231 "implementacion.tex" "implementacion.pdf" "implementacion" 1516789231
+["pdflatex"] 1516883618 "implementacion.tex" "implementacion.pdf" "implementacion" 1516883618
   "C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm" 1136765053 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "C:/Users/alberto/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1457610529 3708308 c9f6d6323332c89b8e8f35dff22ac383 ""
+  "C:/Users/alberto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1514885453 86376 997302d5652de98e215035cab28e3d73 ""
   "implementacion.aux" 1516119063 9 a94a2480d3289e625eea47cd1b285758 ""
-  "implementacion.tex" 1516789231 3749 0b6f42b6946b715024a8ca52c0e9620d ""
+  "implementacion.tex" 1516883618 11547 75de6348c35fc7682e2d3d1e0847d496 ""
   (generated)
   "implementacion.log"
   "implementacion.pdf"
