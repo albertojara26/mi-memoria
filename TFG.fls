@@ -282,19 +282,17 @@ INPUT subfiles/tecnologia.tex
 INPUT eclipse.png
 INPUT ./eclipse.png
 INPUT ./eclipse.png
-INPUT spring.png
-INPUT ./spring.png
-INPUT ./spring.png
-INPUT dao.png
-INPUT ./dao.png
-INPUT ./dao.png
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT debug.png
 INPUT ./debug.png
 INPUT ./debug.png
 INPUT emulador.png
 INPUT ./emulador.png
 INPUT ./emulador.png
-INPUT debug.png
 INPUT subfiles/ingenieria.tex
 INPUT subfiles/ingenieria.tex
 INPUT scrum.jpg
@@ -330,12 +328,9 @@ INPUT PDI.jpg
 INPUT ./PDI.jpg
 INPUT ./PDI.jpg
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8c.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT grupo.jpg
 INPUT ./grupo.jpg
 INPUT ./grupo.jpg
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7y.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT rutas.jpg
 INPUT ./rutas.jpg
 INPUT ./rutas.jpg
@@ -377,7 +372,6 @@ INPUT subfiles/Planificacion-seguimento.tex
 INPUT coste.png
 INPUT ./coste.png
 INPUT ./coste.png
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplbi8c.tfm
 INPUT capturamovil/pdipesca.png
 INPUT ./capturamovil/pdipesca.png
 INPUT ./capturamovil/pdipesca.png
@@ -390,8 +384,6 @@ INPUT ./capturamovil/pdiguardar.png
 INPUT capturamovil/pdiborrar.png
 INPUT ./capturamovil/pdiborrar.png
 INPUT ./capturamovil/pdiborrar.png
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplbi8c.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmbi.tfm
 INPUT capturamovil/login.png
 INPUT ./capturamovil/login.png
 INPUT ./capturamovil/login.png
@@ -445,22 +437,11 @@ INPUT ./arquitectura-servidor.jpg
 INPUT json.PNG
 INPUT ./json.PNG
 INPUT ./json.PNG
-INPUT jparepository.PNG
-INPUT ./jparepository.PNG
-INPUT ./jparepository.PNG
 INPUT arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT subfiles/implementacion.tex
 INPUT subfiles/implementacion.tex
-INPUT jpa.png
-INPUT ./jpa.png
-INPUT ./jpa.png
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
-INPUT C:/Program Files (x86)/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
-INPUT jpa2.png
-INPUT ./jpa2.png
-INPUT ./jpa2.png
 INPUT capturamovil/pdiguardar.png
 INPUT capturamovil/pdiguardar2.png
 INPUT ./capturamovil/pdiguardar2.png
@@ -474,9 +455,6 @@ INPUT ./capturamovil/push2.png
 INPUT ./capturamovil/push2.png
 INPUT subfiles/conclusiones.tex
 INPUT subfiles/conclusiones.tex
-INPUT TFG.lot
-INPUT TFG.lot
-OUTPUT TFG.lot
 INPUT TFG.lof
 INPUT TFG.lof
 OUTPUT TFG.lof

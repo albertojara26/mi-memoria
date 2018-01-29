@@ -9,15 +9,25 @@ En capítulos anteriores ya comentamos la estructura de paquetes seguida para de
 JpaRepository es un repositorio que nos ofrece métodos genéricos de gestión de clases persistentes como también métodos mas concreto que nos permiten realizar operaciones complejas abstrayendonos de su implementacion.
 
 Ademas este repositorio se adapta a la clase con la que va a trabajar.
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {jpa.png}
-		\caption{UsuarioRepository}
-		\label{fig:jpa}
-	\end{figure}
+\begin{lstlisting}[language=java,
+ ,backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}]
+    
+public interface UsuarioRepository 
+extends JpaRepository<Usuario, Long> {
+		}
+
+\end{lstlisting} 
 	
 
 
+
+
+	
+Como se puede ver en la figura anterior, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
 
 \begin{lstlisting}[language=java,
  ,backgroundcolor=\color{backcolour},   
@@ -25,23 +35,35 @@ Ademas este repositorio se adapta a la clase con la que va a trabajar.
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple}]
-  @Autowired
-	private UsuarioService usuarioService;
+    
+public interface UsuarioRepository 
+extends JpaRepository<Usuario, Long> {
 
-	@Autowired
-	private GrupoService grupoService;
+	public Usuario findByCorreo(String correo);
 
-	@Test
-	public void testprueba() {
-\end{lstlisting}
-	
-Como se puede ver en la figura anterior, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {jpa2.png}
-		\caption{UsuarioRepository métodos}
-	\end{figure}
+	public Usuario findByNombre(String nombre);
 
+	public List<Usuario> findByNombreContaining
+		(String nombre);
+
+	@Override
+	public <S extends Usuario> S save(S usuario);
+
+	@Override
+	public void delete(Long idUsuario);
+
+	@Override
+	public boolean exists(Long idUsuario);
+
+	@Override
+	public <S extends Usuario> S saveAndFlush(S usuario);
+
+	@Override
+	public Usuario findOne(Long idUsuario);
+	}
+
+
+\end{lstlisting} 
 
 \newpage
 
@@ -128,12 +150,12 @@ protected Marker createMarkerPesca(double
  
  
  
- Y así es como quedaría.  
+ Y así es como quedaría en la Figura~\ref{fig:marker}  
 
  
  
  
-	\begin{figure}[H]
+	\begin{figure}
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/pdiguardar.png}
@@ -149,6 +171,8 @@ protected Marker createMarkerPesca(double
 \caption{Marker después }
 
 \end{minipage}
+		\label{fig:marker}
+
 \end{figure} 
  
  
@@ -187,8 +211,11 @@ El método ofrece el par de coordenadas cuando el usuario se mueve X metros o bi
 
 
 Como se puede observar en la figura anterior en nuestro proyecto indicamos que los segundos que deberían transcurrir para devolver una coordenadas sería de 15.\\
-Cuando nosotros estamos realizando la ruta en ocasiones el GPS pierde precisión y sitúa al usuario en punto un tanto lejano, lo cual es imposible ya que no se puede mover tan rápido. Este error del GPS lo hemos resuelto de la siguiente manera.
+Cuando nosotros estamos realizando la ruta en ocasiones el GPS pierde precisión y sitúa al usuario en punto un tanto lejano, lo cual es imposible ya que no se puede mover tan rápido. Este error del GPS lo hemos resuelto de la siguiente manera.\\
 
+
+
+\newpage
 \begin{lstlisting}[language=java,
  ,backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -206,16 +233,16 @@ Cuando nosotros estamos realizando la ruta en ocasiones el GPS pierde precisión
       double distance = location1.distanceTo(location2);
 \end{lstlisting}
 
-En este código lo que hacemos es calcular la distancia entre dos puntos consecutivos. Este método pertenece a la API, para calcularla necesita el par de coordenadas y el ya se encarga de tener en cuenta la curvatura de la tierra para hacer la medición. Si esta distancia es superior a 15 metros desechamos ese punto.
+En este código lo que hacemos es calcular la distancia entre dos puntos consecutivos. Usamos un método que pertenece a la API,  el cual necesita un par de coordenadas. El dato que devuelve viene dado en metros y viene dado tiene en cuenta la curvatura de la tierra para calcularlo. Si esta distancia es superior a 15 metros desechamos ese punto.
 
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth] {capturamovil/individual-navegacion.png}
-		\caption{Visualización de la ruta}
+		\caption{Visualización de la ruta mientras se realiza}
 	\end{figure}
 	
 \subsubsection{Firebase} 
-Cuando el usuario inicia una ruta compartida la forma en la que avisa al resto de usuario que la acaba de iniciar es mediante las Notificaciones Push con Firebase. Para ello tenemos que empezar añadiendo las dependencias siguientes.
+Cuando el usuario inicia una ruta compartida el sistema avisa al resto de integrantes de grupo de que acaban de ser invitados a ella, esta acción la realizamos mediante las Notificaciones Push con Firebase. Para ello tenemos que empezar añadiendo las dependencias siguientes.
 
 	\begin{lstlisting}[language=java,
  ,backgroundcolor=\color{backcolour},   
@@ -274,7 +301,7 @@ En la siguiente captura veríamos la notificación en el móvil.
 	
 \section{Pruebas}
 Las pruebas son un tema muy importante a tener en cuenta en cualquier proyecto de software. Nos permiten conoces ciertos aspectos que fallan en el sistema de manera objetiva y conocer ciertos riesgos que se nos pasaron por alto en la implementacion.
-Dado que usamos la metodología Scrum y como describimos en el capitulo de Seguimiento al final de cada Sprint se harán las pruebas para esas historias de usuario.
+Dado que usamos la metodología Scrum y como describimos en el capitulo de seguimiento al final de cada Sprint se harán las pruebas para esas historias de usuario.
 
 
 

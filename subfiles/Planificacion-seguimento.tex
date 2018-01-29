@@ -81,7 +81,7 @@ En este primer Sprint nos centraremos en las tareas relacionadas con la capa int
  
 \subsection{Sprint 3}
 
-En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. La historia que se implementará será \textit{Gestión de puntos de interés (PDI)\textbf{•}}, los casos de uso realizados son los siguientes:
+En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. Las historias que se implementarán serán \textbf{creación de los puntos de interés (caza y pesca)},\textbf{ búsqueda de PDIs por tipo} y \textbf{borrado de PDIs} los casos de uso realizados son los siguientes:
 
 \begin{itemize}
 
@@ -134,7 +134,8 @@ En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenz
 
 \subsection{Sprint 4}
 
-En este Sprint nos centraremos en la historia \textbf{\textit{Iniciar sesión }}, que contiene los siguientes casos de uso:
+En este Sprint nos centraremos en las historias de  \textbf{Iniciar sesión }
+\textbf{Registro} contiene los siguientes casos de uso:
 
 
 
@@ -167,29 +168,48 @@ Además en este Sprint hemos desarrollado un toolbar para gestionar todas las op
 		\caption{Captura del menú de navegación}
 	\end{figure}
 \subsection{Sprint 5}
-Este Sprint se centrará en la historia \textbf{\textit{Gestión de grupos}} que contiene los siguientes casos de uso:
+Este Sprint se centrará en las historias:
+
 \begin{itemize}
-\item\textbf{ \textit{R-G-1 Crear grupo}}
-\item\textbf{\textit{ R-G-2 Añadir integrantes}}
-\item \textbf{\textit{R-G-3 Eliminar integrantes}},
-\item \textbf{\textit{R-G-4 Ver grupos}}.
-\item \textbf{\textit{R-G-5 Ver integrantes grupo}}
+\item \textbf{\textit{Creación de grupos}}, contiene los siguientes casos de uso:
+\begin{itemize}
+\item\textbf{ \textit{R-G-1 Crear grupo}}  Figura~\ref{fig:creargrupo}
+\item\textbf{\textit{ R-G-2 Añadir integrantes}} Figura~\ref{fig:addintegrante}
 \end{itemize}
+\item \textbf{\textit{Eliminar grupos}}, que contiene el siguiente caso de uso:
+\begin{itemize}
+\item   \textbf{\textit{R-G-3 Eliminar integrantes}}
+\end{itemize}
+\item \textbf{\textit{Visualización de grupos}} ,  contiene los siguientes casos de uso:
+\begin{itemize}
+\item \textbf{\textit{R-G-4 Ver grupos}}  Figura~\ref{fig:vergrupos}
+
+\item  \textbf{\textit{R-G-5 Ver integrantes grupo}} Figura~\ref{fig:verintegrantes}
+
+\end{itemize}
+\end{itemize}
+
+
+ 
+
+
+
+
 \begin{figure}[htbp]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/creargrupo.png}
- \label{figura1}
 \caption{Crear grupo}
+ \label{fig:creargrupo}
 
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/addintegrante.png}
- \label{figura2}
-\caption{Añadir usuarios a grupo }
 
+\caption{Añadir usuarios a grupo }
+ \label{fig:addintegrante}
 \end{minipage}
 \end{figure}
 
@@ -198,47 +218,75 @@ Este Sprint se centrará en la historia \textbf{\textit{Gestión de grupos}} que
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/vergrupos.png}
- \label{figura1}
 \caption{Ver grupos del usuario}
+ \label{fig:vergrupos}
 
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/verintegrantes.png}
- \label{figura2}
 \caption{Ver integrantes del grupo }
+ \label{fig:verintegrantes}
 
 \end{minipage}
 \end{figure}
 \newpage
 \subsection{Sprint 6}
-Este Sprint se centrará en \textbf{\textit{Iniciar una ruta individual}}.
+Este Sprint se centrará en \textbf{Iniciar una ruta individual}.
 
 \begin{itemize}
-\item \textbf{\textit{R-R-1 Crear ruta}}
+\item Creación de la ruta, contiene los siguientes casos de uso:
+
+\begin{itemize}
+\item \textbf{\textit{R-R-1 Crear ruta}} Figura~\ref{fig:crearruta}
 \item \textbf{\textit{R-R-1.1 Iniciar ruta}}
 \item\textbf{ \textit{R-R-1.2 Parar ruta}}
-\item \textbf{\textit{R-R-1.3 Guardar ruta}}
-\item \textbf{\textit{R-R-3 Listar rutas} }
-\item \textbf{\textit{R-R-4 Ver ruta en mapa}}
-\item \textbf{\textit{R-R-5 Eliminar ruta}}
+\item \textbf{\textit{R-R-1.3 Guardar ruta}} 
 \end{itemize}
+Figura~\ref{fig:individual-navegacion} uniendo los catos de uso R-R-1.1, R-R-1.2 y R-R-1.3 .
+\item Ver las rutas seguidas por el usuario
+
+\begin{itemize}
+\item \textbf{\textit{R-R-3 Listar rutas} } Figura \ref{fig:listarutas}
+
+\end{itemize}
+\item Ver una ruta en el mapa 
+
+\begin{itemize}
+\item \textbf{\textit{R-R-4 Ver ruta en mapa}}
+
+\end{itemize}
+\item Eliminar ruta
+
+\begin{itemize}
+\item \textbf{\textit{R-R-5 Eliminar ruta}} Figura~\ref{fig:verruta1}
+
+\end{itemize}
+
+\end{itemize}
+
+
+
+
+
+
+
 
 \begin{figure}[htbp]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/crearruta.png}
- \label{figura1}
 \caption{Crear ruta}
+ \label{fig:crearruta}
 
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/individual-navegacion.png}
- \label{figura2}
 \caption{Navegación ruta individual }
+ \label{fig:individual-navegacion}
 
 \end{minipage}
 \end{figure}
@@ -248,8 +296,8 @@ Este Sprint se centrará en \textbf{\textit{Iniciar una ruta individual}}.
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/verruta1.png}
- \label{figura1}
-\caption{Ruta seguida vista gráfica}
+\caption{Eliminar ruta}
+ \label{fig:verruta1}
 
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
@@ -267,10 +315,11 @@ Este Sprint se centrará en \textbf{\textit{Iniciar una ruta individual}}.
 		\centering
 		\includegraphics[width=0.5\textwidth] {capturamovil/listarutas}
 		\caption{Lista de rutas creadas}
+		 \label{fig:listarutas}
 	\end{figure}
 \newpage
 \subsection{Sprint 7}
-Este Sprint contiene la historia más compleja de todas,\textbf{ \textit{gestionar una ruta compartida}}.
+Este Sprint contiene la historia más compleja de todas,\textbf{ gestionar una ruta compartida}.
 
 \begin{itemize}
 \item \textbf{\textit{R-R-2 Crear ruta compartida}}
@@ -278,6 +327,15 @@ Este Sprint contiene la historia más compleja de todas,\textbf{ \textit{gestion
 \item \textbf{\textit{R-R-2.2 Parar ruta}}
 \item \textbf{\textit{R-R-2.3 Finalizar ruta}}
 \end{itemize}
+
+
+
+
+
+
+
+
+
 
 \subsection{Sprint 8}
 

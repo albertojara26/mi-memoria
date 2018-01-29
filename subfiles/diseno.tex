@@ -10,12 +10,12 @@ móvil.
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. Este patrón arquitectónico cliente/servidor se diferencian tres
 capas, una capa de interface de usuario , una capa de persistencia
-y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente. Este esquema esta compuesto por:
+y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente. Este esquema se puede apreciar en la Figura~\ref{fig:arquitectura2}. Este esquema esta compuesto por:
 
 
 
 
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {arquitectura2.png}
 		\caption{Esquema general de la arquitectura del sistema }\label{fig:arquitectura2}
@@ -52,30 +52,30 @@ Esta formada por el interfaz donde se realizan las llamadas entre el servicio we
 \item \textbf{Controlador:}
 Esta capa será la encargada de implementar la lógica del interface llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
 \end{itemize}
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {componentes.jpg}
 		\caption{Diagrama de componentes del sistema }\label{fig:componentes}
 	\end{figure}
-
+ Esta descripcion anteriormente reflejada representa a la siguiente Figura~\ref{fig:componentes}
 \section{Entidad relación}
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth] {BD.jpg}
 		\caption{Entidad relación  }\label{fig:BD}
 	\end{figure}
-	En la figura anterior queda reflejado el modelo  entidad-relación de nuestro sistema. A continuación comentaremos el dominio.\\
+	En la Figura~\ref{fig:BD} queda reflejado el modelo  entidad-relación de nuestro sistema. A continuación comentaremos el dominio.\\
 La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI(Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
  Un caso especial serían las rutas compartidas asociadas a una principal, en las cuales el usuario crea una ruta y después la compartes con otros usuarios. Para  quedar esto reflejado en el entidad-relación tenemos la relación \textit{Asociada-a principal}.
 	
 \section{Servidor}
-Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de servidores , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente.
+Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de servidores , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente. La arquitectura del servidor la podremos ver en la Figura~\ref{fig:arquitectura-servidor}
 
 La solución mencionada anteriormente será un servidor, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
 
 Durante el desarrollo de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
   DigitalOcean, ya que ofrece distintos lugares donde poder ubicar lo hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera más cercano y rápido.
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {arquitectura-servidor.jpg}
 		\caption{Arquitectura del servidor }
@@ -84,7 +84,7 @@ Durante el desarrollo de este proyecto el servidor ha sido desplegado en un prov
 
 
 \subsection{Servicio web}
- La comunicación en esta capa se hará mediante una API. Una API describE la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST, un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
+ La comunicación en esta capa se hará mediante una API. Una API describe la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST, un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
  
 
 \begin{itemize}
@@ -120,8 +120,8 @@ A aplicación del servidor sigue un arquetipo en 5 paquetes distintos de clases 
 \textbf{es.udc.fi.dc.test} Contiene las clases que realizan los test.
 \subsection{Transmisión de la información}
 Como se mencionó anteriormente para el servicio web usaremos la API REST, esta necesita un lenguaje de intercambio para la transmisión de información. El formato que seguiremos para la transmisión será el JSON y como parseador Jackson.
-JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión de la información muy cómodo de usar que emplea pares de clave-valor.
-	\begin{figure}[H]
+JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión de la información muy cómodo de usar que emplea pares de clave-valor. 	Ejemplo de Json en la Figura~\ref{fig:json}
+	\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {json.PNG}
 		\caption{JSON }
@@ -134,12 +134,50 @@ Para gestionar las clases persistentes de nuestro aplicación usaremos el patró
 
 
 Otro motivo por el cual usamos JpaRepository es que permite extender la creación de una buena seria de métodos de búsqueda por el nombre de los atributos de nuestras clases persistentes simplemente definiendo los como un método de nuestro interfaz del DAO.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {jparepository.PNG}
-		\caption{Ejemplo de interfaz con JpaRepository }
-		\label{fig:jparepository}
-	\end{figure}
+	
+	
+	
+	
+	
+	\begin{lstlisting}[language=java,
+ ,backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}]
+    
+public interface UsuarioRepository 
+	extends JpaRepository<Usuario, Long> {
+
+	public Usuario findByCorreo(String correo);
+
+	public Usuario findByNombre(String nombre);
+
+	public List<Usuario> findByNombreContaining
+		(String nombre);
+
+	@Override
+	public <S extends Usuario> S save(S usuario);
+
+	@Override
+	public void delete(Long idUsuario);
+
+	@Override
+	public boolean exists(Long idUsuario);
+
+	@Override
+	public <S extends Usuario> S saveAndFlush(S usuario);
+
+	@Override
+	public Usuario findOne(Long idUsuario);
+	}
+
+
+\end{lstlisting} 
+	
+	
+	
+	
 \section{Aplicación Móvil}
 La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos más relevantes serán expuestos a continuación.
 

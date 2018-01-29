@@ -4,8 +4,8 @@ Una buena elección de la tecnología será una condición necesaria, aunque no 
 En esta sección explicaremos los entornos en los que se trabajo a la hora de desarrollar este proyecto, comentando los fundamento usados en ellos. 
 
 \section{Eclipse Java EE IDE for Web Developers Version Neon2 }
-Herramienta para desarrolladores  integrado (IDE)  en Java para el desarrollo de software. Fue creado por IBM como sucesor de uno de sus herramientas y ahora esta en manos de la Fundación Eclipse que es quien se encarga de seguir desarrollandolo.
- Esta herramienta de desarrollo es totalmente gratuita por lo que no encarece el precio del proyecto. Se decidió usar esta herramienta por el parecido que tiene con el entorno de Android y sus facilidades para la creación de código.
+Herramienta para desarrolladores  integrado (IDE)(Figura~\ref{fig:eclipse})  en Java para el desarrollo de software. Fue creado por IBM como sucesor de uno de sus herramientas y ahora esta en manos de la Fundación Eclipse que es quien se encarga de seguir desarrollandolo.
+ Esta herramienta de desarrollo es totalmente gratuita por lo que no encarece el precio del proyecto. Se decidió usar esta herramienta por el parecido que tiene con el entorno de Android y sus facilidades para la creación de código. 
 \begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {eclipse.png}
@@ -18,11 +18,32 @@ Herramienta para desarrolladores  integrado (IDE)  en Java para el desarrollo de
 \section{Spring}
 Spring es un framework de código abierto que tiene como objetivo ayudar al desarrollador a trabajar con otras APIs de manera más sencilla. Nos proporciona un modelo de programación y configuración integral para aplicaciones empresariales basadas en Java, en cualquier tipo de plataforma de implementación. Simplemente es necesario añadir una dependencia, si se usa Eclipse, en el archivo pom.xml. 
 
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {spring.png}
-		\caption{Dependencia de Spring en el pom.xml }\label{fig:spring}
-	\end{figure}
+
+	
+	
+	
+	
+\begin{lstlisting}[language=java,
+ ,backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}]
+ <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context</artifactId>
+	<version>4.3.6.RELEASE</version>
+</dependency>
+
+
+\end{lstlisting} 	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 Como funcionalidades principales que nos ofrece y por ello elegí, serían:
@@ -33,11 +54,29 @@ Como funcionalidades principales que nos ofrece y por ello elegí, serían:
 
 \item\textbf{ Inyección de dependencias}, patrón que ayuda a reducir el acoplamiento entre los distintos componentes de la aplicación. Esto lo consigue haciendo que una clase le proporcione a otra sus dependencias haciendo que la otra no tenga que crearlas ella misma. De este modo atreves de un interfaz una clase tienes las dependencias de otra sin tener que preocuparse de la implementacion de las mismas, lo que es favorable para reducir el acoplamiento.
 
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {dao.png}
-		\caption{Ejemplo de inyección de dependencia }\label{fig:dao}
-	\end{figure}
+
+
+
+
+\begin{lstlisting}[language=java,
+ ,backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}]  
+@Service
+public class GrupoServiceImpl implements GrupoService {
+
+	@Autowired
+	GrupoRepository grupoDAO;
+
+	public void setGrupoDAO(GrupoRepository grupoDAO) {
+		this.grupoDAO = grupoDAO;
+	}
+
+
+\end{lstlisting} 
+
 
 
 \end{itemize}
@@ -57,19 +96,14 @@ Ademas se ser una potente herramienta para la creación de código permite:
 
 \item Generar un APK (Android Application Package) para la ejecución de nuestra aplicación móvil tanto de forma simulada ayudándonos del simulador que nos proporciona o usando un móvil.
 \end{itemize}
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=0.6\textwidth] {emulador.png}
 		\caption{Emulador de Android con mi aplicación}
 		\label{fig:emulador}
 	\end{figure}
  
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth] {debug.png}
-		\caption{Entorno de trabajo Android Studio }
-		\label{fig:debug}
-	\end{figure}
+
 
 
 \section{Git}
