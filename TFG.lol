@@ -1,3 +1,4 @@
+\contentsline {lstlisting}{\numberline {2.1}Inyecci\IeC {\'o}n de dependencias}{13}{lstlisting.2.1}
 \contentsline {lstlisting}{\numberline {6.1}JpaRepository}{60}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {7.1}Adaptaci\IeC {\'o}n a la clase Usuario}{63}{lstlisting.7.1}
 \contentsline {lstlisting}{\numberline {7.2}Interfaz de UsuarioRepository}{64}{lstlisting.7.2}

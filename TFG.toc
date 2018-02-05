@@ -9,11 +9,11 @@
 \contentsline {section}{\numberline {2.3}Spring}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Android Studio}{13}{section.2.4}
 \contentsline {section}{\numberline {2.5}Git}{14}{section.2.5}
-\contentsline {section}{\numberline {2.6}Maven}{14}{section.2.6}
+\contentsline {section}{\numberline {2.6}Maven}{16}{section.2.6}
 \contentsline {section}{\numberline {2.7}Gradle}{16}{section.2.7}
 \contentsline {section}{\numberline {2.8}Jackson}{16}{section.2.8}
-\contentsline {section}{\numberline {2.9}JPA/Hibernate}{16}{section.2.9}
-\contentsline {section}{\numberline {2.10}PostgreSQL}{16}{section.2.10}
+\contentsline {section}{\numberline {2.9}Hibernate}{16}{section.2.9}
+\contentsline {section}{\numberline {2.10}PostgreSQL}{17}{section.2.10}
 \contentsline {section}{\numberline {2.11}JUnit}{17}{section.2.11}
 \contentsline {chapter}{\numberline {3}Proceso de ingenier\IeC {\'\i }a}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Scrum}{19}{section.3.1}
