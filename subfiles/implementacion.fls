@@ -4,4 +4,5 @@ INPUT implementacion.tex
 OUTPUT implementacion.log
 OUTPUT implementacion.pdf
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
 INPUT C:/Users/alberto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map

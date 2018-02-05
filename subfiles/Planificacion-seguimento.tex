@@ -7,7 +7,7 @@
 Una vez hecho el análisis, conocidos los objetivos que se quieren alcanzar en este proyecto y las herramientas que se utilizarán  empezaremos con la planificación del mismo.
 
 Un punto muy  importante a tener en cuenta a la hora de realizar una planificación sería conocer los recursos y el tiempo del que disponemos.
-Éste punto tan crucial se acentúa ya que este proyecto será realizado por una única persona lo que producirá sobrecargas en la planificación. Esto normalmente no es así ya que los proyectos se realizan por grupos de trabajos y muchas tareas pueden realizarse en paralelo disminuyendo apreciablemente la duración del proyecto.
+Este punto tan crucial se acentúa ya que este proyecto será realizado por una única persona lo que producirá sobrecargas en la planificación. Esto normalmente no es así ya que los proyectos se realizan por grupos de trabajos y muchas tareas pueden realizarse en paralelo disminuyendo apreciablemente la duración del proyecto.
 
 Para realizar la planificación del proyecto hemos dividido el proyecto en tareas con unos objetivos bien marcados(Product Backlog). A su vez al seguir la metodología Scrum dividimos el proyecto en etapas(Sprint) de tiempo donde incluimos las tareas a realizar.
  En todas estas etapas incluimos los siguientes pasos:
@@ -32,7 +32,7 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 
 \section{Duración  y costes}
  A continuación en la tabla siguiente se ha realizado una estimación de tiempos y de costes de este proyecto.
- Cuando se realiza una estimación de costes tenemos que tener en cuenta los gastos en material, licencias y los gastos propios. En mi caso los gastos de materias y de licencias es nulo ya que el material es el del alumno y licencias y gastos propios son nulos.
+ Cuando se realiza una estimación de costes tenemos que tener en cuenta los gastos en material, licencias y los gastos propios. En mi caso los gastos de material y de licencias es nulo ya que el material es el del alumno y licencias y gastos propios son nulos.
  En la siguiente tabla se detalla el esfuerzo horas-hombre de cada uno de los roles dentro del proyecto. 
  
  La jornada laboral sería de 5 horas y la duración de cada Sprint 20 días, lo que nos hace obtener el siguiente coste:
@@ -54,7 +54,7 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 \item En el rol de director de proyecto estarían los que 
 supervisan y evalúan el proyecto. En este caso los directores realizarán este rol.
 
-\item Analista/programador Junior, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por mi yo me encargaría de este rol.
+\item Analista/programador Junior, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por mí yo me encargaría de este rol.
 
 
 
@@ -68,7 +68,7 @@ Como se comentó a lo largo de este capítulo la metodología usada será  Scrum
 
 
 
- Antes de empezar con los Sprint comenzamos creando el Product Backlog. Ésto es una lista con todas las funcionalidades del la aplicación priorizadas de más a menos importancia para nuestro proyecto. 
+ Antes de empezar con los Sprint comenzamos creando el Product Backlog. Esto es una lista con todas las funcionalidades del la aplicación priorizadas de más a menos importancia para nuestro proyecto. 
 
 \subsection{Sprint 1}
 
@@ -77,18 +77,18 @@ En este primer Sprint nos centraremos en las tareas relacionadas con la capa int
 
 \subsection{Sprint 2}
  Una vez implementado el servicio Rest, el objetivo en este Sprint será hacer las pruebas para él.
- Una vez acabas las pruebas el siguiente paso dentro de esté Sprint será la creación de las maquetas que servirán para la capa de presentación/cliente, es decir, el interface del usuario. Estas maquetas se irán revisando y refinando a lo largo del proyecto.
+ Una vez acabas las pruebas el siguiente paso dentro de este Sprint será la creación de las maquetas que servirán para la capa de presentación/cliente, es decir, el interface del usuario. Estas maquetas se irán revisando y refinando a lo largo del proyecto.
  
 \subsection{Sprint 3}
 
-En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya nos proporciona los datos necesarios para guardar puntos y rutas. Las historias que se implementarán serán \textbf{creación de los puntos de interés (caza y pesca)},\textbf{ búsqueda de PDIs por tipo} y \textbf{borrado de PDIs} los casos de uso realizados son los siguientes:
+En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya que nos proporciona los datos necesarios para guardar puntos y rutas. Las historias que se implementarán serán \textbf{creación de los puntos de interés (caza y pesca)},\textbf{ búsqueda de PDIs por tipo} y \textbf{borrado de PDIs} los casos de uso realizados son los siguientes:
 
 \begin{itemize}
 
-\item\textbf{\textit{ R-PDI-1 Guardar Punto De Interés caza}}
-\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}
-\item \textbf{\textit{R-PDI-3 Eliminar PDI}}
-\item \textbf{\textit{R-PDI-4 Buscar los PDI}}
+\item\textbf{\textit{ R-PDI-1 Guardar Punto De Interés caza}}  ( vea Figura \ref{fig:pdicaza})
+\item\textit{ \textbf{R-PDI-2 Guardar Punto De Interés pesca}}  ( vea Figura \ref{fig:pdipesca})
+\item \textbf{\textit{R-PDI-3 Eliminar PDI}}  ( vea Figura \ref{fig:pdiborrar})
+\item \textbf{\textit{R-PDI-4 Buscar los PDI}}  ( vea Figura \ref{fig:pdiguardar})
 \end{itemize} 
 
 
@@ -96,17 +96,17 @@ En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenz
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/pdipesca.png}
- \label{figura1}
+ 
 \caption{PDI pesca}
-
+\label{fig:pdipesca}
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/pdicaza.png}
- \label{figura2}
-\caption{PDI caza}
 
+\caption{PDI caza}
+\label{fig:pdicaza}
 \end{minipage}
 \end{figure}
 
@@ -116,17 +116,17 @@ En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenz
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/pdiguardar.png}
- \label{figura1}
-\caption{Guardar PDI}
 
+\caption{Guardar PDI}
+\label{fig:pdiguardar}
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/pdiborrar.png}
- \label{figura2}
-\caption{Borrar PDI }
 
+\caption{Borrar PDI }
+\label{fig:pdiborrar}
 \end{minipage}
 \end{figure}
 
@@ -140,25 +140,25 @@ En este Sprint nos centraremos en las historias de  \textbf{Iniciar sesión }
 
 
 \begin{itemize}
-\item\textbf{ \textit{R1  Registrarse en la aplicación.}}
-\item \textbf{\textit{R2 Iniciar sesión en la aplicación. }}
+\item\textbf{ \textit{R1  Registrarse en la aplicación.}}  ( vea Figura \ref{fig:login})
+\item \textbf{\textit{R2 Iniciar sesión en la aplicación. }}  ( vea Figura \ref{fig:registro})
 
 \end{itemize} 
 \begin{figure}[htbp]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/login.png}
- \label{figura1}
-\caption{Iniciar sesión }
 
+\caption{Iniciar sesión }
+\label{fig:login}
 \end{minipage}
 \hspace{0.5cm} % Si queremos tener un poco de espacio entre las dos figuras
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/registro.png}
- \label{figura2}
-\caption{Registro del usuario }
 
+\caption{Registro del usuario }
+\label{fig:registro}
 \end{minipage}
 \end{figure}
 Además en este Sprint hemos desarrollado un toolbar para gestionar todas las opciones y mejorar la navegación del usuario en la aplicación.
@@ -173,8 +173,8 @@ Este Sprint se centrará en las historias:
 \begin{itemize}
 \item \textbf{\textit{Creación de grupos}}, contiene los siguientes casos de uso:
 \begin{itemize}
-\item\textbf{ \textit{R-G-1 Crear grupo}}  Figura~\ref{fig:creargrupo}
-\item\textbf{\textit{ R-G-2 Añadir integrantes}} Figura~\ref{fig:addintegrante}
+\item\textbf{ \textit{R-G-1 Crear grupo}} (vea  Figura~\ref{fig:creargrupo})
+\item\textbf{\textit{ R-G-2 Añadir integrantes}}( vea Figura~\ref{fig:addintegrante})
 \end{itemize}
 \item \textbf{\textit{Eliminar grupos}}, que contiene el siguiente caso de uso:
 \begin{itemize}
@@ -182,9 +182,9 @@ Este Sprint se centrará en las historias:
 \end{itemize}
 \item \textbf{\textit{Visualización de grupos}} ,  contiene los siguientes casos de uso:
 \begin{itemize}
-\item \textbf{\textit{R-G-4 Ver grupos}}  Figura~\ref{fig:vergrupos}
+\item \textbf{\textit{R-G-4 Ver grupos}} (vea Figura~\ref{fig:vergrupos})
 
-\item  \textbf{\textit{R-G-5 Ver integrantes grupo}} Figura~\ref{fig:verintegrantes}
+\item  \textbf{\textit{R-G-5 Ver integrantes grupo}} ( veaFigura~\ref{fig:verintegrantes})
 
 \end{itemize}
 \end{itemize}
@@ -239,7 +239,7 @@ Este Sprint se centrará en \textbf{Iniciar una ruta individual}.
 \item Creación de la ruta, contiene los siguientes casos de uso:
 
 \begin{itemize}
-\item \textbf{\textit{R-R-1 Crear ruta}} Figura~\ref{fig:crearruta}
+\item \textbf{\textit{R-R-1 Crear ruta}} (vea Figura~\ref{fig:crearruta})
 \item \textbf{\textit{R-R-1.1 Iniciar ruta}}
 \item\textbf{ \textit{R-R-1.2 Parar ruta}}
 \item \textbf{\textit{R-R-1.3 Guardar ruta}} 
@@ -248,19 +248,19 @@ Figura~\ref{fig:individual-navegacion} uniendo los catos de uso R-R-1.1, R-R-1.2
 \item Ver las rutas seguidas por el usuario
 
 \begin{itemize}
-\item \textbf{\textit{R-R-3 Listar rutas} } Figura \ref{fig:listarutas}
+\item \textbf{\textit{R-R-3 Listar rutas} } ( vea Figura \ref{fig:listarutas})
 
 \end{itemize}
 \item Ver una ruta en el mapa 
 
 \begin{itemize}
-\item \textbf{\textit{R-R-4 Ver ruta en mapa}}
+\item \textbf{\textit{R-R-4 Ver ruta en mapa}}  ( vea Figura \ref{fig:verruta})
 
 \end{itemize}
 \item Eliminar ruta
 
 \begin{itemize}
-\item \textbf{\textit{R-R-5 Eliminar ruta}} Figura~\ref{fig:verruta1}
+\item \textbf{\textit{R-R-5 Eliminar ruta}} ( vea Figura~\ref{fig:verruta1})
 
 \end{itemize}
 
@@ -304,9 +304,9 @@ Figura~\ref{fig:individual-navegacion} uniendo los catos de uso R-R-1.1, R-R-1.2
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/verruta2.png}
- \label{figura2}
+ 
 \caption{Ruta seguida vista satélite  }
-
+\label{fig:verruta}
 \end{minipage}
 \end{figure}
 
@@ -339,5 +339,5 @@ Este Sprint contiene la historia más compleja de todas,\textbf{ gestionar una r
 
 \subsection{Sprint 8}
 
-Por ultimo en este Sprint se realizaran las pruebas finales, cierre del proyecto y la redacción de la memoria.
+Por último en este Sprint se realizarán las pruebas finales, cierre del proyecto y la redacción de la memoria.
 

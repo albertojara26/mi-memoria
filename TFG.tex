@@ -64,6 +64,47 @@
 
 
 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \setlength{\textwidth}{14.5cm}
 \setlength{\textheight}{19.5cm}
 \setlength{\oddsidemargin}{0.96cm}
@@ -87,10 +128,15 @@
 % Title Page
 \title{This is my title}
 \author{I am the author}
-\begin{document}
+
+\renewcommand\lstlistingname{Código}
+\renewcommand\lstlistlistingname{Código}\begin{document}
 \def\tablename{Tabla}
 \def\listtablename{Índice de Tablas}
 \def\listfigurename{Índice de Figuras}
+\def\lstlistlistingname{Indice de Códigos}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Portada
@@ -244,7 +290,7 @@ Director
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
 \vspace*{\stretch{1}}
-\hfill \emph{Dedicatoria}
+\hfill \emph{A mi familia}
 \vspace*{\stretch{1}}
 \end{titlepage}
 \cleardoublepage
@@ -287,7 +333,7 @@ Director
 \begin{tabular}{c}
 \hspace{10cm} \ \\
 \end{tabular}\\
-{\small \textsc{ First keyword, second keyword, etc.}}\\
+{\small \textsc{Android, GPS, localización, Firebase, Spring, seguimento, Scrum}}\\
 \end{titlepage}
 \cleardoublepage
 
@@ -319,8 +365,6 @@ Director
         \label{intro}
         \input{subfiles/introduccion}
         \cleardoublepage
-
-
 
 \chapter{Tecnología}
         \label{tec}
@@ -358,6 +402,10 @@ Director
 
 \listoffigures
 \cleardoublepage
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Índice de Códigos}
+\lstlistoflistings
+\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Apéndices
@@ -376,8 +424,58 @@ Director
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliografía
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{alpha}
-\bibliography{references}
+\begin{thebibliography}{9}
+
+\bibitem{1} 
+\textit {Google, Inc. [2014]. Material design guidelines.}\\
+\url {https://material.io/guidelines/ }
+ 
+ 
+\bibitem{2} 
+\textit{Google, Inc. [n.d.]. Google's android developer guide.}\\
+\url {https://developer.android.com}
+ 
+ 
+ \bibitem{3} 
+\textit{Girones3 J. T. [2016]. El gran libro de Android, 5a edn, Marcombo, Barcelona, España.}
+ 
+ 
+\bibitem{4} 
+\textit{Red Hat Inc. [2016]. Hibernate orm documentation 5.2.}\\
+\url{http://hibernate.org/orm/documentation/5.2/}
+
+
+
+\bibitem{5} 
+\textit{Walls, C. and Castrillo, L. A. [2015]. Spring in Action, 4th edn, Manning.}
+
+
+
+\bibitem{6} 
+\textit{Scrum en la Metodología Ágil.}\\
+\url{http://www.i2btech.com/blog-i2b/tech-deployment/para-que-sirve-el-scrum-en-la-metogologia-agil/}
+
+\bibitem{7} 
+\textit{Google Cloud Platform + Firebase.}\\
+\url{https://firebase.google.com/?hl=es-419}
+
+\bibitem{8} 
+\textit{Miguel Ángel Moreno .Desarrolo de aplicaciones Android seguras}\\
+
+\bibitem{9} 
+\textit{Henrik Kniberg [2008]. Scrum y XP desde las trincheras, 2th edn, InfoQ.}
+
+
+\bibitem{10} 
+\textit{Spring  RequestMapping}\\
+\url{http://www.baeldung.com/spring-requestmapping}
+
+
+
+\bibitem{11} 
+\textit{Getting start with Android Material Designer}\\
+\url{https://app.pluralsight.com/}
+\end{thebibliography}
 \end{document}
 
 

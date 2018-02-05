@@ -1,0 +1,5 @@
+PWD C:/Users/alberto/Desktop/Universidad/MI MEMORIA/subfiles
+INPUT C:/Users/alberto/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT tecnologia.tex
+OUTPUT tecnologia.log
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm

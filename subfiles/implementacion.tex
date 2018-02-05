@@ -1,20 +1,15 @@
 
 \section{Implementación}
-En este capítulo expondremos la implementacion tanto del servidor como de la aplicación móvil.
+En este capítulo expondremos la implementación tanto del servidor como de la aplicación móvil.
 
 
 \subsection{Servidor}
 En capítulos anteriores ya comentamos la estructura de paquetes seguida para desarrollar el servidor, en este hablaremos de JpaRepository.\\
 
-JpaRepository es un repositorio que nos ofrece métodos genéricos de gestión de clases persistentes como también métodos mas concreto que nos permiten realizar operaciones complejas abstrayendonos de su implementacion.
+JpaRepository es un repositorio que nos ofrece métodos genéricos de gestión de clases persistentes como también métodos más concreto que nos permiten realizar operaciones complejas abstrayendonos de su implementacion.
 
-Ademas este repositorio se adapta a la clase con la que va a trabajar.
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+Además este repositorio se adapta a la clase con la que va a trabajar.
+\begin{lstlisting}[language=java,caption={Adaptación a la clase Usuario },label=DescriptiveLabel]
     
 public interface UsuarioRepository 
 extends JpaRepository<Usuario, Long> {
@@ -29,12 +24,7 @@ extends JpaRepository<Usuario, Long> {
 	
 Como se puede ver en la figura anterior, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
 
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+\begin{lstlisting}[language=java,caption={Interfaz  de UsuarioRepository},label=DescriptiveLabel]
     
 public interface UsuarioRepository 
 extends JpaRepository<Usuario, Long> {
@@ -72,21 +62,16 @@ extends JpaRepository<Usuario, Long> {
  
  
  \subsection{Aplicación móvil Android}
-En este capítulo comentaremos aspectos concreto de la implementación de de la aplicación móvil.
+En este capítulo comentaremos aspectos concretos de la implementación de de la aplicación móvil.
 
 
 
 \subsubsection{Mapas}
 
- Para la creación de rutas tanto individuales como compartidas como para crear PDI el usuario necesita conocer las coordenadas de los puntos por lo que trascurre su ruta. Para ello necesitamos los mapas de Google Maps y métodos de sus APIs.
+ Para la creación de rutas tanto individuales como compartidas como para crear PDI el usuario necesita conocer las coordenadas de los puntos por lo que transcurre su ruta. Para ello necesitamos los mapas de Google Maps y métodos de sus APIs.
  
  
- \begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+ \begin{lstlisting}[language=java,caption={Dependencia de Google Maps},label=DescriptiveLabel]
 compile 'com.google.android.gms:play-services-maps:10.2.0'
 
 \end{lstlisting}
@@ -95,12 +80,7 @@ compile 'com.google.android.gms:play-services-maps:10.2.0'
  Para marcar un punto en el mapa y que este quede visible en el mapa necesitamos implementar un método que capture los clic en el mapa y que nos devuelva las coordenadas del punto marcado.
  
  
- \begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+ \begin{lstlisting}[language=java,caption={Captura de clic en la pantalla},label=DescriptiveLabel]
     
 mMap.setMyLocationEnabled(true);
 mMap.getUiSettings().setCompassEnabled(true);
@@ -127,12 +107,7 @@ mMap.setOnMapClickListener(new GoogleMap
 
  
 
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+\begin{lstlisting}[language=java,caption={Creación de Marker  personalizados},label=DescriptiveLabel]
     
 protected Marker createMarkerPesca(double
 		latitude,Double longitude, String nombre,
@@ -178,15 +153,10 @@ protected Marker createMarkerPesca(double
  
  
  \subsubsection{Localización}
-  Para la creación de ruta necesitamos una método que nos proporcione las coordenadas(latitud y longitud) de los puntos por los que trascurre el usuario en la ruta. Para ellos necesitamos la siguiente dependencia.
+  Para la creación de ruta necesitamos un método que nos proporcione las coordenadas(latitud y longitud) de los puntos por los que transcurre el usuario en la ruta. Para ellos necesitamos la siguiente dependencia.
 
 	
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+\begin{lstlisting}[language=java,caption={Dependencia de Location},label=DescriptiveLabel]
 compile 'com.google.android.gms:play-services-location:10.2.0'
 
 
@@ -195,12 +165,7 @@ compile 'com.google.android.gms:play-services-location:10.2.0'
 	
 	Una vez añadida esta dependencia necesitamos un método que nos proporciones las coordenadas concretas, para ellos usaremos el siguiente fragmento de código.
 	
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+\begin{lstlisting}[language=java,caption={Obtencion de coordenadas  por intervalo de tiempo},label=DescriptiveLabel]
 mlocManager.requestLocationUpdates(LocationManager
 .GPS_PROVIDER15, 0,(LocationListener) Local);
 
@@ -210,18 +175,13 @@ mlocManager.requestLocationUpdates(LocationManager
 El método ofrece el par de coordenadas cuando el usuario se mueve X metros o bien por un intervalo de tiempo en segundos.
 
 
-Como se puede observar en la figura anterior en nuestro proyecto indicamos que los segundos que deberían transcurrir para devolver una coordenadas sería de 15.\\
+Como se puede observar en la figura anterior en nuestro proyecto indicamos que los segundos que deberían transcurrir para devolver unas coordenadas sería de 15.\\
 Cuando nosotros estamos realizando la ruta en ocasiones el GPS pierde precisión y sitúa al usuario en punto un tanto lejano, lo cual es imposible ya que no se puede mover tan rápido. Este error del GPS lo hemos resuelto de la siguiente manera.\\
 
 
 
 \newpage
-\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+\begin{lstlisting}[language=java,caption={Fragmento para el calculo de distancias entre puntos},label=DescriptiveLabel]
       iniTramo = finTramo;
       finTramo = new LatLng(latitud, longitud);
       Location location1 = new Location("localizacion 1");
@@ -233,35 +193,26 @@ Cuando nosotros estamos realizando la ruta en ocasiones el GPS pierde precisión
       double distance = location1.distanceTo(location2);
 \end{lstlisting}
 
-En este código lo que hacemos es calcular la distancia entre dos puntos consecutivos. Usamos un método que pertenece a la API,  el cual necesita un par de coordenadas. El dato que devuelve viene dado en metros y viene dado tiene en cuenta la curvatura de la tierra para calcularlo. Si esta distancia es superior a 15 metros desechamos ese punto.
+En este código lo que hacemos es calcular la distancia entre dos puntos consecutivos. Usamos un método que pertenece a la API,  el cual necesita un par de coordenadas. El dato que devuelve viene dado en metros y  dado tiene en cuenta la curvatura de la tierra para calcularlo. Si esta distancia es superior a 15 metros desechamos ese punto. El resultado de los puntos válidos lo podemos ver en  Figura~\ref{fig:individual-navegacion}
 
-\begin{figure}[H]
+\begin{figure}{H}
 		\centering
 		\includegraphics[width=0.4\textwidth] {capturamovil/individual-navegacion.png}
 		\caption{Visualización de la ruta mientras se realiza}
+		\label{fig:individual-navegacion}
 	\end{figure}
 	
 \subsubsection{Firebase} 
 Cuando el usuario inicia una ruta compartida el sistema avisa al resto de integrantes de grupo de que acaban de ser invitados a ella, esta acción la realizamos mediante las Notificaciones Push con Firebase. Para ello tenemos que empezar añadiendo las dependencias siguientes.
 
-	\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+	\begin{lstlisting}[language=java,caption={Dependencia de Firebase},label=DescriptiveLabel]
  compile 'com.google.firebase:firebase-core:10.2.0'
  compile 'com.google.firebase:firebase-messaging:10.2.0'
 
 \end{lstlisting}
 	
 Del lado del servidor enviamos una notificación con una serie de campos necesarios para identificar la ruta a un usuario concreto. Este usuario lo identificamos por un token que almacenamos en la base de dato, este token es característico de cada móvil. Para que nuestra aplicación  pueda recibir y entender esta notificación necesitaremos el siguiente fragmento de código.
-	\begin{lstlisting}[language=java,
- ,backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple}]
+	\begin{lstlisting}[language=java,caption={Recepción de mensajes},label=DescriptiveLabel]
  @Override
  public void onMessageReceived(RemoteMessage remoteMessage) {
         Map<String, String> data = remoteMessage.getData();
@@ -300,8 +251,8 @@ En la siguiente captura veríamos la notificación en el móvil.
 \newpage
 	
 \section{Pruebas}
-Las pruebas son un tema muy importante a tener en cuenta en cualquier proyecto de software. Nos permiten conoces ciertos aspectos que fallan en el sistema de manera objetiva y conocer ciertos riesgos que se nos pasaron por alto en la implementacion.
-Dado que usamos la metodología Scrum y como describimos en el capitulo de seguimiento al final de cada Sprint se harán las pruebas para esas historias de usuario.
+Las pruebas son un tema muy importante a tener en cuenta en cualquier proyecto de software. Nos permiten conocer ciertos aspectos que fallan en el sistema de manera objetiva y conocer ciertos riesgos que se nos pasaron por alto en la implementación.
+Dado que usamos la metodología Scrum y como describimos en el capítulo de seguimiento al final de cada Sprint se harán las pruebas para esas historias de usuario.
 
 
 
