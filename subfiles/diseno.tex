@@ -38,8 +38,8 @@ Esta capa es la encargada de almacenar los datos del sistema en la base de datos
 \end{itemize}
 Una vez comentada la arquitectura general del sistema, pasaremos a comentar la capa intermedia un poco más a fondo ya que en ciertas ocasiones, la capa intermedia puede estar compuesta de N-capas(Arquitectura en N-capas). Esta es una de esas ocasiones.
 
-Los servidores que siguen el modelo Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio  y el envío  de información por la red.
-Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crear la como a la hora de hacer su mantenimiento ya que marca al desarrollador a colocar el código en una capa concreta. \\
+Los servidores que siguen el patrón Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio  y el envío  de información por la red.
+Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crear la como a la hora de hacer su mantenimiento ya que marca al desarrollador a distribuir el código en una capa concreta. \\
 
 
 Los componentes capas que componen al patrón MVC son:
@@ -68,13 +68,13 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI(Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
  Un caso especial serían las rutas compartidas asociadas a una principal, en las cuales el usuario crea una ruta y después la compartes con otros usuarios. Para  quedar esto reflejado en el entidad-relación tenemos la relación \textit{Asociada-a principal}.
 	
-\section{Servidor}
-Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de servidores , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente. La arquitectura del servidor la podremos ver en la Figura~\ref{fig:arquitectura-servidor}
+\section{Aplicación servidor}
+Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de internet , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente. La arquitectura del servidor la podremos ver en la Figura~\ref{fig:arquitectura-servidor}
 
-La solución mencionada anteriormente será un servidor, en java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
+La solución mencionada anteriormente será un servidor, en Java, que  usará Spring ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
 
 Durante el desarrollo de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
-  DigitalOcean, ya que ofrece distintos lugares donde poder ubicarlo. Hemos decidido hacerlo en uno concreto de Alemania para que el ping fuera más cercano y rápido.
+  DigitalOcean, que ofrece distintas localizaciones donde poder ubicarlo. Hemos decidido hacerlo en uno concreto de Alemania para que hubiera menos latencia y mayor rapidez.
 \begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {arquitectura-servidor.jpg}
@@ -109,7 +109,7 @@ La aplicación del servidor sigue un arquetipo en 5 paquetes distintos de clases
 \begin{itemize}
 \item\textbf{ es.udc.fi.dc.config} Contiene las clases Java de configuración de Spring.
 \item \textbf{es.udc.fi.dc.model} Contiene todos los modelos de datos que estarán almacenados en la base de datos.
-\item \textbf{es.udc.fi.dc.daos} Contiene los interfaces (JpaRepository) que aceden a los datos del sistema.
+\item \textbf{es.udc.fi.dc.daos} Contiene los interfaces (JPARepository) que aceden a los datos del sistema.
 \item \textbf{es.udc.fi.dc.controller} Contiene las clases relacionadas  con las peticiones remotas.
 \item  \textbf{es.udc.fi.dc.services} Contiene tanto los interfaces de los servicios como la implementación de los mismos.
 
@@ -176,12 +176,12 @@ public interface UsuarioRepository
 \section{Aplicación Móvil}
 La capa de presentación será accesible por el usuario a través de una aplicación móvil desarrollada en Android. Los aspectos más relevantes serán expuestos a continuación.
 
-\subsection{Servicios}
+\subsection{Servicios usados}
 \begin{itemize}
-\item \textbf{Google Maps API}. Es un servicio web proporcionado por google que nos permite usar los mapas en nuestras aplicaciones y también conocer la ubicación del usuario  en todo momento. Esta ubicación la marca con un punto azul pero no suministra coordenadas(latitud y longitud).
-\item \textbf{Google Location}. Es un servicio de google que nos suministra las coordinadas del usuario, según varía la posición ciertos metros o cada cierto tiempo.
-\item \textbf{Rest SystemService}. Este punto sería el que ejecuta nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
-\item \textbf{Firebase Cloud Messaging} Firebase Cloud Messaging (FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones push cuando se inicia una ruta compartida.
+\item \textbf{Google Maps API}. Es un servicio web proporcionado por Google que nos permite usar los mapas en nuestras API y también conocer la ubicación del usuario  en todo momento. Esta ubicación  con un punto azul en el mapa pero no suministra coordenadas(latitud y longitud).
+\item \textbf{Google Location}. Es un servicio de Google que nos suministra las coordinadas del usuario, según varía la posición ciertos metros o cada cierto tiempo.
+\item \textbf{Rest SystemService}. Este servicio es el encargado de ejecutar nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
+\item \textbf{Firebase Cloud Messaging}(FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones post cuando se inicia una ruta compartida.
 \end{itemize}
 \begin{figure}[H]
 		\centering
@@ -194,10 +194,10 @@ La capa de presentación será accesible por el usuario a través de una aplicac
 \subsection{Organización de los paquetes}
 La organización seguida en la aplicación móvil es la de agrupar las clases por funcionalidades comunes.
 \begin{itemize}
-\item  \textbf{com.example.alberto.hunter-android.activities}, contiene todas las actividades.
-\item \textbf{com.example.alberto.hunter-android.adapter}, contiene los adaptadores.
-\item \textbf{com.example.alberto.hunter-android.model},contiene todos los modelos de datos.
-\item \textbf{com.example.alberto.hunter-android.utils}, contiene las clases auxiliares.\\ 
+\item  \textbf{alberto.hunter-android.activities}, contiene todas las actividades. Las actividades contienen la lógica que hay detrás de cada interfaz con la que interactua el usuario.
+\item \textbf{alberto.hunter-android.adapter}, contiene los adaptadores. Son clases que reciben datos y los manipulas para poder ser usados en otra actividad.
+\item \textbf{alberto.hunter-android.model},contiene todos los modelos de datos.
+\item \textbf{alberto.hunter-android.utils}, contiene las clases auxiliares.\\ 
 
 Con esta organización por funcionalidades comunes creamos un proyecto claro y  organizado lógicamente.
 
