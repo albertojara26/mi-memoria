@@ -1,53 +1,48 @@
-En este capítulo se justifica y se describe la metodología de desarrollo sobre la que se apoya el proceso de ingeniería. En este proyecto se ha empleado una metodología ágil, Scrum. Se ha optado por esta solución frente a otras clásicas como la de proceso unificado porque al usar un modelo incremental, basado en iteraciones, aseguramos que al final de cada etapa tengamos un producto operativo y que en sucesivas etapas se irá completando.
+En este capítulo se justifica la elección y se describe la metodología de desarrollo sobre la que se apoya el proceso de ingeniería. En este proyecto se ha empleado una metodología ágil, Scrum. 
 
 
 
 \section{Scrum}
 
-El Scrum es un proceso de la Metodología Ágil que se usa para minimizar los riesgos durante la realización de un proyecto. 
-Esta metodología esta basada en ciclo iterativos lo que se traduce en una gran flexibilidad a la hora de adaptarse a cambios en el proyecto o sobre el control de riesgos. 
-
-
-
-Entre las ventajas se encuentran la productividad, calidad y que se realiza un seguimiento diario de los avances del proyecto, logrando que los integrantes estén unidos, comunicados. Esta cualidad no será palpable ya que en el caso de este proyecto el equipo estará formado por una sola persona.\\
+El Scrum es una  Metodología ágil que se usa para estructurar y gestionar proyectos, y para minimizar los riesgos durante la realización del mismo.
+Esta metodología esta basada en ciclo iterativos lo que se traduce en una gran flexibilidad a la hora de adaptarse a cambios que surjan duran el desarrollo del proyecto.
+Entre las ventajas se encuentran la baja carga de burocracia y documentación, productividad, calidad y que se realiza un seguimiento diario de los avances del proyecto, logrando una comunicación activa y constante en el equipo de trabajo.\\
 
 \subsection{Sprint}
 
-Por Sprint entendemos un bloque de tiempo fijo de entorno a 1 mes en el que
+Por Sprint entendemos un bloque de tiempo fijo, normalmente de 3 o 4 semanas en el que
 se crea una versión de nuestra aplicación que se irá incrementando de tamaño
 según van avanzando los Sprints. Los Sprints se pueden considerar como pequeños
 proyectos ya que al final de cada uno de ellos debemos tener un producto
-operativo, es decir, que responda a la historia o historias planteadas en él.
+operativo, es decir, que responda a la historia o historias de usuario planteadas en él.
 
 
 
 \subsection{Participantes}
 \begin{itemize}
 \item \textbf{Product Owner}\\
-Habla por el cliente, y asegura que el equipo cumpla las expectativas. Es “el jefe”, sus decisiones deben ser
-respetadas y acatadas. Estas  decisiones influirán en la prioridad de la lista de tareas o Product Backlog.
-
+Es el responsable del producto, de priorizar los user stories y de decidir si el sistema las cumple. En general , es un representante del cliente u otro stakeholder
 
 
 \item \textbf{Scrum Master}\\
-Es el encargado de liderar la reuniones y ayudar al equipo en los problemas que tengan. Debe minimizar las imposibilidades que surgen en el desarrollo del proyecto para que se cumplan los objetivos del Sprint. Además debe promover la comunicación entre los integrantes del grupo para generar la motivación necesaria para conseguir los objetivos en plazo.
+Es el encargado de liderar la reuniones y ayudar al equipo en los problemas que tengan  en la implementación de la metodología. Debe minimizar las imposibilidades que surgen en el desarrollo del proyecto para que se cumplan los objetivos. Además debe promover la comunicación entre los integrantes del grupo para generar la motivación necesaria para conseguir los objetivos en plazo.
 
 
 
 
 \item  \textbf{Scrum Team}\\
-Son los encargados de desarrollar y cumplir lo que les asigna el Product Owner. En si son quienes realizan las tareas que finalmente generan el producto que se va a entregar.
+Son los encargados de desarrollar y llevar acabo las tareas de los sprints. En si son quienes realizan las tareas que finalmente generan el producto que se va a entregar.
 
 
 \item  \textbf{Cliente}\\
-Recibe el producto y puede influir en el proceso, entregando sus ideas o comentarios respecto al desarrollo.
+Recibe el producto y puede influir en el proceso, entregando sus ideas o comentarios respecto al desarrollo a través del feedback con el product owner y el equipo sobre las versiones del producto. 
 \end{itemize}
 
 \subsection{Cómo funciona el Proceso}
 
 
 
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {scrum.jpg}
 		\caption{Metodología Scrum }
@@ -55,33 +50,32 @@ Recibe el producto y puede influir en el proceso, entregando sus ideas o comenta
 	\end{figure} 
 
 
-El proceso comienza con la definición del Product Backlog, se dará pie a los futuros Sprints.
-Iremos troceando Figura~\ref{fig:scrum} y comentando sus partes.
+El proceso comienza con la definición del Product Backlog. De este Product Backlog  se irán obteniendo las historias para los distintos sprints. El proceso general se puede ver en la figura~\ref{fig:scrum}. A continuacion comentaremos sus partes:
 \begin{itemize}
-\item \textbf{Definición del Product Backlog}\\
-Es una lista con las funcionalidad de la aplicación.\\
-Esta funcionalidad que se definen en el Product Owner son las historias del usuario, es decir, es lo que el usuario quiere hacer en la aplicación y por tanto en muchos casos cada historia contendrá varios casos de uso. \\
-Está elaborado por el Product Owner y las funcionalidad están ordenadas de mayor a menor importancia dentro de la aplicación. La finalidad del Product Owner es plantear lo que hay que hacer.
-Con las historias ordenadas se indicarán los Sprints que serán necesarios pudiendo hacer  varias historias en un mismo Sprint pero nunca una historia dividida en 2 Sprints. 
+\item \textbf{Definición del Product Backlog}. Figura~\ref{fig:product}
+Es una lista con las funcionalidad de la aplicación.
+Estas funcionalidades que se definen en el Product Owner son las historias del usuario, es decir, es lo que el usuario quiere hacer en la aplicación y por tanto en muchos casos cada historia puede contener varios casos de uso. \\
+Está elaborado por el Product Owner y las funcionalidad están ordenadas de mayor a menor importancia para el cliente. La finalidad del Product Owner es plantear lo que hay que hacer.
+Con las historias ordenadas se indicarán los Sprints que serán necesarios pudiendo hacer  varias historias en un mismo Sprint pero nunca una historia dividida en dos Sprints. 
 
  
- \begin{figure}[H]
+ \begin{figure}
 		\centering
 		\includegraphics[width=0.2\textwidth] {product.png}
 		\caption{Parte metodología Scrum, Product Backlog }\label{fig:product}
 	\end{figure} 
 
 
-\item \textbf{Sprint Planning Meeting}\\
- Esta reunión se hace al comienzo de cada Sprint y se define cómo se va a enfocar el proyecto que viene del Product Backlog las etapas y los plazos.
+\item \textbf{Sprint Planning Meeting}. Figura~\ref{fig:planing}\\
+ Esta reunión se hace al comienzo de cada Sprint y se define cómo se va a enfocar el proyecto, se revisan las historias con mayor prioridad y se decide el Sprint backlog.
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth] {planing.png}
 		\caption{Parte metodología Scrum, Sprint Planning }\label{fig:planing}
 	\end{figure} 
 
-\item \textbf{Sprint Backlog}\\
-Es el conjunto de historias del Product Backlog que se decidirán hacer en el Sprint, estando ordenadas de mayor a menor prioridad. Una vez hecho esto los miembros del equipo dividirán las historias en partes más pequeñas y más manejables.
+\item \textbf{Sprint Backlog}. figura~\ref{fig:sprint}\\
+Es el conjunto de historias del Product Backlog que se decidirán hacer en el Sprint, estando ordenadas de mayor a menor prioridad. Una vez completado los miembros del equipo dividirán las historias en tareas más pequeñas y más manejables, si es necesario.
 
 \begin{figure}[H]
 		\centering
@@ -91,9 +85,9 @@ Es el conjunto de historias del Product Backlog que se decidirán hacer en el Sp
 
  
  
-\item \textbf{Daily Scrum o Stand-up Meeting}\\
-Es una reunión breve que se realiza a diario mientras dura el periodo de Sprint. 
-En estas reuniones si algun miembro del equipo encuentra algun problema esto se comenta y se trata de ayudarlo. Este tipo de problemas debería resolverlos el Scrum Master.
+\item \textbf{Daily Scrum o Stand-up Meeting. Figura~\ref{fig:daily}}\\
+Es una reunión breve que se realiza cada mañana mientras dura el periodo de Sprint. 
+En estas reuniones si algún miembro del equipo encuentra algún problema  se comenta y se trata de buscar la solución. El scrum master es el encargado de lidiar con los inconvenientes encontrados.
 
 \begin{figure}[H]
 		\centering
@@ -102,7 +96,7 @@ En estas reuniones si algun miembro del equipo encuentra algun problema esto se 
 	\end{figure} 
 
 \item\textbf{ Sprint Review}\\
-Esta sería la primera reunión una vez acabado el Sprint. En ella se deberían plantear las tareas acabadas y se debería ver un avance claro para ser presentado al cliente. Las tareas inacabas deberían ser devueltas al Product Backlog y si hiciera falta volver a calcular las prioridades.
+Esta sería la primera reunión una vez acabado el Sprint. En ella se deberían plantear las tareas acabadas y se debería ver un avance claro para ser presentado al cliente. Las tareas inacabas las deberían ser devueltas al Product Backlog y si hiciera falta volver a calcular las prioridades.
 
  \item \textbf{Sprint Retrospective}\\
   El equipo revisa los objetivos cumplidos del Sprint terminado. Se anota lo bueno y lo malo, para no volver a repetir los errores. Esta etapa se centra en el cómo se realiza el proyecto para si hay algún error en el desarrollo poder resolverlo en el siguiente Sprint.
@@ -111,13 +105,14 @@ Esta sería la primera reunión una vez acabado el Sprint. En ella se deberían 
 
 
 \section{Adaptación la metodología a este proyecto }
- En el momento de seguir la metodología Scrum debimos realizar una serie de cambios o adaptaciones en ciertos elementos como fueron los siguientes :
+ Debido a la naturaleza de un Trabajo de fin de grado  debimos realizar una serie de cambios o adaptaciones en ciertos elementos como fueron los siguientes :
 \subsection{Participantes}
 Los participantes fueron los siguientes:
 \begin{itemize}
 \item El Product Owner interpretado por los  directores.
 \item El cliente tambien fue desempeñado por los directores.
-\item El Scrum Master fue desempeñado por el alumno.
+\item El Scrum Master no se usó puesto que se decidió 
+ user scrum program.
 \item  Y el equipo solo estuvo formado por el alumno.
 
 \end{itemize}
@@ -128,4 +123,25 @@ Cada sprint siempre tuvo una duración establecida de 4 semanas y 5 horas cada d
 
 \subsection{Reuniones}
 
-En el apartado de las reuniones siempre se establecían las tareas a realizar en cada jornada de trabajo. Al finalizar cada Sprint se realizaban reuniones con los directores y se aprovechaba para la planificación de la siguiente.
+En el apartado de las reuniones siempre se establecían las tareas a realizar en cada jornada de trabajo. Al finalizar cada Sprint se realizaban reuniones con los directores y se aprovechaba para la planificación de la siguiente.\\
+
+Una vez adaptada la metodología a este proyecto encontramos las siguientes ventajas a su uso:
+
+\begin{itemize}
+\item Ayuda a estar más centrado en el producto durante el desarrollo del proyecto ya que no existe la preocupación por establecer las siguientes tareas.  Estas ya quedaron indicadas en el sprint. 
+
+
+
+\item En ocasiones al ir avanzando en el desarrollo aparecen nuevas funcionalidades que se pueden ir añadiendo al Product Backlog. Esto lo podemos hacer siempre y cuando nos ciñamos al Sprint Backlog
+ para saber la tarea que realizar en ese momento.
+
+
+\item  Las historias de usuario se irán dividiendo en tareas que se puedan realizar durante el sprint. De este modo una vez acabado el sprint tengamos un producto potencialmente entregable.\\
+
+Dado el poco conocimiento de la metodología Scrum antes de la realización del proyecto, el ir avanzando en el proceso ayuda a adquirir conocimientos. Los cuales ayudarán a estimar mejor la duración e importancia de los elementos que se añaden al Sprint Backlog.
+
+
+\item
+Durante el desarrollo del proyecto hay ciertas funcionalidades que pueden cambiar. Empleando los principios de las metodologías ágiles en cada iteración haremos que el proyecto sea mas adaptable antes nuevos requisitos y cambios.
+
+\end{itemize}

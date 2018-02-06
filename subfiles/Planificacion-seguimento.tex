@@ -1,25 +1,25 @@
 
 
- En este capítulo se comentará el proceso seguido para la realización de este proyecto detallando la planificación, diseño y el desarrollo del mismo estructurado en etapas.
+ En este capítulo se comentará el proceso seguido para la realización de este proyecto detallando la planificación, diseño y el desarrollo de interfaces.
  
-\section{Seguimiento}
+\section{Pasos de ejecución}
 
 Una vez hecho el análisis, conocidos los objetivos que se quieren alcanzar en este proyecto y las herramientas que se utilizarán  empezaremos con la planificación del mismo.
 
 Un punto muy  importante a tener en cuenta a la hora de realizar una planificación sería conocer los recursos y el tiempo del que disponemos.
 Este punto tan crucial se acentúa ya que este proyecto será realizado por una única persona lo que producirá sobrecargas en la planificación. Esto normalmente no es así ya que los proyectos se realizan por grupos de trabajos y muchas tareas pueden realizarse en paralelo disminuyendo apreciablemente la duración del proyecto.
 
-Para realizar la planificación del proyecto hemos dividido el proyecto en tareas con unos objetivos bien marcados(Product Backlog). A su vez al seguir la metodología Scrum dividimos el proyecto en etapas(Sprint) de tiempo donde incluimos las tareas a realizar.
+Para realizar la planificación del proyecto hemos dividido el proyecto en tareas con unos objetivos bien marcados(Product Backlog). A su vez al seguir la metodología Scrum dividimos el proyecto en etapas (Sprint) de tiempo donde incluimos las tareas a realizar.
  En todas estas etapas incluimos los siguientes pasos:
  
  
 
 
 \begin{itemize}
-\item Definición del Sprint Backlog,  documento que recoge las tareas a realizar y quién las desempeña. En este caso al solo trabajar yo en el proyecto haré todas las tareas.
+\item Definición del Sprint Backlog,  documento que recoge las historias de usuario y quién las desempeña. En este caso al solo trabajar el estudiante en el proyecto haré todas las tareas.
 
 
-\item División del Sprint Backlog en tareas más sencillas y abordables (Backlog items). 
+\item División de las historias de del Sprint en tareas más sencillas y abordables. 
 
 
 
@@ -31,11 +31,11 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 
 
 \section{Duración  y costes}
- A continuación en la tabla siguiente se ha realizado una estimación de tiempos y de costes de este proyecto.
+ A continuación en la tabla \ref{fig:coste} siguiente se ha realizado una estimación de tiempos y de costes de este proyecto.
  Cuando se realiza una estimación de costes tenemos que tener en cuenta los gastos en material, licencias y los gastos propios. En mi caso los gastos de material y de licencias es nulo ya que el material es el del alumno y licencias y gastos propios son nulos.
  En la siguiente tabla se detalla el esfuerzo horas-hombre de cada uno de los roles dentro del proyecto. 
  
- La jornada laboral sería de 5 horas y la duración de cada Sprint 20 días, lo que nos hace obtener el siguiente coste:
+ La jornada laboral sería de 5 horas, 5 días a la semana y la duración de cada Sprint 4 semanas, lo que nos hace obtener el siguiente coste:
 
 
 \begin{figure}[H]
@@ -51,10 +51,10 @@ Para realizar la planificación del proyecto hemos dividido el proyecto en tarea
 
 
 \begin{itemize}
-\item En el rol de director de proyecto estarían los que 
+\item En el rol de jefe de proyecto estaría a cargo de los que 
 supervisan y evalúan el proyecto. En este caso los directores realizarán este rol.
 
-\item Analista/programador Junior, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por mí yo me encargaría de este rol.
+\item Analista/programador Junior, en este rol estaría la persona encargada de las tareas de análisis, diseño, desarrollo y de la creación de las pruebas para este proyecto. Al estar realizado por el estudiante este se encargaría de este rol.
 
 
 
@@ -63,25 +63,25 @@ supervisan y evalúan el proyecto. En este caso los directores realizarán este 
 \end{itemize}
 \section{Sprints}
 
-Como se comentó a lo largo de este capítulo la metodología usada será  Scrum y el proyecto será dividido en Sprints de 4 semanas cada uno. El número de Sprint que estimamos sería de 8.
+Como se comentó a lo largo de este capítulo la metodología usada será  Scrum y el proyecto será dividido en Sprints de 4 semanas cada uno. El número de Sprint  estimados sería de 8.
 
 
 
 
- Antes de empezar con los Sprint comenzamos creando el Product Backlog. Esto es una lista con todas las funcionalidades del la aplicación priorizadas de más a menos importancia para nuestro proyecto. 
+ Antes de empezar con los Sprints comenzamos creando el Product Backlog. Esto es una lista con todas las funcionalidades del la aplicación priorizadas de más a menos importancia para nuestro proyecto. 
 
 \subsection{Sprint 1}
 
-En este primer Sprint nos centraremos en las tareas relacionadas con la capa intermedia. Para ello comenzamos diseñando la base de datos y modelo de datos, algo fundamental en cualquier aplicación para no heredar carencias en capas superiores. Posteriormente los servicios necesarios para el servicio REST.
+En este primer Sprint nos centramos en las tareas relacionadas con la capa intermedia. Para ello comenzamos diseñando el modelo de datos, algo fundamental en cualquier aplicación para no heredar carencias en capas superiores, y acabamos implementando el modulo de servicios.
 
 
 \subsection{Sprint 2}
- Una vez implementado el servicio Rest, el objetivo en este Sprint será hacer las pruebas para él.
- Una vez acabas las pruebas el siguiente paso dentro de este Sprint será la creación de las maquetas que servirán para la capa de presentación/cliente, es decir, el interface del usuario. Estas maquetas se irán revisando y refinando a lo largo del proyecto.
+ Una vez implementado el modulo servicio , el objetivo en este Sprint era hacer las pruebas para él.
+ Una vez acabas las pruebas el siguiente paso dentro de este Sprint era la creación de las maquetas que sirvieron para la capa de presentación/cliente, es decir, el interfaz del usuario. Estas maquetas se fueron revisando y refinando a lo largo del proyecto.
  
 \subsection{Sprint 3}
 
-En este Sprint se comenzará con el desarrollo de la aplicación Android. Comenzaremos permitiendo que el usuario sea capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya que nos proporciona los datos necesarios para guardar puntos y rutas. Las historias que se implementarán serán \textbf{creación de los puntos de interés (caza y pesca)},\textbf{ búsqueda de PDIs por tipo} y \textbf{borrado de PDIs} los casos de uso realizados son los siguientes:
+En este Sprint se comenzó con el desarrollo de la aplicación Android. Comenzamos permitiendo que el usuario fuera capaz que conocer su localización dentro del mapa y que al ir desplazándose cambie su ubicación como también obtener las coordenadas de su posición. Este punto será básico para el resto de la aplicación ya que nos proporciona los datos necesarios para guardar puntos y rutas. Las historias que se implementarán serán \textbf{creación de los puntos de interés (caza y pesca)},\textbf{ búsqueda de PDIs por tipo} y \textbf{borrado de PDIs} los casos de uso realizados son los siguientes:
 
 \begin{itemize}
 
@@ -319,7 +319,7 @@ Figura~\ref{fig:individual-navegacion} uniendo los catos de uso R-R-1.1, R-R-1.2
 	\end{figure}
 \newpage
 \subsection{Sprint 7}
-Este Sprint contiene la historia más compleja de todas,\textbf{ gestionar una ruta compartida}.
+Este Sprint contiene la historia más compleja de todas,\textbf{ gestionar una ruta compartida},el interfaz es igual al de una ruta individual pero la lógica es diferente.Figura~\ref{fig:individual-navegacion}.
 
 \begin{itemize}
 \item \textbf{\textit{R-R-2 Crear ruta compartida}}

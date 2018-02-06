@@ -2,15 +2,14 @@
 \section{Análisis de Requisitos}
 
 
-En esta aplicación móvil objetivo de este proyecto, se establecieron una serie de requisitos que debería cumplir la aplicación. Estos requisitos fueron obtenidos al  hacer una entrevista con los directores del proyecto.\\
-
+A la hora de cumplir los objetivo de este proyecto, se establecieron una serie de requisitos. Estos requisitos fueron obtenidos al  hacer una entrevista con los directores del proyecto. A lo largo del proyecto y siguiendo la metodología, se fueron refinando y añadiendo requisitos. 
 El registro del usuario sería el primero para poder darle acceso y comenzar a usarla, ya que sin él no tiene acceso a ninguna funcionalidad de la aplicación.
 
-La creación de puntos de interés marcados en un mapa con nombre, descripción y un punto en el mapa con o sin señal GPS clasificados en tipo, caza o pesca. \\
+Después surgió la creación de puntos de interés marcados en un mapa con nombre, descripción y un punto en el mapa con o sin señal GPS clasificados en tipo, caza o pesca.
 
-Creación y almacenamiento de las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.\\
+Creación y almacenamiento de las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.
 
-El usuario también podrá crear grupos con los usuarios que le parezca oportuno y los integrantes del mismo poder añadir a otros. El resultado de esta funcionalidad es la que permitirá posteriormente crear rutas conjuntas ya para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento. Una vez elegido se enviarán las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas permitirán al usuario navegar por un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes. Finalmente se podrán ver las rutas conjuntas igual que las individuales.
+Adicionalmente, también se completó la posibilidad de que el usuario pueda crear grupos con los usuarios que le parezca oportuno y los integrantes del mismo poder añadir a otros. El resultado de esta funcionalidad es la que permitirá posteriormente crear rutas conjuntas ya para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento. Una vez elegido se enviarán las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas permitirán al usuario navegar por un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes. Esta funcionalidad tendrá un especial interés en las jornadas de caza ya que el conocer en todo momento la posición del resto de compañeros evita peligros innecesarios. Con todo ello se podrán ver las rutas conjuntas igual que las individuales.
 \subsection{Actores}
 
 Los únicos actores que se presentan en la  aplicación son los siguientes:
@@ -23,7 +22,7 @@ del sistema.
 
 
 \section{Historias de usuario}
-Historias de Usuario son los requisitos vistos desde el punto de vista del usuario, es decir, acciones que el usuario llevará a cabo durante el uso del la aplicación. Son la unidad básica en cada Sprint y se caracteriza por ser:
+Las historias de usuario son los requisitos vistos desde el punto de vista del cliente, es decir, acciones que el usuario llevará a cabo durante el uso del la aplicación. Son la unidad básica detrabajo y se caracteriza por ser:
 \begin{itemize}
 \item Independientes
  \item Negociables
@@ -37,14 +36,17 @@ Las historias en este proyecto serán las siguientes:
 
 
 \begin{itemize}
- \item Gestión de puntos de interés (PDI)
+\item Diseño capa intermedia
+\item Implementación del servicio Rest
 \item Iniciar sesión  
+ \item Gestión de puntos de interés (PDI)
   \item Gestión de grupos
   \item Iniciar una ruta individual
    \item Iniciar la ruta compartida
+   \item Realización de la memoria.
     
 \end{itemize}
- Estas historias anteriormente citadas serán divididas en cada Sprint en pequeñas tareas mas fáciles de manejar. Una tarea es la acción que debe implementar el desarrollador para que se pueda ejecutar parte de la historia, esta está en un lenguaje técnico. Estas tareas pasar a ser en la mayoría de los casos los denominados casos de uso que comentaremos posteriormente.
+ Estas historias anteriormente citadas serán divididas en cada Sprint en pequeñas tareas mas fáciles de manejar. Una tarea es la acción que debe implementar el desarrollador para que se pueda ejecutar parte de la historia, esta está en un lenguaje técnico. Estas tareas reflejan en la mayoría de los casos los denominados casos de uso que comentaremos posteriormente.
 
 \subsection{Casos de uso}
 A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior.
@@ -52,14 +54,17 @@ A continuación, en esta sección, se exponen los requisitos funcionales que sur
 \begin{itemize}
 \item\textbf{ \textit{R1}  Registrarse en la aplicación.}
  El usuario podrá darse de alta en el sistema
-introduciendo sus datos en el formulario que se le indican. Una vez registrado se iniciará sesión
-automáticamente con el nuevo perfil.
+introduciendo sus datos en el formulario que se le indican. Una vez registrado se cambia de pantalla para el usuario inserte los datos.
 
 \item \textbf{\textit{R2} Iniciar sesión en la aplicación. }
 El usuario ya registrado podrá, con
 sus credenciales, autenticarse en el  sistema. Se pedirá el nombre del usuario y su contraseña. Se guardará el estado en el terminal hasta que el usuario decida desconectarse.
+
+Estos dos casos de uso quedan reflejados en la figura \ref{fig:usuario-no-autenticado}.
+
+
 \end{itemize} 
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=0.75\textwidth] {usuario-no-autenticado.jpg}
 		\caption{Casos de uso del actor Usuario No Autenticado }\label{fig:usuario-no-autenticado}
@@ -69,7 +74,7 @@ sus credenciales, autenticarse en el  sistema. Se pedirá el nombre del usuario 
 	
 \subsubsection{• Usuario  autenticado}
 
-Para el caso que el usuario ya esté autenticado dividiremos en 3 grupos los casos de usos:
+Para el caso que el usuario ya esté autenticado dividiremos en 3 grupos los casos de usos, los cuales podremos ver en la figura \ref{fig:PDI}:
 \begin{itemize}
 \item \textbf{Gestión de puntos de interés}\\
 Aquí se describirán los casos de uso relacionados con la gestión  de la información del los puntos de interés.
@@ -88,17 +93,17 @@ Aquí se describirán los casos de uso relacionados con la gestión  de la infor
 	
 	
 	
-\item \textbf{Gestión de grupos}
+\item \textbf{Gestión de grupos}. Ver figura \ref{fig:grupo}
 \begin{itemize}
 \item\textbf{ \textit{R-G-1 Crear grupo}}, el usuario crea un grupo con nombre único.
-\item\textbf{\textit{ R-G-2 Añadir integrantes}}, el usuario busca en la base de datos los usuarios que quiere integrar en el grupo previamente seleccionado.
-\item \textbf{\textit{R-G-3 Eliminar integrantes}}, el usuario puede eliminar los integrantes que vea pertinentes.
-\item \textbf{\textit{R-G-4 Ver grupos}}, el sistema lista los grupos en los que el usuario está registrado.
+\item\textbf{\textit{ R-G-2 Añadir integrantes}}, el usuario busca los usuarios que quiere integrar en el grupo previamente seleccionado.
+\item \textbf{\textit{R-G-3 Eliminar integrantes}}, el usuario puede eliminar los integrantes que considere.
+\item \textbf{\textit{R-G-4 Ver grupos}}, el sistema lista los grupos a los que el usuario pertenece.
 \item \textbf{\textit{R-G-5 Ver integrantes grupo}}, el sistema permitirá ver los integrantes del grupo que el usuario indique, previo listado del caso de uso R-G-4. 
 
 \end{itemize} 
 
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=0.75\textwidth] {grupo.jpg}
 		\caption{Casos de uso de gestión de grupos de usuarios }\label{fig:grupo}
@@ -106,28 +111,30 @@ Aquí se describirán los casos de uso relacionados con la gestión  de la infor
 	
 	
 	
-\item \textbf{Gestión de rutas}, el usuario iniciará una navegación privada siendo guardada la ruta seguida.
+\item \textbf{Gestión de rutas}. Ver figura \ref{fig:rutas} 
 \begin{itemize}
 \item \textbf{\textit{R-R-1 Crear ruta privada}}, el usuario registra la ruta con un nombre.
 \begin{itemize}
-\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario está navegando y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente, no solo al finalizar la ruta y visualizarla.
+\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario está desplazándose y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente, no solo al finalizar la ruta y visualizarla.
 \item\textbf{ \textit{R-R-1.2}} Parar ruta, permite parar la navegación, tanto de guardar las coordenadas como de pintar la ruta seguida.
-\item \textbf{\textit{R-R-1.3}} Guardar ruta, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
+\item\textbf{ \textit{R-R-1.3}} Reanudar ruta, permite reanudar la navegación.
+\item \textbf{\textit{R-R-1.4}} Guardar ruta, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
 \end{itemize}
 
 \item \textbf{\textit{R-R-2 Crear ruta compartida}}, este caso de uso permite guardar la ruta seguida por el usuario y al mismo tiempo ver la posición del resto de integrantes de un grupo, anteriormente seleccionado, en tiempo real. Este caso de uso también enviaría a los integrantes del grupo una invitación a dicha ruta.
 \begin{itemize}
-\item \textbf{\textit{R-R-2.1 Iniciar ruta}}, se comienza a guardar y dibujar la ruta en el mapa. Por otra parte se comienza el seguimiento del resto de usuarios que estén también navegando, como también una actualización parcial de la ruta seguida en el servidor.
+\item \textbf{\textit{R-R-2.1 Iniciar ruta}}, se comienza a guardar y dibujar la ruta en el mapa. Por otra parte se comienza el seguimiento del resto de usuarios que estén también desplazándose, como también una actualización parcial de la ruta seguida en el servidor.
 \item \textbf{\textit{R-R-2.2 Parar ruta}}, se para la navegación y se deja de actualizar la posición al resto de usuario de la ruta compartida.
-\item \textbf{\textit{R-R-2.3 Finalizar ruta}}, se guardan los puntos que faltan de enviar al servidor y se deja de enviar datos al resto de integrantes.
+\item \textbf{\textit{R-R-2.3 Reanudar ruta}}, se reanuda la navegación y se  actualizar la posición al resto de usuario de la ruta compartida
+\item \textbf{\textit{R-R-2.4 Finalizar ruta}}, se guardan los puntos que faltan de enviar al servidor y se deja de enviar datos al resto de integrantes.
 \end{itemize}
 \item \textbf{\textit{R-R-3 Listar rutas} }, permite al usuario ver todas las rutas realizadas tanto de manera privada como de manera compartida.
 \item \textbf{\textit{R-R-4 Ver ruta en mapa}}, el sistema dibuja en un mapa la ruta seguida y previamente seleccionada.
-\item \textbf{\textit{R-R-5 Eliminar ruta}}, permite al usuario borrar de la aplicación la ruta indicada.
+\item \textbf{\textit{R-R-5 Eliminar ruta}}, permite al usuario borrar de la aplicación la ruta indicada. Dado que el tratamiento de rutas compartidas una vez guardadas es igual a la de rutas individuales, el borrado se hace igual.
 
 \end{itemize} 
 \end{itemize}
-\begin{figure}[H]
+\begin{figure}
 		\centering
 		\includegraphics[width=0.75\textwidth] {rutas.jpg}
 		\caption{Casos de uso de gestión de rutas }
@@ -136,6 +143,11 @@ Aquí se describirán los casos de uso relacionados con la gestión  de la infor
 
 
 \section{Análisis de riesgos}
+
+Un aspecto fundamental que debe gestionarse a lo largo del desarrollo de un proyecto
+son los riesgos. Mediante un tratamiento de la incertidumbre podremos evitar
+las posibles la exposición y el impacto.
+
 \subsection{Riesgos identificados}
 \begin{figure}[H]
 		\centering
@@ -148,12 +160,12 @@ Una vez identificados y clasificados los riesgos debemos realizar dos acciones d
 \subsection{Planes de contingencia} 
 
 Los riesgos que tengan una alta exposición pueden hacer peligrar el futuro del proyecto por ello,  debemos analizarlos en fases tempranas, antes
-de comenzar el diseño o la implementación, y que así   vigilarlos. En el caso de este proyecto la manera de solventarlos fue diferente.  A continuación se comentan.
+de comenzar el diseño o la implementación o vigilarlos. En el caso de este proyecto la manera de solventarlos fue diferente.  A continuación se comenta el R1.
 
  
 
 \begin{itemize}
-\item \textbf{Riesgo1} \textbf{- Curva aprendizaje Android}. Este riesgo era algo que se conocía antes de comenzar ya con el proyecto. Por ello era algo que se tenía  muy en cuenta. Para atenuar este riesgo antes de comenzar  con el proyecto se realizaron una serie de cursos on-line en \textit{Pluralsight} ya que era la manera de menguar esta curva de aprendizaje.
+\item \textbf{R1} \textbf{- Curva aprendizaje Android}. Este riesgo era algo que se conocía antes de comenzar ya con el proyecto. Por ello era algo que se tenía  muy en cuenta. Para atenuar este riesgo antes de comenzar  con el proyecto se realizaron una serie de cursos on-line en \textit{Pluralsight} ya que era la manera de menguar esta curva de aprendizaje.
 
 
 
@@ -164,21 +176,21 @@ de comenzar el diseño o la implementación, y que así   vigilarlos. En el caso
 \end{itemize}
 
 \subsection{Seguimiento} 	
-	Para el resto de riesgos se hará un seguimiento.
+	Para el resto de riesgos se hará el seguimiento.
 	\begin{itemize}
-	\item\textbf{ Riesgo2 Precisión en la obtención de coordenadas GPS}\\
-	Este riesgo venía dado por el temor a que el GPS del móvil no fuera lo suficientemente preciso en  lugares donde se podían realizar rutas. Esto era algo comprensible ya que los Gps del los móviles no son muy muy precisos y en el caso de pintar la rutas seguidas podían producir algún que otro error. Un problema encontrado fue que las coordenadas cambiaban repentinamente sin que el usuario se desplazara tan rápido. Este problema fue solventado quitando las coordenadas que variaran demasiado en un corto periodo de tiempo, esta solución será comentada en el capítulo de implementación de la aplicación.
+	\item\textbf{ R2 Precisión en la obtención de coordenadas GPS}\\
+	Este riesgo venía dado por el temor a que el GPS del móvil no fuera lo suficientemente preciso en  lugares donde se podían realizar rutas. Esto era algo comprensible ya que los GPS del los móviles no son muy muy precisos y en el caso de pintar la rutas seguidas podían producir algún que otro error. Un problema encontrado fue que las coordenadas cambiaban repentinamente sin que el usuario se desplazara tan rápido. Este problema fue solventado quitando las coordenadas que variaran demasiado en un corto periodo de tiempo, esta solución será comentada en el capítulo de implementación de la aplicación.
 
 
-\item \textbf{Riesgo3 Adaptación de la metodología Scrum en el proyecto}\\
+\item \textbf{R3 Adaptación de la metodología Scrum en el proyecto}\\
 Antes de la realización de este proyecto mi conocimiento sobre la metodología Scrum era bastante escaso. Para solucionar esto antes del comienzo del proyecto hubo un periodo de familiarización con esta metodología. 
 
 	\end{itemize}
 \newpage
-\section{Maquetas}
+\section{Interfaz y usabilidad}
 Una vez obtenidos los casos de uso, comenzamos creando las maquetas de cómo debería que ser a interface del usuario.
-Se busca que sea una interface simple y intuitiva.
-Para hacer esto posible seguiremos las pautas y usaremos los elementos de Material Design. 
+Se busca que sea una interfaz simple  intuitiva.
+Para hacer esto posible seguiremos las pautas y usaremos los elementos de Material Design \cite{1}. 
 
 
 Material Design es un lenguaje de diseño para distintas plataformas y dispositivos. Ofrece una guía que se debe seguir para que los usuarios  tengan una experiencia común y habitual entre distintas aplicaciones.
@@ -236,19 +248,7 @@ En las figuras \ref{fig:crearg} y en la \ref{fig:anadir} podemos ver como se cre
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	\begin{figure}[htbp]
+	\begin{figure}[H]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{maqueta/lista-grupos.png}
@@ -267,7 +267,7 @@ En las figuras \ref{fig:crearg} y en la \ref{fig:anadir} podemos ver como se cre
 \end{figure}
 	
 
-En la figura \ref{fig:verg} vemos como se mostrarían los grupos a los que pertenece el usuario y a continuación vemos la maqueta de como serían las opciones que tiene el usuario para interactuar con la aplicación \ref{fig:opc}.
+En la figura \ref{fig:verg} vemos como se mostrarían los grupos a los que pertenece el usuario y a continuación vemos la maqueta de como serían las opciones que tiene el usuario para interactuar con la aplicación, como vemos en la figura  \ref{fig:opc}.
 
 
 
@@ -281,7 +281,7 @@ En la figura \ref{fig:verg} vemos como se mostrarían los grupos a los que perte
 
 
 
-	\begin{figure}[htbp]
+	\begin{figure}[H]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{maqueta/pdi1.png}
@@ -299,9 +299,9 @@ En la figura \ref{fig:verg} vemos como se mostrarían los grupos a los que perte
 \end{minipage}
 \end{figure}
 	
- A continuación mostraríamos como se crearía un PDI \ref{fig:pdi1} y como lo veríamos una vez creado \ref{fig:pdi2}.	
+ A continuación mostraríamos como se crearía un PDI en la figura  \ref{fig:pdi1} y como lo veríamos una vez creado la figura \ref{fig:pdi2}.	
 
-	\begin{figure}[htbp]
+	\begin{figure}[H]
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{maqueta/Trayecto-actual.png}
