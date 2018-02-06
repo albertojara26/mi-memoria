@@ -3,78 +3,81 @@
 \contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{7}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos}{8}{section.1.2}
 \contentsline {section}{\numberline {1.3}Estructura de la memoria}{8}{section.1.3}
-\contentsline {chapter}{\numberline {2}Tecnolog\IeC {\'\i }a}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Android SDK}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Eclipse }{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Spring}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Android Studio}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}Git}{14}{section.2.5}
-\contentsline {section}{\numberline {2.6}Maven}{16}{section.2.6}
-\contentsline {section}{\numberline {2.7}Gradle}{16}{section.2.7}
-\contentsline {section}{\numberline {2.8}Jackson}{16}{section.2.8}
-\contentsline {section}{\numberline {2.9}Hibernate}{16}{section.2.9}
-\contentsline {section}{\numberline {2.10}PostgreSQL}{17}{section.2.10}
-\contentsline {section}{\numberline {2.11}JUnit}{17}{section.2.11}
-\contentsline {chapter}{\numberline {3}Proceso de ingenier\IeC {\'\i }a}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Scrum}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Sprint}{19}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Participantes}{20}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}C\IeC {\'o}mo funciona el Proceso}{20}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Adaptaci\IeC {\'o}n la metodolog\IeC {\'\i }a a este proyecto }{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Participantes}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Sprints}{24}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Reuniones}{24}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}An\IeC {\'a}lisis}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}An\IeC {\'a}lisis de Requisitos}{25}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Actores}{26}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Historias de usuario}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Casos de uso}{27}{subsection.4.2.1}
-\contentsline {subsubsection}{\IeC {\textbullet } Usuario no autenticado}{27}{section*.2}
-\contentsline {subsubsection}{\IeC {\textbullet } Usuario autenticado}{27}{section*.3}
-\contentsline {section}{\numberline {4.3}An\IeC {\'a}lisis de riesgos}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Riesgos identificados}{31}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Planes de contingencia}{32}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Seguimiento}{32}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Interfaz y usabilidad}{33}{section.4.4}
-\contentsline {chapter}{\numberline {5}Ejecuci\IeC {\'o}n}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}Pasos de ejecuci\IeC {\'o}n}{39}{section.5.1}
-\contentsline {section}{\numberline {5.2}Duraci\IeC {\'o}n y costes}{40}{section.5.2}
-\contentsline {section}{\numberline {5.3}Sprints}{41}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Sprint 1}{41}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Sprint 2}{41}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Sprint 3}{41}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Sprint 4}{42}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Sprint 5}{45}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Sprint 6}{48}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Sprint 7}{52}{subsection.5.3.7}
-\contentsline {subsection}{\numberline {5.3.8}Sprint 8}{52}{subsection.5.3.8}
-\contentsline {chapter}{\numberline {6}Dise\IeC {\~n}o}{53}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arquitectura}{53}{section.6.1}
-\contentsline {section}{\numberline {6.2}Capa de datos}{55}{section.6.2}
-\contentsline {section}{\numberline {6.3}Servidor}{57}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Servicio web}{57}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Organizacion dos paquetes}{59}{subsection.6.3.2}
-\contentsline {subsubsection}{java}{59}{section*.4}
-\contentsline {subsubsection}{test}{59}{section*.5}
-\contentsline {subsection}{\numberline {6.3.3}Transmisi\IeC {\'o}n de la informaci\IeC {\'o}n}{59}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Gesti\IeC {\'o}n de las clases persistentes}{60}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{61}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Servicios}{61}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Organizaci\IeC {\'o}n de los paquetes}{62}{subsection.6.4.2}
-\contentsline {chapter}{\numberline {7}Implementaci\IeC {\'o}n}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Implementaci\IeC {\'o}n}{63}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Servidor}{63}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Aplicaci\IeC {\'o}n m\IeC {\'o}vil Android}{65}{subsection.7.1.2}
-\contentsline {subsubsection}{Mapas}{65}{section*.6}
-\contentsline {subsubsection}{Localizaci\IeC {\'o}n}{66}{section*.7}
-\contentsline {subsubsection}{Firebase}{68}{section*.8}
-\contentsline {section}{\numberline {7.2}Pruebas}{71}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Pruebas de unidad}{71}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Pruebas de integraci\IeC {\'o}n y aceptaci\IeC {\'o}n}{71}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{73}{chapter.8}
-\contentsline {section}{\numberline {8.1}Trabajo realizado}{73}{section.8.1}
-\contentsline {section}{\numberline {8.2}Trabajo futuro}{74}{section.8.2}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{75}{chapter*.9}
-\contentsline {chapter}{Ap\IeC {\'e}ndices}{79}{chapter*.10}
-\contentsline {chapter}{\numberline {A}Glosario}{79}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{81}{appendix.Alph2}
+\contentsline {section}{\numberline {1.4}Estudio de mercado}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}iHunt Journal}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}My Fishing Companion}{11}{subsection.1.4.2}
+\contentsline {chapter}{\numberline {2}Tecnolog\IeC {\'\i }a}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Android SDK}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Eclipse }{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Spring}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Android Studio}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Git}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}Maven}{18}{section.2.6}
+\contentsline {section}{\numberline {2.7}Gradle}{18}{section.2.7}
+\contentsline {section}{\numberline {2.8}Jackson}{18}{section.2.8}
+\contentsline {section}{\numberline {2.9}Hibernate}{18}{section.2.9}
+\contentsline {section}{\numberline {2.10}PostgreSQL}{19}{section.2.10}
+\contentsline {section}{\numberline {2.11}JUnit}{19}{section.2.11}
+\contentsline {chapter}{\numberline {3}Proceso de ingenier\IeC {\'\i }a}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Scrum}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Sprint}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Participantes}{22}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}C\IeC {\'o}mo funciona el Proceso}{22}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Adaptaci\IeC {\'o}n la metodolog\IeC {\'\i }a a este proyecto }{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participantes}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sprints}{26}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Reuniones}{26}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}An\IeC {\'a}lisis}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lisis de Requisitos}{27}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Actores}{28}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Historias de usuario}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Casos de uso}{29}{subsection.4.2.1}
+\contentsline {subsubsection}{\IeC {\textbullet } Usuario no autenticado}{29}{section*.2}
+\contentsline {subsubsection}{\IeC {\textbullet } Usuario autenticado}{29}{section*.3}
+\contentsline {section}{\numberline {4.3}An\IeC {\'a}lisis de riesgos}{33}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Riesgos identificados}{33}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Planes de contingencia}{34}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Seguimiento}{34}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Interfaz y usabilidad}{35}{section.4.4}
+\contentsline {chapter}{\numberline {5}Ejecuci\IeC {\'o}n}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pasos de ejecuci\IeC {\'o}n}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Duraci\IeC {\'o}n y costes}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sprints}{43}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sprint 1}{43}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Sprint 2}{43}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Sprint 3}{43}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Sprint 4}{44}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Sprint 5}{47}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Sprint 6}{50}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Sprint 7}{54}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}Sprint 8}{54}{subsection.5.3.8}
+\contentsline {chapter}{\numberline {6}Dise\IeC {\~n}o}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Arquitectura}{55}{section.6.1}
+\contentsline {section}{\numberline {6.2}Capa de datos}{57}{section.6.2}
+\contentsline {section}{\numberline {6.3}Aplicaci\IeC {\'o}n servidor}{59}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Servicio web}{59}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Organizacion dos paquetes}{61}{subsection.6.3.2}
+\contentsline {subsubsection}{java}{61}{section*.4}
+\contentsline {subsubsection}{test}{61}{section*.5}
+\contentsline {subsection}{\numberline {6.3.3}Transmisi\IeC {\'o}n de la informaci\IeC {\'o}n}{61}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Gesti\IeC {\'o}n de las clases persistentes}{62}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{63}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Servicios usados}{63}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Organizaci\IeC {\'o}n de los paquetes}{64}{subsection.6.4.2}
+\contentsline {chapter}{\numberline {7}Implementaci\IeC {\'o}n}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}Implementaci\IeC {\'o}n}{65}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1} Aplicaci\IeC {\'o}n Servidor}{65}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Aplicaci\IeC {\'o}n m\IeC {\'o}vil Android}{67}{subsection.7.1.2}
+\contentsline {subsubsection}{Mapas}{67}{section*.6}
+\contentsline {subsubsection}{Localizaci\IeC {\'o}n}{68}{section*.7}
+\contentsline {subsubsection}{Firebase}{70}{section*.8}
+\contentsline {section}{\numberline {7.2}Pruebas}{73}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Pruebas de unidad}{73}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Pruebas de integraci\IeC {\'o}n y aceptaci\IeC {\'o}n}{74}{subsection.7.2.2}
+\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{75}{chapter.8}
+\contentsline {section}{\numberline {8.1}Trabajo realizado}{75}{section.8.1}
+\contentsline {section}{\numberline {8.2}Trabajo futuro}{76}{section.8.2}
+\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{77}{chapter*.9}
+\contentsline {chapter}{Ap\IeC {\'e}ndices}{83}{chapter*.10}
+\contentsline {chapter}{\numberline {A}Glosario}{83}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{85}{appendix.Alph2}
