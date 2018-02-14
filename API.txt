@@ -1,0 +1,261 @@
+\begin{itemize}
+\item \textbf{UsuarioController}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/correo/{correo}
+Response <Usuario>
+Path String correo
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/nombre/{nombre}
+Response <Usuario> 
+Path String nombre
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuarios/lista/{nombre}
+<List<Usuario>> 
+(@PathVariable String nombre)
+\end{lstlisting}
+
+ 
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/ruta/{usuario}
+<List<Ruta>> 
+(@PathVariable Long usuario)
+\end{lstlisting}
+
+ 
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/pois/{usuario}
+<List<Poi>>
+(@PathVariable Long usuario)
+\end{lstlisting}
+
+ 
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/pois/usuario/{idUsuario}/tipo
+<List<Poi>> 
+(@PathVariable Long idUsuario, @RequestParam("tipopoi") String tipo)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /usuario/
+ ResponseEntity<Usuario> 
+(@RequestBody Usuario usuario)
+\end{lstlisting}
+
+ 
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /usuario/grupos/{idUsuario}
+<List<Grupo>> 
+(@PathVariable Long idUsuario)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+DELETE /usuario/{idUsuario}
+(@PathVariable Long idUsuario, HttpServletResponse response)
+\end{lstlisting}
+
+
+ 
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /usuario/grupo/{idGrupo}
+(@PathVariable Long idGrupo, @RequestBody Usuario usuario, HttpServletResponse response)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+DELETE /usuario/grupo/{idGrupo}/usuario/{nombre}
+(@PathVariable Long idGrupo, @PathVariable String nombre, HttpServletResponse response)
+\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{PoiController}
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /poi/
+ResponseEntity<Poi> 
+(@RequestBody Poi poi) {
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+DELETE /poi/{idPoi}
+(@PathVariable Long idPoi, HttpServletResponse response) 
+
+
+\end{lstlisting}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{GrupoController}
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /grupo/
+<Grupo> 
+(@RequestBody Grupo grupo)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /grupo/{nombreGrupo}
+<Grupo> 
+(@PathVariable String nombreGrupo)
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /grupo/lista/{nombre}
+<List<Usuario>> 
+(@PathVariable String nombre)
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /grupos/lista/{nombre}
+<List<Grupo>>
+(@PathVariable String nombre)
+
+
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{RutaController}
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /ruta/
+<Ruta> 
+(@RequestBody Ruta ruta)
+
+
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+ POST/rutacompartida/{nombreGrupo}
+ <Ruta> 
+ (@RequestBody Ruta ruta, @PathVariable String nombreGrupo)
+
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /rutacompartida/{idRuta}
+<List<Ruta>> 
+(@PathVariable Long idRuta)
+
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /rutaCompartida/{idRuta}/estado/{estado}
+<Ruta>
+(@PathVariable Long idRuta, @PathVariable String estado,HttpServletResponse response)
+
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /rutacompartida/cerrar/{idRuta}
+<Ruta> 
+(@PathVariable Long idRuta, HttpServletResponse response)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /rutacompartida/seguimiento/ruta/{idRuta}/grupo/{nombreGrupo}
+<List<PuntoRuta>> 
+(@RequestBody List<PuntoRuta> puntosRutaEntrada,
+			@PathVariable String nombreGrupo, @PathVariable Long idRuta)
+
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+DELETE /ruta/{idRuta}
+(@PathVariable Long idRuta, HttpServletResponse response)
+
+
+\end{lstlisting}
+
+
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /ruta/puntos/{idRuta}
+<List<PuntoRuta>> 
+(@PathVariable Long idRuta)
+
+
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /ruta/{nombre}
+<Ruta>
+(@PathVariable String nombre)
+
+
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+GET /ruta/lista/{idRuta}
+<List<Ruta>>
+(@PathVariable Long idRuta)
+
+
+\end{lstlisting}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{PuntoRutaController}
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+POST /puntoruta/{idRuta}
+<List<PuntoRuta>>
+(@RequestBody List<PuntoRuta> puntosRutaEntrada,
+			@PathVariable Long idRuta)
+
+
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=java,label=DescriptiveLabel]
+
+
+
+\end{lstlisting}
+
+
+\end{itemize}

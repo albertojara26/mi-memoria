@@ -11,13 +11,14 @@
 \contentsline {section}{\numberline {2.2}Eclipse }{14}{section.2.2}
 \contentsline {section}{\numberline {2.3}Spring}{14}{section.2.3}
 \contentsline {section}{\numberline {2.4}Android Studio}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Git}{16}{section.2.5}
-\contentsline {section}{\numberline {2.6}Maven}{18}{section.2.6}
-\contentsline {section}{\numberline {2.7}Gradle}{18}{section.2.7}
-\contentsline {section}{\numberline {2.8}Jackson}{18}{section.2.8}
-\contentsline {section}{\numberline {2.9}Hibernate}{18}{section.2.9}
-\contentsline {section}{\numberline {2.10}PostgreSQL}{19}{section.2.10}
-\contentsline {section}{\numberline {2.11}JUnit}{19}{section.2.11}
+\contentsline {section}{\numberline {2.5}Postman}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}Git}{16}{section.2.6}
+\contentsline {section}{\numberline {2.7}Maven}{18}{section.2.7}
+\contentsline {section}{\numberline {2.8}Gradle}{18}{section.2.8}
+\contentsline {section}{\numberline {2.9}Jackson}{18}{section.2.9}
+\contentsline {section}{\numberline {2.10}Hibernate}{18}{section.2.10}
+\contentsline {section}{\numberline {2.11}PostgreSQL}{19}{section.2.11}
+\contentsline {section}{\numberline {2.12}JUnit}{19}{section.2.12}
 \contentsline {chapter}{\numberline {3}Proceso de ingenier\IeC {\'\i }a}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Scrum}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Sprint}{21}{subsection.3.1.1}
@@ -67,17 +68,18 @@
 \contentsline {chapter}{\numberline {7}Implementaci\IeC {\'o}n}{65}{chapter.7}
 \contentsline {section}{\numberline {7.1}Implementaci\IeC {\'o}n}{65}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1} Aplicaci\IeC {\'o}n Servidor}{65}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Aplicaci\IeC {\'o}n m\IeC {\'o}vil Android}{67}{subsection.7.1.2}
-\contentsline {subsubsection}{Mapas}{67}{section*.6}
-\contentsline {subsubsection}{Localizaci\IeC {\'o}n}{68}{section*.7}
-\contentsline {subsubsection}{Firebase}{70}{section*.8}
-\contentsline {section}{\numberline {7.2}Pruebas}{73}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Pruebas de unidad}{73}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Pruebas de integraci\IeC {\'o}n y aceptaci\IeC {\'o}n}{74}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{75}{chapter.8}
-\contentsline {section}{\numberline {8.1}Trabajo realizado}{75}{section.8.1}
-\contentsline {section}{\numberline {8.2}Trabajo futuro}{76}{section.8.2}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{77}{chapter*.9}
-\contentsline {chapter}{Ap\IeC {\'e}ndices}{83}{chapter*.10}
-\contentsline {chapter}{\numberline {A}Glosario}{83}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{85}{appendix.Alph2}
+\contentsline {subsubsection}{API REST}{66}{section*.6}
+\contentsline {subsection}{\numberline {7.1.2}Aplicaci\IeC {\'o}n m\IeC {\'o}vil Android}{74}{subsection.7.1.2}
+\contentsline {subsubsection}{Mapas}{74}{section*.7}
+\contentsline {subsubsection}{Localizaci\IeC {\'o}n}{75}{section*.8}
+\contentsline {subsubsection}{Firebase}{77}{section*.9}
+\contentsline {section}{\numberline {7.2}Pruebas}{80}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Pruebas de unidad}{80}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Pruebas de integraci\IeC {\'o}n y aceptaci\IeC {\'o}n}{81}{subsection.7.2.2}
+\contentsline {chapter}{\numberline {8}Conclusiones y trabajo futuro}{83}{chapter.8}
+\contentsline {section}{\numberline {8.1}Trabajo realizado}{83}{section.8.1}
+\contentsline {section}{\numberline {8.2}Trabajo futuro}{84}{section.8.2}
+\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{85}{chapter*.10}
+\contentsline {chapter}{Ap\IeC {\'e}ndices}{91}{chapter*.11}
+\contentsline {chapter}{\numberline {A}Glosario}{91}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Bibliograf\'{\i }a}{93}{appendix.Alph2}

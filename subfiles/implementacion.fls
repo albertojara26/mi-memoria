@@ -2,7 +2,7 @@ PWD C:/Users/alberto/Desktop/Universidad/MI MEMORIA/subfiles
 INPUT C:/Users/alberto/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
 INPUT implementacion.tex
 OUTPUT implementacion.log
-OUTPUT implementacion.pdf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT implementacion.pdf
 INPUT C:/Users/alberto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm

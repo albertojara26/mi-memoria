@@ -20,11 +20,10 @@ extends JpaRepository<Usuario, Long> {
 
 
 
-
 	
-Como se puede ver en la figura anterior, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
+Como se puede ver en la figura \ref{jpa}, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
 
-\begin{lstlisting}[language=java,caption={Interfaz  de UsuarioRepository},label=DescriptiveLabel]
+\begin{lstlisting}[language=java,caption={Interfaz  de UsuarioRepository},label=jpa]
     
 public interface UsuarioRepository 
 extends JpaRepository<Usuario, Long> {
@@ -54,6 +53,612 @@ extends JpaRepository<Usuario, Long> {
 
 
 \end{lstlisting} 
+
+
+
+
+
+
+
+
+
+\subsubsection{API REST}
+
+
+
+
+\begin{itemize}
+\item \textbf{UsuarioController}
+
+
+\begin{itemize}
+\item \textbf{ /usuario/correo/\{correo\} [GET]}\\
+Busca al usuario cuyo correo es el parámetro correo.
+
+\begin{itemize}
+\item Param 
+\begin{itemize}
+\item String correo
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Usuario
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+\begin{itemize}
+\item  \textbf{/usuario/nombre/\{nombre\} [GET]}\\
+Busca al usuario cuyo nombre es el parámetro nombre.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombre
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Usuario
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item \textbf{ /usuarios/lista/\{nombre\} [GET]}\\
+Busca los usuarios que tienen el parámetro nombre como  parte de su nombre.
+
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombre
+\end{itemize}
+
+\item Reponse
+\begin{itemize}
+\item List<Usuario> 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/usuario/ruta/\{idUsuario\} [GET]}\\
+Busca las rutas cuyo propietario es el que tiene como identificador el idUsuario.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item  Long idUsuario
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<Ruta>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+ 
+
+
+ \begin{itemize}
+\item  \textbf{/usuario/pois/\{idUsuario\} [GET]}\\
+Busca los pois cuyo propietario es el que tiene como identificador el idUsuario.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idUsuario
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<Poi>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+ \begin{itemize}
+\item  \textbf{/usuario/pois/usuario/\{idUsuario\}/tipo [GET]}\\
+Busca los pois cuyo propietario es el que tiene como identificador el idUsuario y por tipo de poi el tipo que le pasamos.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idUsuario
+\item String tipo
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List(Poi)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item  \textbf{/usuario/ [POST]}\\
+Crea un usuario.
+\begin{itemize}
+
+\item Body
+\begin{itemize}
+\item Usuario
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Usuario
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item  \textbf{/usuario/grupos/\{idUsuario\} [GET]}\\
+Busca los grupos a los que pertenece el usuario con identificador idUsuario.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idUsuario
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<Grupo>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+ 
+
+
+\begin{itemize}
+\item  \textbf{/usuario/\{idUsuario\} [DELETE]}\\
+Elimina un usuario
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idUsuario
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/usuario/grupo/\{idGrupo\} [POST]}\\
+Añade un usuario a un grupo.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idGrupo
+\end{itemize}
+\item Body
+\begin{itemize}
+\item Usuario usuario
+\end{itemize}
+
+\end{itemize}
+\end{itemize}
+ 
+
+\begin{itemize}
+\item  \textbf{/usuario/grupo/\{idGrupo\}/usuario/\{nombre\} [DELETE]}\\
+Elimina a un usuario de un grupo.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item  Long idGrupo
+\item String nombre
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{PoiController}
+\begin{itemize}
+\item  \textbf{/poi/ [POST]}\\
+Crea un Poi.
+\begin{itemize}
+\item Body
+\begin{itemize}
+\item Poi
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Poi
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item  \textbf{/poi/\{idPoi\} [DELETE]}\\
+Elimina un poi
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idPoi
+\end{itemize}
+
+\end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{GrupoController}
+\begin{itemize}
+\item  \textbf{/grupo/ [POST]}\\
+Crea un grupo.
+\begin{itemize}
+\item Body
+\begin{itemize}
+\item Grupo
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item \textbf{ /grupo/\{nombreGrupo\} [GET]}\\
+Busca el grupo cuyo nombre es nombreGrupo.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombreGrupo
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Grupo
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+\begin{itemize}
+\item  \textbf{/grupos/lista/\{nombreGrupo\} [GET]}\\
+Devuelve una lista con los integrantes de un grupo cuyo nombre es nombreGrupo-
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombreGrupo
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<Usuario>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{RutaController}
+
+\begin{itemize}
+\item  \textbf{/ruta/ [POST]}\\
+Crea una ruta.
+\begin{itemize}
+\item Body
+\begin{itemize}
+\item Ruta
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Ruta
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+\begin{itemize}
+\item  \textbf{/rutacompartida/\{nombreGrupo\} [POST]}\\
+Crea una ruta compartida para cada uno de los integrantes del grupo cuyo nombre es nombreGrupo.  Además envía una notificación push a cada integrante para indicar que la ruta ya esta disponible para comenzar.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombreGrupo
+\end{itemize}
+\item Body
+\begin{itemize}
+\item Ruta 
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Ruta
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item \textbf{/rutacompartida/\{idRuta\} [GET]}\\
+Busca todas las rutas cuyo parámetro idrutacompartida es idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<Ruta>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/rutaCompartida/\{idRuta\}/estado/\{estado\} [POST]}\\
+Cambia el estado de la ruta cuyo identificador es idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item  Long idRuta
+\item String estado
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Ruta
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/rutacompartida/cerrar/\{idRuta\} [POST]}\\
+Cierra la ruta cuyo identificador es idRuta. Y en el caso de que el resto de usuario ya hubieran cerrado sus rutas, elimina la invitación restante del usuario que queda.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item Ruta
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/rutacompartida/seguimiento/ruta/\{idRuta\}/grupo/\{nombreGrupo\} [POST]}\\
+Este servicio es el encargado de realizar el siguimiento de los usuario. Envía una lista con los punto seguidos durante la ruta cuyo identificador es idRuta del usuario y además recibe una lista con los últimos puntos de cada uno de los integrantes del grupo cuyo nombre es nombreGrupo.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item String nombreGrupo
+\item Long idRuta
+\end{itemize}
+\item Body
+\begin{itemize}
+\item List<PuntoRuta> puntosRutaEntrada
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<PuntoRuta>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item  \textbf{/ruta/\{idRuta\} [DELETE]}\\
+Elimina la ruta con identificador idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+\begin{itemize}
+\item  \textbf{/ruta/puntos/\{idRuta\} [GET]}\\
+Obtiene todos los puntos de la ruta que tiene como identificador el idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<PuntoRuta>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+\begin{itemize}
+\item  \textbf{/ruta/lista/\{idRuta\} [GET]}\\
+Obtiene una lista con rutas que fueron compartidas a la vez que la ruta cuyo idRutaCompartida es idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List(Ruta)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{PuntoRutaController}
+
+
+\begin{itemize}
+\item \textbf{ /puntoruta/\{idRuta\} [POST]}\\
+Guarda una lista de puntos asociados a una ruta que tiene como identificador idRuta.
+\begin{itemize}
+\item Param
+\begin{itemize}
+\item Long idRuta
+\end{itemize}
+\item Body
+\begin{itemize}
+\item List<PuntoRuta> puntosRutaEntrada
+\end{itemize}
+\item Reponse
+\begin{itemize}
+\item List<PuntoRuta>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+En la anterior API se usan una serie de objetos que hacen referencia a las siguientes interfaces:
+\begin{itemize}
+ \item Usuario ver figura \ref{fig:Usuario}
+ \item Grupo ver figura \ref{fig:Grupo}
+ \item Ruta ver figura \ref{fig:Ruta}
+ \item PuntoRuta ver figura \ref{fig:PuntoRuta}
+ \item Poi ver figura \ref{fig:Poi}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\begin{tikzpicture} 
+\umlinterface{Usuario}
+{Long idusuario 
+\\ String nombre
+\\ String correo
+\\ String password
+\\ String token}{} 
+\end{tikzpicture}
+\caption{ Interfaz Usuario}
+\label{fig:Usuario}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\begin{tikzpicture} 
+\umlinterface{Grupo}
+{Long idGrupo 
+\\ String nombre 
+}{} 
+\end{tikzpicture}
+\caption{ Interfaz Grupo}
+\label{fig:Grupo}
+\end{minipage}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\begin{tikzpicture} 
+\umlinterface{Ruta}
+{Long idRuta 
+\\ String nombre 
+\\ String estado 
+\\ Long idrutacompartida}{} 
+\end{tikzpicture}
+\caption{ Interfaz Ruta}
+\label{fig:Ruta}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\begin{tikzpicture} 
+\umlinterface{PuntoRuta}
+{Long idpuntoruta 
+\\ Double latitud 
+\\ Double longitud 
+\\ number: string}{} 
+\end{tikzpicture}
+\caption{ Interfaz PuntoRuta}
+\label{fig:PuntoRuta}
+\end{minipage}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\begin{tikzpicture} 
+\umlinterface{Poi}
+{Long idpoi 
+\\ String nombre 
+\\ String tipo 
+\\ Double latitud
+\\ Double longitud
+\\String descripcion}{} 
+\end{tikzpicture}
+\caption{ Interfaz Poi}
+\label{fig:Poi}
+\end{minipage}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newpage
 
