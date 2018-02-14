@@ -475,9 +475,6 @@ INPUT subfiles/ingenieria.tex
 INPUT scrum.jpg
 INPUT ./scrum.jpg
 INPUT ./scrum.jpg
-INPUT product.png
-INPUT ./product.png
-INPUT ./product.png
 INPUT planing.png
 INPUT ./planing.png
 INPUT ./planing.png

@@ -27,8 +27,8 @@
 \contentsline {subsection}{\numberline {3.1.4}C\IeC {\'o}mo funciona el Proceso}{23}{subsection.3.1.4}
 \contentsline {section}{\numberline {3.2}Adaptaci\IeC {\'o}n la metodolog\IeC {\'\i }a a este proyecto }{26}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Participantes}{26}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Sprints}{27}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Reuniones}{27}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.2}Sprints}{26}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Reuniones}{26}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}An\IeC {\'a}lisis}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}An\IeC {\'a}lisis de Requisitos}{29}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Actores}{30}{subsection.4.1.1}
