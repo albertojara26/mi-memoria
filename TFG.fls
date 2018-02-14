@@ -484,6 +484,9 @@ INPUT ./sprint.png
 INPUT daily.png
 INPUT ./daily.png
 INPUT ./daily.png
+INPUT riesgos.png
+INPUT ./riesgos.png
+INPUT ./riesgos.png
 INPUT subfiles/analisis.tex
 INPUT subfiles/analisis.tex
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8c.tfm
@@ -506,9 +509,6 @@ INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT rutas.jpg
 INPUT ./rutas.jpg
 INPUT ./rutas.jpg
-INPUT riesgos.png
-INPUT ./riesgos.png
-INPUT ./riesgos.png
 INPUT maqueta/Iniciar.png
 INPUT ./maqueta/Iniciar.png
 INPUT ./maqueta/Iniciar.png

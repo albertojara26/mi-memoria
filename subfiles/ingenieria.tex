@@ -11,7 +11,7 @@ A continuación se describen los principales  de la metodoligía Scrum.
 
 
 \subsection{Historias de usuario}
-Las historias de usuario son los requisitos vistos desde el punto de vista del cliente, es decir, acciones que el usuario llevará a cabo durante el uso del la aplicación. Son las funcionalidades escritas usando frases del lenguaje común del usuario. Son la unidad básica detrabajo y se caracteriza por ser:
+Las historias de usuario son los requisitos vistos desde el punto de vista del cliente, es decir, acciones que el usuario llevará a cabo durante el uso del la aplicación. Son las funcionalidades escritas usando frases del lenguaje común del usuario. Son la unidad básica de trabajo y se caracteriza por ser:
 \begin{itemize}
 \item Independientes.
  \item Negociables.
@@ -25,8 +25,8 @@ Las historias en este proyecto serán las siguientes:
 
 
 \begin{itemize}
-\item Diseño capa intermedia
-\item Implementación del servicio Rest
+\item Diseño de la capa encargada de la implementación de la lógica de las funcionalidades del servidor.
+\item Implementación del servicio que ofrece las funcionalidades del servidor.
 \item Iniciar sesión  
  \item Gestión de puntos de interés (PDI)
   \item Gestión de grupos
@@ -170,3 +170,48 @@ Dado el poco conocimiento de la metodología Scrum antes de la realización del 
 Durante el desarrollo del proyecto hay ciertas funcionalidades que pueden cambiar. Empleando los principios de las metodologías ágiles en cada iteración haremos que el proyecto sea mas adaptable antes nuevos requisitos y cambios.
 
 \end{itemize}
+
+
+\section{Análisis de riesgos}
+
+Un aspecto fundamental que debe gestionarse a lo largo del desarrollo de un proyecto
+son los riesgos. Mediante un tratamiento de la incertidumbre podremos evitar
+las consecuencias de una posible materialización de esos riesgos.
+\subsection{Riesgos identificados}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth] {riesgos.png}
+		\caption{Identificación y clasificación de riesgos del proyecto }\label{fig:riesgos}
+	\end{figure}
+	
+	
+Una vez identificados y clasificados los riesgos debemos realizar dos acciones diferentes dependiendo del riesgo que conlleven:
+\subsection{Planes de contingencia} 
+
+Los riesgos que tengan una alta exposición pueden hacer peligrar el futuro del proyecto por ello,  debemos analizarlos en fases tempranas, antes
+de comenzar el diseño o la implementación y vigilarlos. En el caso de este proyecto la manera de solventarlos fue diferente.  A continuación se comenta el R1.
+
+ 
+
+\begin{itemize}
+\item \textbf{R1} \textbf{- Curva aprendizaje Android}. Este riesgo era algo que se conocía antes de comenzar ya con el proyecto. Por ello era algo que se tenía  muy en cuenta. Para atenuar este riesgo antes de comenzar  con el proyecto se realizaron una serie de cursos on-line en \textit{Pluralsight} ya que era la manera de menguar esta curva de aprendizaje.
+
+
+
+
+
+
+	
+\end{itemize}
+
+\subsection{Seguimiento} 	
+	Para el resto de riesgos se hará el seguimiento.
+	\begin{itemize}
+	\item\textbf{ R2 Precisión en la obtención de coordenadas GPS}\\
+	Este riesgo venía dado por el temor a que el GPS del móvil no fuera lo suficientemente preciso en  lugares donde se podían realizar rutas. Esto era algo comprensible ya que los GPS del los móviles no son muy precisos y en el caso de pintar la rutas seguidas podían producir algún error. Un problema encontrado fue que las coordenadas cambiaban repentinamente sin que el usuario se desplazara tan rápido. Este problema fue solventado quitando las coordenadas que variaran demasiado en un corto periodo de tiempo, esta solución será comentada en el capítulo de implementación de la aplicación.
+
+
+\item \textbf{R3 Adaptación de la metodología Scrum en el proyecto}\\
+Antes de la realización de este proyecto mi conocimiento sobre la metodología Scrum era bastante escaso. Para solucionar esto antes del comienzo del proyecto hubo un periodo de familiarización con esta metodología. 
+
+	\end{itemize}

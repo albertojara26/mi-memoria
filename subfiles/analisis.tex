@@ -1,3 +1,5 @@
+
+En este capítulo se presenta el resultado del análisis de requisitos realizado en el proyecto. Además de describir las funcionalidades de las pantallas de la aplicación.
 \section{Análisis de Requisitos}
 
 
@@ -5,10 +7,9 @@ A la hora de cumplir los objetivo de este proyecto, se establecieron una serie d
 El registro del usuario sería el primero para poder darle acceso y comenzar a usarla, ya que sin él no tiene acceso a ninguna funcionalidad de la aplicación.
 
 Después surgió la creación de puntos de interés marcados en un mapa con nombre, descripción y un punto en el mapa con o sin señal GPS clasificados en tipo, caza o pesca.
-
 Creación y almacenamiento de las rutas seguidas por un usuario en sus caminatas por cualquier tipo de terrero.
 
-Adicionalmente, también se completó la posibilidad de que el usuario pueda crear grupos con los usuarios que le parezca oportuno y los integrantes del mismo poder añadir a otros. El resultado de esta funcionalidad es la que permitirá posteriormente crear rutas conjuntas ya para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento. Una vez elegido se enviarán las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas permitirán al usuario navegar por un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes. Esta funcionalidad tendrá un especial interés en las jornadas de caza ya que el conocer en todo momento la posición del resto de compañeros evita peligros innecesarios. Con todo ello se podrán ver las rutas conjuntas igual que las individuales.
+Adicionalmente, también se completó la posibilidad de que el usuario pueda crear grupos con los usuarios que le parezca oportuno y que los integrantes del mismo puedan añadir a otros. El resultado de esta funcionalidad es la que permitirá posteriormente crear rutas conjuntas, ya que para crear una ruta conjunta primero se elige el grupo del que se hará el seguimiento. Una vez elegido se enviarán las invitaciones para participar en él a cada integrante del grupo. Estas invitaciones en el caso de ser aceptadas permitirán al usuario navegar por un mapa y periódicamente se irán realizando actualizaciones de las posiciones del resto de integrantes. Esta funcionalidad tendrá un especial interés en las jornadas de caza ya que el conocer en todo momento la posición del resto de compañeros evita peligros innecesarios. Con todo ello se podrán ver las rutas conjuntas igual que las individuales.
 \subsection{Actores}
 
 Los únicos actores que se presentan en la  aplicación son los siguientes:
@@ -23,12 +24,12 @@ del sistema.
 
 
 \subsection{Casos de uso}
-A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior.
+A continuación, en esta sección, se exponen los requisitos funcionales que surgen de los requisitos generales planteados en el punto anterior. Estos requisitos indican funcionalidades concretas que serán implementadas por los desarrolladores, siendo escritos en un lenguaje más técnico.
 \subsubsection{• Usuario no autenticado}
 \begin{itemize}
 \item\textbf{ \textit{R1}  Registrarse en la aplicación.}
  El usuario podrá darse de alta en el sistema
-introduciendo sus datos en el formulario que se le indican. Una vez registrado se cambia de pantalla para el usuario inserte los datos.
+introduciendo sus datos en el formulario que se le indican. Una vez registrado se cambia de pantalla para que el usuario inserte los datos.
 
 \item \textbf{\textit{R2} Iniciar sesión en la aplicación. }
 El usuario ya registrado podrá, con
@@ -89,10 +90,10 @@ Aquí se describirán los casos de uso relacionados con la gestión  de la infor
 \begin{itemize}
 \item \textbf{\textit{R-R-1 Crear ruta privada}}, el usuario registra la ruta con un nombre.
 \begin{itemize}
-\item \textbf{\textit{R-R-1.1}} Iniciar ruta, el sistema comienza a guardar las coordenadas por la que el usuario está desplazándose y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente, no solo al finalizar la ruta y visualizarla.
-\item\textbf{ \textit{R-R-1.2}} Parar ruta, permite parar la navegación, tanto de guardar las coordenadas como de pintar la ruta seguida.
-\item\textbf{ \textit{R-R-1.3}} Reanudar ruta, permite reanudar la navegación.
-\item \textbf{\textit{R-R-1.4}} Guardar ruta, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
+\item \textbf{\textit{R-R-1.1 Iniciar ruta}}, el sistema comienza a guardar las coordenadas por la que el usuario está desplazándose y dibujando la ruta en el mapa. Las coordenadas se irán guardando periódicamente, no solo al finalizar la ruta y visualizarla.
+\item\textbf{ \textit{R-R-1.2 Parar ruta}}, permite parar la navegación, tanto de guardar las coordenadas como de pintar la ruta seguida.
+\item\textbf{ \textit{R-R-1.3 Reanudar ruta}}, permite reanudar la navegación.
+\item \textbf{\textit{R-R-1.4 Guardar ruta}}, el sistema guarda los últimos puntos que quedaban sin actualizar y ejecuta el caso de uso ver ruta en el mapa(R-R-4).
 \end{itemize}
 
 \item \textbf{\textit{R-R-2 Crear ruta compartida}}, este caso de uso permite guardar la ruta seguida por el usuario y al mismo tiempo ver la posición del resto de integrantes de un grupo, anteriormente seleccionado, en tiempo real. Este caso de uso también enviaría a los integrantes del grupo una invitación a dicha ruta.
@@ -116,53 +117,10 @@ Aquí se describirán los casos de uso relacionados con la gestión  de la infor
 	\end{figure}
 
 
-\section{Análisis de riesgos}
 
-Un aspecto fundamental que debe gestionarse a lo largo del desarrollo de un proyecto
-son los riesgos. Mediante un tratamiento de la incertidumbre podremos evitar
-las posibles la exposición y el impacto.
-
-\subsection{Riesgos identificados}
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.75\textwidth] {riesgos.png}
-		\caption{Identificación y clasificación de riesgos del proyecto }\label{fig:riesgos}
-	\end{figure}
-	
-	
-Una vez identificados y clasificados los riesgos debemos realizar dos acciones diferentes dependiendo del riesgo que conlleven:
-\subsection{Planes de contingencia} 
-
-Los riesgos que tengan una alta exposición pueden hacer peligrar el futuro del proyecto por ello,  debemos analizarlos en fases tempranas, antes
-de comenzar el diseño o la implementación o vigilarlos. En el caso de este proyecto la manera de solventarlos fue diferente.  A continuación se comenta el R1.
-
- 
-
-\begin{itemize}
-\item \textbf{R1} \textbf{- Curva aprendizaje Android}. Este riesgo era algo que se conocía antes de comenzar ya con el proyecto. Por ello era algo que se tenía  muy en cuenta. Para atenuar este riesgo antes de comenzar  con el proyecto se realizaron una serie de cursos on-line en \textit{Pluralsight} ya que era la manera de menguar esta curva de aprendizaje.
-
-
-
-
-
-
-	
-\end{itemize}
-
-\subsection{Seguimiento} 	
-	Para el resto de riesgos se hará el seguimiento.
-	\begin{itemize}
-	\item\textbf{ R2 Precisión en la obtención de coordenadas GPS}\\
-	Este riesgo venía dado por el temor a que el GPS del móvil no fuera lo suficientemente preciso en  lugares donde se podían realizar rutas. Esto era algo comprensible ya que los GPS del los móviles no son muy muy precisos y en el caso de pintar la rutas seguidas podían producir algún que otro error. Un problema encontrado fue que las coordenadas cambiaban repentinamente sin que el usuario se desplazara tan rápido. Este problema fue solventado quitando las coordenadas que variaran demasiado en un corto periodo de tiempo, esta solución será comentada en el capítulo de implementación de la aplicación.
-
-
-\item \textbf{R3 Adaptación de la metodología Scrum en el proyecto}\\
-Antes de la realización de este proyecto mi conocimiento sobre la metodología Scrum era bastante escaso. Para solucionar esto antes del comienzo del proyecto hubo un periodo de familiarización con esta metodología. 
-
-	\end{itemize}
 \newpage
 \section{Interfaz y usabilidad}
-Una vez obtenidos los casos de uso, comenzamos creando las maquetas de cómo debería que ser a interface del usuario.
+Una vez obtenidos los casos de uso, comenzamos creando las maquetas de cómo debería que ser la interfaz del usuario.
 Se busca que sea una interfaz simple  intuitiva.
 Para hacer esto posible seguiremos las pautas y usaremos los elementos de Material Design \cite{1}. 
 
