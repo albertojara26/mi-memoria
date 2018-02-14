@@ -10,30 +10,30 @@
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Datos sobre la meteorolog\IeC {\'\i }a}}{12}{figure.1.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Entorno de trabajo Eclipse }}{14}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Captura de pantalla realizando app debug }}{16}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Emulador de Android con mi aplicaci\IeC {\'o}n}}{17}{figure.2.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Captura de pantalla de Android Studio realizando app debug }}{16}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Emulador de Android con mi aplicaci\IeC {\'o}n, Hunter tools}}{17}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Metodolog\IeC {\'\i }a Scrum }}{23}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Product Backlog }}{23}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Sprint Planning }}{24}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Sprint Backlog }}{24}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Daily Scrum }}{25}{figure.3.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Metodolog\IeC {\'\i }a Scrum }}{24}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Product Backlog }}{24}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Sprint Planning }}{25}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Sprint Backlog }}{25}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Parte metodolog\IeC {\'\i }a Scrum, Daily Scrum }}{26}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Casos de uso del actor Usuario No Autenticado }}{30}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de puntos de inter\IeC {\'e}s }}{31}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de grupos de usuarios }}{32}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de rutas }}{33}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Identificaci\IeC {\'o}n y clasificaci\IeC {\'o}n de riesgos del proyecto }}{33}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Inisiar sesi\IeC {\'o}n}}{35}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Registrar usuario}}{35}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Crear grupo}}{36}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces A\IeC {\~n}adir usuarios a grupo}}{36}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Listar grupos}}{37}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Opciones generales}}{37}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Crear PDI}}{38}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Visualizar PDIs}}{38}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Ruta individual}}{39}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Ruta compartida}}{39}{figure.4.15}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Casos de uso del actor Usuario No Autenticado }}{31}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de puntos de inter\IeC {\'e}s }}{32}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de grupos de usuarios }}{33}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Casos de uso de gesti\IeC {\'o}n de rutas }}{34}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Identificaci\IeC {\'o}n y clasificaci\IeC {\'o}n de riesgos del proyecto }}{34}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Inisiar sesi\IeC {\'o}n}}{36}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Registrar usuario}}{36}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Crear grupo}}{37}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces A\IeC {\~n}adir usuarios a grupo}}{37}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Listar grupos}}{38}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Opciones generales}}{38}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Crear PDI}}{39}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Visualizar PDIs}}{39}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Ruta individual}}{40}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Ruta compartida}}{40}{figure.4.15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Costes asociados a este proyecto }}{42}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces PDI pesca}}{44}{figure.5.2}
