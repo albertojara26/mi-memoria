@@ -5,12 +5,12 @@ En este capítulo expondremos la implementación tanto de la aplicación servido
 
 
 \subsection{ Aplicación Servidor}
-En capítulos anteriores ya comentamos la estructura de paquetes seguida para desarrollar el servidor, en este hablaremos de JPARepository.\\
+En capítulos anteriores ya comentamos la estructura de paquetes seguida para desarrollar el servidor, en esta sección hablaremos de JPARepository.\\
 
 JPARepository es un repositorio que nos ofrece métodos genéricos de gestión de clases persistentes como también métodos más concreto que nos permiten realizar operaciones complejas abstrayendonos de su implementacion.
 
 Además este repositorio se adapta a la clase con la que va a trabajar.
-\begin{lstlisting}[language=java,caption={Adaptación a la clase Usuario },label=DescriptiveLabel]
+\begin{lstlisting}[language=java,caption={Adaptación a la clase Usuario },label=jpa1]
     
 public interface UsuarioRepository 
 extends JpaRepository<Usuario, Long> {
@@ -22,9 +22,9 @@ extends JpaRepository<Usuario, Long> {
 
 
 	
-Como se puede ver en la figura \ref{jpa}, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
+Como se puede ver en las figura \ref{jpa1} y \ref{jpa2}, este interfaz importa la clase Usuario accediendo a todos sus atributos y generando una lista de métodos para estos atributos concretos como podemos ver en la siguiente.\\
 
-\begin{lstlisting}[language=java,caption={Interfaz  de UsuarioRepository},label=jpa]
+\begin{lstlisting}[language=java,caption={Interfaz  de UsuarioRepository},label=jpa2]
     
 public interface UsuarioRepository 
 extends JpaRepository<Usuario, Long> {
@@ -526,127 +526,52 @@ Guarda una lista de puntos asociados a una ruta que tiene como identificador idR
 \end{itemize}
 \end{itemize}
 
-En la anterior API se usan una serie de objetos que hacen referencia a las siguientes interfaces:
+En la anterior API se usan una serie de objetos que hacen referencia a las siguientes interfaces, véase figura \ref{fig:interfaz}
 \begin{itemize}
- \item Usuario ver figura \ref{fig:Usuario}
- \item Grupo ver figura \ref{fig:Grupo}
- \item Ruta ver figura \ref{fig:Ruta}
- \item PuntoRuta ver figura \ref{fig:PuntoRuta}
- \item Poi ver figura \ref{fig:Poi}
+ \item Usuario
+ \item Grupo  
+ \item Ruta 
+ \item PuntoRuta
+ \item Poi 
 \end{itemize}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{figure}[H]
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\begin{tikzpicture} 
-\umlinterface{Usuario}
-{Long idusuario 
-\\ String nombre
-\\ String correo
-\\ String password
-\\ String token}{} 
-\end{tikzpicture}
-\caption{ Interfaz Usuario}
-\label{fig:Usuario}
-\end{minipage}
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\begin{tikzpicture} 
-\umlinterface{Grupo}
-{Long idGrupo 
-\\ String nombre 
-}{} 
-\end{tikzpicture}
-\caption{ Interfaz Grupo}
-\label{fig:Grupo}
-\end{minipage}
-\end{figure}
+		\centering
+		\includegraphics[width=\textwidth] {interfaz.jpg}
+		\caption{Interfaces usadas en la API}
+		\label{fig:interfaz}
+	\end{figure}
 
 
 
 
-\begin{figure}[H]
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\begin{tikzpicture} 
-\umlinterface{Ruta}
-{Long idRuta 
-\\ String nombre 
-\\ String estado 
-\\ Long idrutacompartida}{} 
-\end{tikzpicture}
-\caption{ Interfaz Ruta}
-\label{fig:Ruta}
-\end{minipage}
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\begin{tikzpicture} 
-\umlinterface{PuntoRuta}
-{Long idpuntoruta 
-\\ Double latitud 
-\\ Double longitud 
-\\ number: string}{} 
-\end{tikzpicture}
-\caption{ Interfaz PuntoRuta}
-\label{fig:PuntoRuta}
-\end{minipage}
-\end{figure}
 
 
 
 
-\begin{figure}[H]
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\begin{tikzpicture} 
-\umlinterface{Poi}
-{Long idpoi 
-\\ String nombre 
-\\ String tipo 
-\\ Double latitud
-\\ Double longitud
-\\String descripcion}{} 
-\end{tikzpicture}
-\caption{ Interfaz Poi}
-\label{fig:Poi}
-\end{minipage}
-\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -683,7 +608,7 @@ compile 'com.google.android.gms:play-services-maps:10.2.0'
 \end{lstlisting}
  
  Con la dependencia de la figura \ref{map} permitimos a nuestra aplicación que use los servicios de  Google Maps.\\
- Para marcar un punto en el mapa y que este quede visible en este necesitamos implementar un método que capture los clic en el mapa y que nos devuelva las coordenadas del punto marcado.
+ 	Para marcar un punto en el mapa y que este quede visible en este necesitamos implementar un método que capture los clic en el mapa y que nos devuelva las coordenadas del punto marcado.
  
  
  \begin{lstlisting}[language=java,caption={Captura de clic en la pantalla},label=clic]
@@ -740,7 +665,7 @@ protected Marker createMarkerPesca(double
 \begin{minipage}[b]{0.5\linewidth} %Una minipágina que cubre la mitad de la página
 \centering
 \includegraphics[width=6cm]{capturamovil/pdiguardar.png}
- \label{marker5}
+ \label{fig:marker5}
 \caption{Marker antes de guardar el PDI}
 
 \end{minipage}
@@ -748,7 +673,7 @@ protected Marker createMarkerPesca(double
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=6cm]{capturamovil/pdiguardar2.png}
- \label{marker6}
+ \label{fig:marker6}
 \caption{Marker después }
 
 \end{minipage}
@@ -862,7 +787,9 @@ Dado que usamos la metodología Scrum y como describimos en el capítulo de segu
 
 
 \subsection{Pruebas de unidad}
-Las pruebas de unidad se  encargan de comprobar el  buen funcionamiento de partes de código. Esta comprobación se realiza normalmente a nivel de clase  asegurándonos que el funcionamiento es el adecuado.\\En nuestro caso las pruebas de unidad se realizaron en el servidor ayudándonos del framework de pruebas JUnit. Como ya se comentó JUnit es una tecnología que ayuda a la ejecución de pruebas  para la comprobación del funcionamiento de métodos o clases.
+Las pruebas de unidad se  encargan de comprobar el  buen funcionamiento de partes de código. Esta comprobación se realiza normalmente a nivel de clase  asegurándonos que el funcionamiento es el adecuado.\\
+
+En nuestro caso las pruebas de unidad se realizaron en el servidor ayudándonos del framework de pruebas JUnit. Como ya se comentó JUnit es una tecnología que ayuda a la ejecución de pruebas  para la comprobación del funcionamiento de métodos o clases.
 
 Como también se usó el framework Spring para el desarrollo este también fue empleado para los test ya que ayuda a la inyección de dependencias y otras gestiones de las transacciones.
 
@@ -902,7 +829,7 @@ public class UsuarioServiceTest {
 
 \subsection{Pruebas de integración y aceptación}
 Las pruebas de integración entre los componentes del sistema y las de aceptación se realizaron de forma manual. En ellas se comprobaba el funcionamiento y la respuesta antes las acciones realizadas.\\
-Como el servidor estaba desplegado en un servidor de aplicaciones las pruebas se podían realizar de 2 maneras:
+	Como el servidor estaba desplegado en un servidor de aplicaciones las pruebas se podían realizar de 2 maneras:
 \begin{itemize}
 \item Mediante el emulador propio de Android.\\
 Esta opción fue la utilizada para depurar la aplicación en los primeros Sprint ya que era más cómodo a la hora realizar las pruebas usar el teclado.

@@ -57,17 +57,13 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Diagrama de componentes del sistema }}{60}{figure.6.2}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Arquitectura del servidor }}{62}{figure.6.4}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces JSON }}{64}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Servicios de la aplicaci\IeC {\'o}n m\IeC {\'o}vil }}{66}{figure.6.6}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Servicios de la aplicaci\IeC {\'o}n m\IeC {\'o}vil }}{65}{figure.6.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Interfaz Usuario}}{74}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Interfaz Grupo}}{74}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Interfaz Ruta}}{75}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Interfaz PuntoRuta}}{75}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Interfaz Poi}}{75}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Marker antes de guardar el PDI}}{78}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Marker despu\IeC {\'e}s }}{78}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Visualizaci\IeC {\'o}n de la ruta mientras se realiza}}{80}{figure.7.8}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Notificaci\IeC {\'o}n push }}{81}{figure.7.9}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Interfaces usadas en la API}}{75}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Marker antes de guardar el PDI}}{78}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Marker despu\IeC {\'e}s }}{78}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Visualizaci\IeC {\'o}n de la ruta mientras se realiza}}{80}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Notificaci\IeC {\'o}n push }}{81}{figure.7.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

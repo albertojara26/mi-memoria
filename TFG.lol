@@ -1,5 +1,4 @@
 \contentsline {lstlisting}{\numberline {2.1}Inyecci\IeC {\'o}n de dependencias}{15}{lstlisting.2.1}
-\contentsline {lstlisting}{\numberline {6.1}JpaRepository}{64}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {7.1}Adaptaci\IeC {\'o}n a la clase Usuario}{67}{lstlisting.7.1}
 \contentsline {lstlisting}{\numberline {7.2}Interfaz de UsuarioRepository}{68}{lstlisting.7.2}
 \contentsline {lstlisting}{\numberline {7.3}Dependencia de Google Maps en gradle}{76}{lstlisting.7.3}

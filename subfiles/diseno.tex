@@ -9,8 +9,8 @@ móvil.
 \section{Arquitectura}
 La aplicación que estamos desarrollando seguirá la arquitectura
 en tres capas. En este patrón arquitectónico cliente/servidor se diferencian tres
-capas, una capa de interface de usuario , una capa de persistencia
-y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo(capa que contiene la lógica) por parte del cliente. Este esquema se puede apreciar en la Figura~\ref{fig:arquitectura2}. Este esquema esta compuesto por:
+capas, una capa de interfaz de usuario una capa de persistencia
+y una capa intermedia llamada de servicios que permite la llamada de forma remota a la capa modelo (capa que contiene la lógica) por parte del cliente. Este esquema se puede apreciar en la Figura~\ref{fig:arquitectura2}. Este esquema esta compuesto por:
 
 
 
@@ -32,11 +32,8 @@ Esta capa es la encargada de enlazar la capa de persistencia con la capa de pres
 \item \textbf{Capa de persistencia:}\\
 Esta capa es la encargada de almacenar los datos del sistema en la base de datos, además contiene todos los mecanismos de acceso a datos necesarios para poder hacer persistentes los datos.
  Esta capa debe ofrecer una interface que ayude a la comunicación con la capa intermedia, de manera que se abstraiga de la tecnología usada en el sistema de almacenamiento y no cree una dependencia con ella. Esta abstracción permitirá hacer cambios o actualizaciones en la tecnología sin afectar a otras capas con las que pudiera interaccionar en un futuro.\\
- 
-
-
 \end{itemize}
-Una vez comentada la arquitectura general del sistema, pasaremos a comentar la capa intermedia un poco más a fondo ya que en ciertas ocasiones, la capa intermedia puede estar compuesta de N-capas(Arquitectura en N-capas). Esta es una de esas ocasiones.
+Una vez comentada la arquitectura general del sistema, pasaremos a comentar la capa intermedia un poco más a fondo ya que en ciertas ocasiones, la capa intermedia puede estar compuesta de N-capas (Arquitectura en N-capas). Esta es una de esas ocasiones.
 
 Los servidores que siguen el patrón Modelo-Vista-Controlador consiguen separar los datos de la  aplicación, la lógica de negocio  y el envío  de información por la red.
 Ésta separación ayuda al desarrollo de la aplicación tanto a la hora de crear la como a la hora de hacer su mantenimiento ya que marca al desarrollador a distribuir el código en una capa concreta. \\
@@ -48,9 +45,9 @@ Los componentes capas que componen al patrón MVC son:
 \item \textbf{Modelo:}
 Está compuesta por clases que tienen acceso a los datos ofreciendo unos métodos para ser usados de manera sencilla por las capas superiores. Éstos métodos son los encargados de acceder a la base de datos y proporcionar los datos persistentes.
 \item \textbf{Vista:}
-Está formada por el interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
+Está formada por la interfaz donde se realizan las llamadas entre el servicio web, peticiones HTTP en las que la información va en formato JSON, y la aplicación cliente.
 \item \textbf{Controlador:}
-Esta capa será la encargada de implementar la lógica del interface llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
+Esta capa será la encargada de implementar la lógica del interfaz llamando a las operaciones que ofrece el modelo y seleccionando la vista asociada a cada petición.
 \end{itemize}
 \begin{figure}
 		\centering
@@ -65,16 +62,16 @@ Esta capa será la encargada de implementar la lógica del interface llamando a 
 		\caption{Entidad relación  }\label{fig:BD}
 	\end{figure}
 	En la Figura~\ref{fig:BD} queda reflejado el modelo  entidad-relación de nuestro sistema. A continuación comentaremos el dominio.\\
-La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI(Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
- Un caso especial serían las rutas compartidas asociadas a una principal, en las cuales el usuario crea una ruta y después la compartes con otros usuarios. Para  quedar esto reflejado en el entidad-relación tenemos la relación \textit{Asociada-a principal}.
+	La entidad principal sobre la que gira la aplicación es \textbf{Usuario}. Este puede crear \textbf{Grupos} a los que pasa a pertenecer al ser creados y los cuales desaparecen del sistema una vez que queden sin integrantes automáticamente.  El usuario puede crear \textbf{PDI (Puntos De Interés)} los cuales son propios y privados de un solo usuario con los atributos que aparecen reflejados en la figura. El usuario también puede realizar \textbf{Rutas} que a su vez pueden tener \textbf{Puntos} asociados a ellas, es decir, el  usuario crea una ruta asociándola a el y la ruta tiene asociada a ella puntos.
+ Un caso especial serían las rutas compartidas asociadas a una principal, en las cuales el usuario crea una ruta y después la comparte con otros usuarios. Para que esto quede reflejado en el modelo entidad-relación tenemos la relación \textit{Asociada-a principal}.
 	
 \section{Aplicación servidor}
-Para permitir una comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de internet , al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente. La arquitectura del servidor la podremos ver en la Figura~\ref{fig:arquitectura-servidor}
+Para permitir la comunicación entre la aplicación del cliente y la capa de persistencia hemos desarrollado un servidor desplegado en un proveedor de internet, al que se podrá acceder de manera remota y que permitirá tener acceso a las funcionalidades de la capa persistente. La arquitectura del servidor la podremos ver en la Figura~\ref{fig:arquitectura-servidor}
 
 La solución mencionada anteriormente será un servidor, en Java, que  usará Spring \cite{10} ya que facilita la creación de aplicaciones de forma cómoda y rápida.\\
 
 Durante el desarrollo de este proyecto el servidor ha sido desplegado en un proveedor de servidores virtuales llamado 
-  DigitalOcean, que ofrece distintas localizaciones donde poder ubicarlo. Hemos decidido hacerlo en uno concreto de Alemania para que hubiera menos latencia y mayor rapidez.
+  DigitalOcean, que ofrece distintas localizaciones donde poder ubicarlo.
 \begin{figure}
 		\centering
 		\includegraphics[width=\textwidth] {arquitectura-servidor.jpg}
@@ -84,7 +81,7 @@ Durante el desarrollo de este proyecto el servidor ha sido desplegado en un prov
 
 
 \subsection{Servicio web}
- La comunicación en esta capa se hará mediante una API. Una API describe la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST, un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de los siguientes peticiones podremos acceder a los distintos recursos.
+ La comunicación en esta capa se hará mediante una API. Una API describe la forma en que los programas o los sitios webs intercambian datos, cuyo formato  de intercambio de datos normalmente es JSON. En este servicio hemos decidido usar una API REST, un tipo de arquitectura de desarrollo web que se apoya totalmente en el estándar HTTP para la obtención de datos. A través de las siguientes peticiones podremos acceder a los distintos recursos.
  
 
 \begin{itemize}
@@ -92,7 +89,7 @@ Durante el desarrollo de este proyecto el servidor ha sido desplegado en un prov
 
 
 
-\item Dependiendo del método usado se irán cambiando la ruta en la petición HTTP y el contenido de ellas(cuerpo). Un POST tendrá una URL sencilla ya que los datos del objetos para ser creado irán en el cuerpo mientras que el GET y DELETE la tendrán de la forma \textit{ /usuario/{idusuario}} para obtener un objeto concreto o eliminarlo.
+\item Dependiendo del método usado se irán cambiando la ruta en la petición HTTP y el contenido de ellas (cuerpo). Un POST tendrá una URL sencilla ya que los datos del objetos para ser creado irán en el cuerpo mientras que el GET y DELETE la tendrán de la forma \textit{ /usuario/{idusuario}} para obtener un objeto concreto o eliminarlo.
 
 
 
@@ -128,47 +125,12 @@ JSON, siglas JavaScript Object Notation, es un formato estándar de transmisión
 		\label{fig:json}
 	\end{figure}
 \subsection{Gestión de las clases persistentes}
-Para gestionar las clases persistentes de nuestra aplicación usaremos el patrón de diseño basado en DAO(Data Access Object).
+Para gestionar las clases persistentes de nuestra aplicación usaremos el patrón de diseño basado en DAO (Data Access Object).
 
- Un DAO define un interfaz que contiene conjunto de operaciones de persistencia y a su vez una implementación permitiendo la gestión de las entidades en la base de datos. Es decir oculta la gestión de la base de datos y a su vez la tecnología que usamos en ella, dotando a cada clase persistente de un DAO asociado a ella. En éste proyecto hemos usado Spring Data JPA que nos proporciona una interfaz para la gestión de los objetos del dominio sin tener que escribir nosotros la implementación de los métodos. Esto nos permite ganar agilidad a la hora de crear los DAOs ya que permite extender esta interfaz a nuestra clase DAO proporcionando todos los métodos CRUD, métodos para modificar o eliminar objetos de ese tipo. Éste interfaz se llama JpaRepository.\\
+ Un DAO define un interfaz que contiene conjunto de operaciones de persistencia y a su vez una implementación permitiendo la gestión de las entidades en la base de datos. Es decir oculta la gestión de la base de datos y a su vez la tecnología que usamos en ella, dotando a cada clase persistente de un DAO asociado a ella. En éste proyecto hemos usado Spring Data JPA que nos proporciona una interfaz para la gestión de los objetos del dominio sin tener que escribir nosotros la implementación de los métodos. Esto nos permite ganar agilidad a la hora de crear los DAOs ya que permite extender esta interfaz a nuestra clase DAO proporcionando todos los métodos CRUD, métodos para modificar o eliminar objetos de ese tipo. Ésta interfaz se llama JpaRepository.\\
 
 
 Otro motivo por el cual usamos JpaRepository es que permite extender la creación de una buena serie de métodos de búsqueda por el nombre de los atributos de nuestras clases persistentes simplemente definiendo los como un método de nuestro interfaz del DAO.
-	
-	
-	
-	
-	
-\begin{lstlisting}[language=java,caption={JpaRepository},label=DescriptiveLabel]
-    
-public interface UsuarioRepository 
-	extends JpaRepository<Usuario, Long> {
-
-	public Usuario findByCorreo(String correo);
-
-	public Usuario findByNombre(String nombre);
-
-	public List<Usuario> findByNombreContaining
-		(String nombre);
-
-	@Override
-	public <S extends Usuario> S save(S usuario);
-
-	@Override
-	public void delete(Long idUsuario);
-
-	@Override
-	public boolean exists(Long idUsuario);
-
-	@Override
-	public <S extends Usuario> S saveAndFlush(S usuario);
-
-	@Override
-	public Usuario findOne(Long idUsuario);
-	}
-
-
-\end{lstlisting} 
 	
 	
 	
@@ -179,9 +141,9 @@ La capa de presentación será accesible por el usuario a través de una aplicac
 \subsection{Servicios usados}
 \begin{itemize}
 \item \textbf{Google Maps API}. Es un servicio web proporcionado por Google que nos permite usar los mapas en nuestras API y también conocer la ubicación del usuario  en todo momento. Esta ubicación  con un punto azul en el mapa pero no suministra coordenadas(latitud y longitud).
-\item \textbf{Google Location}. Es un servicio de Google que nos suministra las coordinadas del usuario, según varía la posición ciertos metros o cada cierto tiempo.
+\item \textbf{Google Location}. Es un servicio de Google que nos suministra las coordenadas del usuario, según varía la posición ciertos metros o cada cierto tiempo.
 \item \textbf{Rest SystemService}. Este servicio es el encargado de ejecutar nuestro propio servidor para guardar o devolver lo datos de los usuario, puntos de interés, rutas o grupos del usuario.
-\item \textbf{Firebase Cloud Messaging}(FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones post cuando se inicia una ruta compartida.
+\item \textbf{Firebase Cloud Messaging} (FCM) es una solución de mensajería multiplataforma que te permite enviar mensajes de forma segura y gratuita. En este caso lo hemos utilizado para enviar notificaciones PUSH cuando se inicia una ruta compartida.
 \end{itemize}
 \begin{figure}[H]
 		\centering
@@ -194,10 +156,10 @@ La capa de presentación será accesible por el usuario a través de una aplicac
 \subsection{Organización de los paquetes}
 La organización seguida en la aplicación móvil es la de agrupar las clases por funcionalidades comunes.
 \begin{itemize}
-\item  \textbf{alberto.hunter-android.activities}, contiene todas las actividades. Las actividades contienen la lógica que hay detrás de cada interfaz con la que interactua el usuario.
-\item \textbf{alberto.hunter-android.adapter}, contiene los adaptadores. Son clases que reciben datos y los manipulas para poder ser usados en otra actividad.
-\item \textbf{alberto.hunter-android.model},contiene todos los modelos de datos.
-\item \textbf{alberto.hunter-android.utils}, contiene las clases auxiliares.\\ 
+\item  \textbf{alberto.hunter-android.activities}. Contiene todas las actividades. Las actividades contienen la lógica que hay detrás de cada interfaz con la que interactua el usuario.
+\item \textbf{alberto.hunter-android.adapter}. Contiene los adaptadores. Son clases que reciben datos y los manipulas para poder ser usados en otra actividad.
+\item \textbf{alberto.hunter-android.model} Contiene todos los modelos de datos.
+\item \textbf{alberto.hunter-android.utils}. Contiene las clases auxiliares.\\ 
 
 Con esta organización por funcionalidades comunes creamos un proyecto claro y  organizado lógicamente.
 

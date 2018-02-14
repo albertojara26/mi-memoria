@@ -614,27 +614,9 @@ INPUT ./arquitectura-movil.jpg
 INPUT ./arquitectura-movil.jpg
 INPUT subfiles/implementacion.tex
 INPUT subfiles/implementacion.tex
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr7t.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr7t.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7m.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7m.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7y.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7y.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7v.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7v.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7t.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/zplmr7t.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7y.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT interfaz.jpg
+INPUT ./interfaz.jpg
+INPUT ./interfaz.jpg
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr7t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr7t.tfm
 INPUT C:/Program Files (x86)/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr7t.tfm
